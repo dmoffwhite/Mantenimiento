@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Contorno del botón con espacio adicional entre la línea y la imagen -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF"  /> <!-- Color de fondo blanco -->
+            <stroke android:color="#000000" android:width="2dp"/> <!-- Contorno negro de 2dp -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Icono del botón con tamaño ajustado -->
+    <item android:drawable="@drawable/registro">
+        <bitmap android:tint="#00f6fb" android:gravity="center" android:width="40dp" android:height="40dp" />
+    </item>
+</layer-list>

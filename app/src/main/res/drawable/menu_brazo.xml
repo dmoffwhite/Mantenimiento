@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Contorno del botón -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" /> <!-- Color de fondo blanco -->
+            <stroke android:color="#000000" android:width="2dp" /> <!-- Contorno negro de 2dp -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Icono del botón -->
+    <item android:drawable="@drawable/brazo">
+        <bitmap android:tint="#00f6fb" android:gravity="center" />
+    </item>
+</layer-list>

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Mantenimientos pmi y lpr</string>
+    <string name="next_buttom">Iniciar Sesión</string>
+    <string name="password">Contraseña</string>
+    <string name="user">Nombre de usuario</string>
+    <string name="sign">Por favor acceda con su cuenta</string>
+    <string name="sign_inicio">Mantenimientos LPR Y PMI</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="choice">Elija el mantenimiento</string>
+    <string name="pmi">Mantenimiento PMI</string>
+    <string name="lpr">Mantenimiento LPR</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_pmi">PMI</string>
+    <string name="menu_lpr">LPR</string>
+    <string name="logout">Cerrar sesión</string>
+
+    <string name="label_pmi_datos">Datos</string>
+    <string name="label_pmi_postes">Postes</string>
+    <string name="label_pmi_pararayos">Pararayos</string>
+    <string name="label_pmi_brazo">Brazos</string>
+    <string name="label_pmi_equipamiento">Equipamiento</string>
+    <string name="label_pmi_gabinete">Gabinete</string>
+    <string name="label_pmi_anuncio">Anuncio C5i</string>
+    <string name="label_pmi_boton">Boton</string>
+    <string name="label_pmi_registroM">Registro</string>
+    <string name="label_pmi_anclas">Anclas</string>
+    <string name="label_pmi_cimentacion">Cimentacion</string>
+    <string name="label_pmi_tierra">Sistema tierra</string>
+
+
+    <string name="components_pmi">Componentes PMI</string>
+
+    <string name="components_lpr">Componentes LPR</string>
+
+    <string name="label_lpr_electrificacion">Electrificación</string>
+    <string name="label_lpr_estructura">Estructura</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="select_city">Selecciona un municipio</string>
+    <string name="select_month">Mes</string>
+    <string name="input_folio">Folio</string>
+    <string name="input_cuadrilla">Cuadrilla</string>
+    <string name="input_fecha">Fecha de visita</string>
+
+
+</resources>
