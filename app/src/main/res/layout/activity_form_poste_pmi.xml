@@ -237,6 +237,8 @@
                 android:id="@+id/input_pmi_mes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
+
                 app:endIconMode="custom"
                 app:endIconTint="@color/principal"
                 app:endIconDrawable="@drawable/calendar"
@@ -386,6 +388,19 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="222dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/botonsiguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
