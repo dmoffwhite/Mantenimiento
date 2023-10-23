@@ -60,7 +60,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TIPO DE MANTENIMIENTO:"
+                android:text="@string/tipo_mantenimiento"
 
 
                 android:textStyle="bold"/>
@@ -69,7 +69,7 @@
                 android:id="@+id/preventivo"
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
-                android:text="PREVENTIVO"
+                android:text="@string/tag_preventivo"
                 android:buttonTint="@color/azul_cierlo_fuerte"
                 android:theme="@style/colored_checkBox"
                 android:button="@drawable/image_checkbox"
@@ -79,7 +79,7 @@
                 android:id="@+id/correctivo"
                 android:layout_width="match_parent"
                 android:layout_height="26dp"
-                android:text="CORRECTIVO"
+                android:text="@string/tag_correctivo"
                 android:buttonTint="@color/azul_cierlo_fuerte"
                 android:theme="@style/colored_checkBox"
                 android:button="@drawable/image_checkbox"
@@ -103,7 +103,7 @@
                 app:endIconDrawable="@drawable/id"
                 app:endIconContentDescription="Ingresa id"
                 app:boxStrokeColor="@color/principal"
-                android:hint="PMI ID"
+                android:hint="@string/input_pmi_id"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal"
                 android:gravity="center"
@@ -111,7 +111,6 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-
                     android:layout_height="wrap_content"
                     android:maxLines="1"
                     android:imeOptions="actionNext"
@@ -156,7 +155,7 @@
                 app:endIconDrawable="@drawable/folio"
                 app:endIconContentDescription="Ingresa folio"
                 app:boxStrokeColor="@color/principal"
-                android:hint="FOLIO"
+                android:hint="@string/input_folio"
                 app:hintTextColor="@color/principal"
                 app:boxBackgroundColor="@color/white">
 
@@ -201,7 +200,7 @@
                 app:endIconDrawable="@drawable/cuadrilla"
                 app:endIconContentDescription="Ingresa cuadrilla"
                 app:boxStrokeColor="@color/principal"
-                android:hint="CUADRILLA"
+                android:hint="@string/input_cuadrilla"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 
@@ -248,7 +247,7 @@
                 app:endIconDrawable="@drawable/calendar"
                 app:endIconContentDescription="Selecciona mes"
                 app:boxStrokeColor="@color/principal"
-                android:hint="MES"
+                android:hint="@string/input_mes"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 

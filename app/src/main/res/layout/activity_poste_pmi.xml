@@ -34,7 +34,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
+        android:id="@+id/linearLayout_conectores"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Conectores tapon"
+                android:text="@string/conectores_tapon"
 
                 android:textStyle="bold"/>
 
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="LIMPIEZA"
+                android:text="@string/tag_limpieza"
                 android:textStyle="bold"/>
 
 
@@ -86,14 +86,451 @@
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
-                    android:text="Sí"
+                    android:text="@string/tag_si"
                     android:buttonTint="@color/azul_cierlo_fuerte"
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="No"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_uno"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_conectores"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_elementos"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_uno"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elementos_ajenos"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_si"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_dos"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_elementos"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_ligado"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_dos"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ligado_sanacion"
+
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_limpieza"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_tres"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_ligado"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_pintura"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tres"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aplicacion_pintura"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_limpieza"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
                     android:buttonTint="@color/azul_cierlo_fuerte"
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"
@@ -114,7 +551,7 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ESTATUS"
+                android:text="@string/tag_estatus"
                 android:textStyle="bold"
                 android:gravity="center"/>
 
@@ -126,49 +563,44 @@
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
-                    android:text="Sí"
+                    android:text="@string/tag_si"
                     android:buttonTint="@color/azul_cierlo_fuerte"
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="No"
+                    android:text="@string/tag_no"
                     android:buttonTint="@color/azul_cierlo_fuerte"
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
 
             </RadioGroup>
         </LinearLayout>
-
-
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout_obs_cuatro"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_pintura"
         android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-        android:visibility="gone"
-        >
+        android:layout_marginRight="10sp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:endIconMode="custom"
             app:endIconTint="@color/azul_cierlo_fuerte"
-            app:endIconDrawable="@drawable/id"
-            android:hint="Observación"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
             app:endIconContentDescription="Ingresa observación"
             app:boxBackgroundColor="@color/white"
-            app:hintTextColor="@color/principal"
-            android:visibility="gone">
+            app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -178,13 +610,21 @@
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-
-
     </LinearLayout>
 
 
-
-
+    <ImageButton
+        android:id="@+id/siguiente_menu"
+        android:layout_width="222dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/botonsiguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_cuatro" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
