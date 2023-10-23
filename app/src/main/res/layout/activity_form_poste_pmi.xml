@@ -50,7 +50,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
             android:gravity="center"
             android:orientation="vertical">
@@ -60,17 +60,19 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TIPO DE MANTENIMIENTO:" />
+                android:text="TIPO DE MANTENIMIENTO:"
+
+
+                android:textStyle="bold"/>
 
             <CheckBox
                 android:id="@+id/preventivo"
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
                 android:text="PREVENTIVO"
-                android:textColor="@color/principal"
-                android:button="@drawable/custom_checkbox"
-                android:textStyle="bold"
-                app:useMaterialThemeColors="false"
+                android:buttonTint="@color/azul_cierlo_fuerte"
+                android:theme="@style/colored_checkBox"
+                android:button="@drawable/image_checkbox"
                 />
 
             <CheckBox
@@ -78,9 +80,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="26dp"
                 android:text="CORRECTIVO"
-                android:textColor="@color/principal"
-                android:button="@drawable/custom_checkbox"
-                android:textStyle="bold"
+                android:buttonTint="@color/azul_cierlo_fuerte"
+                android:theme="@style/colored_checkBox"
+                android:button="@drawable/image_checkbox"
                 />
 
         </LinearLayout>
@@ -97,17 +99,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:endIconMode="custom"
-                app:endIconTint="@color/principal"
+                app:endIconTint="@color/azul_cierlo_fuerte"
                 app:endIconDrawable="@drawable/id"
                 app:endIconContentDescription="Ingresa id"
                 app:boxStrokeColor="@color/principal"
                 android:hint="PMI ID"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal"
+                android:gravity="center"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:maxLines="1"
                     android:imeOptions="actionNext"
@@ -148,7 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:endIconMode="custom"
-                app:endIconTint="@color/principal"
+                app:endIconTint="@color/azul_cierlo_fuerte"
                 app:endIconDrawable="@drawable/folio"
                 app:endIconContentDescription="Ingresa folio"
                 app:boxStrokeColor="@color/principal"
@@ -193,7 +197,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:endIconMode="custom"
-                app:endIconTint="@color/principal"
+                app:endIconTint="@color/azul_cierlo_fuerte"
                 app:endIconDrawable="@drawable/cuadrilla"
                 app:endIconContentDescription="Ingresa cuadrilla"
                 app:boxStrokeColor="@color/principal"
@@ -240,7 +244,7 @@
 
 
                 app:endIconMode="custom"
-                app:endIconTint="@color/principal"
+                app:endIconTint="@color/azul_cierlo_fuerte"
                 app:endIconDrawable="@drawable/calendar"
                 app:endIconContentDescription="Selecciona mes"
                 app:boxStrokeColor="@color/principal"
@@ -283,7 +287,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:endIconMode="custom"
-                app:endIconTint="@color/principal"
+                app:endIconTint="@color/azul_cierlo_fuerte"
                 app:endIconDrawable="@drawable/visita"
                 app:endIconContentDescription="Selecciona fecha"
                 app:boxStrokeColor="@color/principal"
@@ -326,7 +330,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:endIconMode="custom"
-                app:endIconTint="@color/principal"
+                app:endIconTint="@color/azul_cierlo_fuerte"
                 app:endIconDrawable="@drawable/carro"
                 app:endIconContentDescription="Inserte placas"
                 app:boxStrokeColor="@color/principal"
@@ -369,7 +373,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:endIconMode="custom"
-                app:endIconTint="@color/principal"
+                app:endIconTint="@color/azul_cierlo_fuerte"
                 app:endIconDrawable="@drawable/municipio"
                 app:endIconContentDescription="Seleccione municipio"
                 app:boxStrokeColor="@color/principal"
@@ -390,7 +394,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/siguiente"
         android:layout_width="222dp"
         android:layout_height="63dp"
         android:layout_marginTop="40dp"
