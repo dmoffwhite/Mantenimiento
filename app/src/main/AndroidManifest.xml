@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".PostePMI"
+            android:exported="false" />
+        <activity
             android:name=".FormPostePMI"
             android:exported="false" />
         <activity

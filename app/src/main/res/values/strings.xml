@@ -47,11 +47,29 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="select_city">Selecciona un municipio</string>
-    <string name="select_month">Mes</string>
-    <string name="input_folio">Folio</string>
-    <string name="input_cuadrilla">Cuadrilla</string>
-    <string name="input_fecha">Fecha de visita</string>
+
+
+
+
+    <!--Activity form Poste Pmi-->
+    <string name="tipo_mantenimiento">TIPO DE MANTENIMIENTO:</string>
+    <string name="tag_preventivo">PREVENTIVO</string>
+    <string name="tag_correctivo">CORRECTIVO</string>
+    <string name="input_pmi_id">PMI ID</string>
+    <string name="input_folio">FOLIO</string>
+    <string name="input_cuadrilla">CUADRILLA</string>
+    <string name="input_mes">MES</string>
+
+    <!--Activity Poste Pmi-->
+    <string name="conectores_tapon">Conectores tapon</string>
+    <string name="tag_limpieza">Limpieza</string>
+    <string name="tag_si">Sí</string>
+    <string name="tag_no">No</string>
+    <string name="tag_estatus">ESTATUS</string>
+    <string name="boton_obs">Observación</string>
+    <string name="elementos_ajenos">Elementos ajenos</string>
+    <string name="ligado_sanacion">Ligado y sanación</string>
+    <string name="aplicacion_pintura">Aplicación pintura</string>
 
 
 </resources>
