@@ -6,7 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
 
 public class MenuPMI extends AppCompatActivity {
 
@@ -18,12 +18,31 @@ public class MenuPMI extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_pmi);
 
-        CardView cardView = findViewById(R.id.btn_pmi_poste);
-        cardView.setOnClickListener(new View.OnClickListener() {
+        CardView posteCard = findViewById(R.id.btn_pmi_poste);
+        posteCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cardView.setCardElevation(8);
+                posteCard.setCardElevation(8);
                 Intent intent = new Intent(MenuPMI.this, PostePMI.class);
+                startActivity(intent);
+            }
+        });
+
+        CardView brazosCard = findViewById(R.id.btn_pmi_brazos);
+        brazosCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                brazosCard.setCardElevation(8);
+                Intent intent = new Intent(MenuPMI.this, BrazosPMI.class);
+                startActivity(intent);
+            }
+        });
+
+        CardView gabineteCard = findViewById(R.id.btn_pmi_gabinete);
+        gabineteCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuPMI.this, GabinetePMI.class);
                 startActivity(intent);
             }
         });
