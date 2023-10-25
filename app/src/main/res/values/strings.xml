@@ -48,10 +48,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-
-
-
-    <!--Activity form Poste Pmi-->
+    <!--Activity form Pmi-->
     <string name="tipo_mantenimiento">TIPO DE MANTENIMIENTO:</string>
     <string name="tag_preventivo">PREVENTIVO</string>
     <string name="tag_correctivo">CORRECTIVO</string>
@@ -59,17 +56,35 @@
     <string name="input_folio">FOLIO</string>
     <string name="input_cuadrilla">CUADRILLA</string>
     <string name="input_mes">MES</string>
+    <string name="input_fecha">FECHA DE VISITA</string>
+    <string name="input_placas">PLACAS DEL VEHICULO</string>
+    <string name="input_municipio">MUNICIPIO</string>
 
     <!--Activity Poste Pmi-->
     <string name="conectores_tapon">Conectores tapon</string>
     <string name="tag_limpieza">Limpieza</string>
     <string name="tag_si">Sí</string>
     <string name="tag_no">No</string>
-    <string name="tag_estatus">ESTATUS</string>
+    <string name="tag_estatus">Estatus</string>
     <string name="boton_obs">Observación</string>
     <string name="elementos_ajenos">Elementos ajenos</string>
     <string name="ligado_sanacion">Ligado y sanación</string>
     <string name="aplicacion_pintura">Aplicación pintura</string>
+
+    <!--Activity Brazos Pmi-->
+    <string name="carcasa">Carcasa o Gurda</string>
+    <string name="tuberia_brazos">Tuberia y Conexiones</string>
+
+    <!--Activity Gabinete Pmi -->
+    <string name="tuberia_gabinete">Tuberia licuatite</string>
+    <string name="tapa_gabinete">Tapa</string>
+    <string name="cables_gabinete">Cables Interior</string>
+    <string name="exterior_gabinete">Exterior</string>
+    <string name="fijacion_gabinete">Fijacion clemas</string>
+    <string name="orientacion_gabinete">Orientación gabinete</string>
+    <string name="cable_neutro_gabinete">Cable neutro</string>
+    <string name="ventilador_gabinete">Ventilador</string>
+    <string name="filtros_gabinete">Filtros</string>
 
 
 </resources>

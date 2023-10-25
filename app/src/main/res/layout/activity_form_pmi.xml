@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormPostePMI"
+    tools:context=".FormPMI"
     android:background="@drawable/fondomenu">
 
 
@@ -290,7 +290,7 @@
                 app:endIconDrawable="@drawable/visita"
                 app:endIconContentDescription="Selecciona fecha"
                 app:boxStrokeColor="@color/principal"
-                android:hint="FECHA DE VISITA"
+                android:hint="@string/input_fecha"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 
@@ -333,7 +333,7 @@
                 app:endIconDrawable="@drawable/carro"
                 app:endIconContentDescription="Inserte placas"
                 app:boxStrokeColor="@color/principal"
-                android:hint="PLACAS DEL VEHICULO"
+                android:hint="@string/input_placas"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 
@@ -376,7 +376,7 @@
                 app:endIconDrawable="@drawable/municipio"
                 app:endIconContentDescription="Seleccione municipio"
                 app:boxStrokeColor="@color/principal"
-                android:hint="MUNICIPIO"
+                android:hint="@string/input_municipio"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 

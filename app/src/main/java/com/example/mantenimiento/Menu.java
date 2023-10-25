@@ -23,7 +23,7 @@ public class Menu extends AppCompatActivity {
         pmi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Menu.this, FormPostePMI.class);
+                Intent intent = new Intent(Menu.this, FormPMI.class);
                 startActivity(intent);
             }
         });

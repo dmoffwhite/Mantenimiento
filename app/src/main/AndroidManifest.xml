@@ -16,10 +16,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".GabinetePMI"
+            android:exported="false" />
+        <activity
+            android:name=".BrazosPMI"
+            android:exported="false" />
+        <activity
             android:name=".PostePMI"
             android:exported="false" />
         <activity
-            android:name=".FormPostePMI"
+            android:name=".FormPMI"
             android:exported="false" />
         <activity
             android:name=".MenuLPR"
