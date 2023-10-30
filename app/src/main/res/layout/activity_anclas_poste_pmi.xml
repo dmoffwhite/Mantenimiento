@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondomenu"
-    tools:context=".PostePMI">
+    tools:context=".RegistroMantenimientoPMI">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -34,7 +34,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_carcasa"
+        android:id="@+id/linearLayout_cuerda_anclas"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/carcasa_brazos"
+                android:text="@string/cuerda_anclas"
 
                 android:textStyle="bold"/>
 
@@ -146,14 +146,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_carcasa"
+        android:id="@+id/linearLayout_obs_cuerda"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_carcasa"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_cuerda_anclas"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -183,14 +183,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_tuberia"
+        android:id="@+id/linearLayout_tuercas_anclas"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_carcasa"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_cuerda"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         >
@@ -207,7 +207,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/tuberia_brazos"
+                android:text="@string/tuercas_anclas"
+
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -260,6 +261,7 @@
             >
 
             <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tag_estatus"
@@ -290,19 +292,17 @@
         </LinearLayout>
 
 
-
-
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_tuberia"
+        android:id="@+id/linearLayout_obs_tuercas"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tuberia"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tuercas_anclas"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -327,9 +327,9 @@
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+
+
     </LinearLayout>
-
-
 
     <ImageButton
         android:id="@+id/siguiente_menu"
@@ -342,7 +342,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tuberia" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tuercas" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

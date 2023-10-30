@@ -52,23 +52,22 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150sp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/tuberia_gabinete"
-
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140sp"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -106,7 +105,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -148,7 +147,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout_obs_uno"
+            android:id="@+id/linearLayout_obs_tuberia"
             android:layout_width="0dp"
             android:layout_height="73dp"
             android:layout_marginLeft="10sp"
@@ -193,11 +192,11 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_uno">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tuberia">
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -206,13 +205,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/tapa_gabinete"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140sp"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -250,7 +250,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -291,7 +291,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout_obs_dos"
+            android:id="@+id/linearLayout_obs_tapa"
             android:layout_width="0dp"
             android:layout_height="73dp"
             android:layout_marginLeft="10sp"
@@ -339,11 +339,11 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_dos">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tapa">
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -352,13 +352,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/cables_gabinete"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140sp"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -396,7 +397,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -485,7 +486,7 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -494,13 +495,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/exterior_gabinete"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140sp"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -538,7 +540,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -627,7 +629,7 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -636,13 +638,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/fijacion_gabinete"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140sp"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -680,7 +683,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -769,7 +772,7 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -778,13 +781,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/orientacion_gabinete"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140sp"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -822,7 +826,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -912,7 +916,7 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -921,13 +925,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/cable_neutro_gabinete"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140sp"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -965,7 +970,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -1055,7 +1060,7 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -1064,13 +1069,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/cable_neutro_gabinete"
+                    android:gravity="center"
+                    android:text="@string/ventilador_gabinete"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140sp"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -1108,7 +1114,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="120sp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -1183,6 +1189,165 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_filtros_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_ventilador">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/filtros_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_filtros"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_filtros_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/siguiente_menu"
+            android:layout_width="222dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="50sp"
+            android:layout_marginBottom="90dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/botonsiguiente"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_filtros" />
 
 
 

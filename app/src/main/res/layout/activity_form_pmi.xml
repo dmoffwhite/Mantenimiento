@@ -396,7 +396,7 @@
         android:id="@+id/siguiente"
         android:layout_width="222dp"
         android:layout_height="63dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="90sp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/botonsiguiente"

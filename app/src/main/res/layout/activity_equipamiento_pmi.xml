@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondomenu"
-    tools:context=".PostePMI">
+    tools:context=".EquipamientoPMI">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -34,7 +34,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_carcasa"
+        android:id="@+id/linearLayout_radio"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/carcasa_brazos"
+                android:text="@string/radio_equipamiento"
 
                 android:textStyle="bold"/>
 
@@ -146,14 +146,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_carcasa"
+        android:id="@+id/linearLayout_obs_radio"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_carcasa"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_radio"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -183,14 +183,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_tuberia"
+        android:id="@+id/linearLayout_camaras_ptz"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_carcasa"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_radio"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         >
@@ -207,7 +207,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/tuberia_brazos"
+                android:text="@string/camapras_ptz_equipamiento"
+
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -260,6 +261,7 @@
             >
 
             <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tag_estatus"
@@ -290,19 +292,17 @@
         </LinearLayout>
 
 
-
-
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_tuberia"
+        android:id="@+id/linearLayout_obs_ptz"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tuberia"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_camaras_ptz"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -327,9 +327,298 @@
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_camaras_fija"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_ptz"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="150sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/camapras_fija_equipamiento"
+
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_limpieza"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_fija"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_camaras_fija"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout_camaras_analitica"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_fija"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="150sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/camapras_analiticas_equipamiento"
+
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_limpieza"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_analitica"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_camaras_analitica"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/siguiente_menu"
@@ -342,7 +631,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tuberia" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_analitica" />
+
+
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

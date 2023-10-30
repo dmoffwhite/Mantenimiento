@@ -16,6 +16,30 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".SistemaTierrasPMI"
+            android:exported="false" />
+        <activity
+            android:name=".CimentacionPMI"
+            android:exported="false" />
+        <activity
+            android:name=".AnclasPostePMI"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroMantenimientoPMI"
+            android:exported="false" />
+        <activity
+            android:name=".EquipamientoPMI"
+            android:exported="false" />
+        <activity
+            android:name=".PararayosPMI"
+            android:exported="false" />
+        <activity
+            android:name=".BotonPanicoPMI"
+            android:exported="false" />
+        <activity
+            android:name=".AnuncioC5iPMI"
+            android:exported="false" />
+        <activity
             android:name=".GabinetePMI"
             android:exported="false" />
         <activity

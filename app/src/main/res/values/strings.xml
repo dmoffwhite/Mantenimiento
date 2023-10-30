@@ -67,13 +67,22 @@
     <string name="tag_no">No</string>
     <string name="tag_estatus">Estatus</string>
     <string name="boton_obs">Observación</string>
-    <string name="elementos_ajenos">Elementos ajenos</string>
-    <string name="ligado_sanacion">Ligado y sanación</string>
-    <string name="aplicacion_pintura">Aplicación pintura</string>
+    <string name="elementos_ajenos">Elementos ajenos al poste</string>
+    <string name="ligado_sanacion">Ligado y sanación en las secciones oxidadas</string>
+    <string name="aplicacion_pintura">Aplicación de pintura antioxido</string>
+
+    <!--Activity Pararayos -->
+    <string name="punta_pararayos">Punta faraday</string>
 
     <!--Activity Brazos Pmi-->
-    <string name="carcasa">Carcasa o Gurda</string>
-    <string name="tuberia_brazos">Tuberia y Conexiones</string>
+    <string name="carcasa_brazos">Carcasa o guarda</string>
+    <string name="tuberia_brazos">Tuberia y conexiones</string>
+
+    <!-- Activity Equipamiento -->
+    <string name="radio_equipamiento">Radio</string>
+    <string name="camapras_ptz_equipamiento">Camaras tipo: PTZ</string>
+    <string name="camapras_fija_equipamiento">Camaras tipo: FIJA</string>
+    <string name="camapras_analiticas_equipamiento">Camaras tipo: ANALITICAS</string>
 
     <!--Activity Gabinete Pmi -->
     <string name="tuberia_gabinete">Tuberia licuatite</string>
@@ -85,6 +94,38 @@
     <string name="cable_neutro_gabinete">Cable neutro</string>
     <string name="ventilador_gabinete">Ventilador</string>
     <string name="filtros_gabinete">Filtros</string>
+
+    <!--Activity AnuncioC5i Pmi -->
+    <string name="estructura_anuncio">Estructura</string>
+    <string name="orientacion_anuncio">Orientación</string>
+
+    <!--Activity Boton Pmi -->
+    <string name="validacion_boton">Validación de comunicación y llamada de prueba</string>
+    <string name="ajuste_boton">Ajuste o reposición tornillos de seguridad tipo torx</string>
+    <string name="acabado_boton">Acabado de superficie de vano B.P.</string>
+    <string name="revision_boton">Revisión de conexiones</string>
+    <string name="reemplazo_boton">Reemplazo de cableado en casos requeridos</string>
+    <string name="firmware_boton">Actualización de firmware</string>
+
+    <!-- Activity Registro Mantenimiento PMI -->
+    <string name="tapa_registroM"> Tapa galvanizada</string>
+    <string name="tornillos_registroM"> Tornillos de seguridad tipo torx</string>
+
+    <!-- Activity Anclas Poste PMI -->
+    <string name="cuerda_anclas">Cuerda de ancla(minimo 3 cuerdas)</string>
+    <string name="tuercas_anclas">Tuercas, rondana de presion, rondana plana</string>
+
+    <!-- Activity Cimentacion PMI -->
+    <string name="piso_cimentacion">Nivel de piso terminado</string>
+    <string name="acabado_cimentacion">Acabado en superficie de cimentacion</string>
+    <string name="superficie_cimentacion">Superficie de cimentacion sin acero expuesto</string>
+    <string name="grout_cimentacion">Presenta grout y drenaje de grout</string>
+
+    <!-- Activity Sistema Tierras PMI -->
+    <string name="nivel_sistema">Nivel de piso terminado (banqueta y jardin)</string>
+    <string name="registro_sistema">Registro en una sola pieza</string>
+    <string name="conectores_sistema">Estado de conectores (cables sueltos o sulfatados)</string>
+    <string name="cables_sistema">Cables no visibles hacia el registro</string>
 
 
 </resources>

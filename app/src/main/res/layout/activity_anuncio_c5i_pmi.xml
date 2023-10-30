@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondomenu"
-    tools:context=".PostePMI">
+    tools:context=".AnuncioC5iPMI"
+    android:background="@drawable/fondomenu">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -34,7 +34,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_carcasa"
+        android:id="@+id/linearLayout_estructura_anuncio"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/carcasa_brazos"
+                android:text="@string/estructura_anuncio"
 
                 android:textStyle="bold"/>
 
@@ -146,14 +146,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_carcasa"
+        android:id="@+id/linearLayout_obs_estructura"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_carcasa"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_estructura_anuncio"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -183,14 +183,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_tuberia"
+        android:id="@+id/linearLayout_orientacion_anuncio"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_carcasa"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_estructura"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         >
@@ -207,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/tuberia_brazos"
+                android:text="@string/orientacion_anuncio"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -224,7 +224,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/tag_limpieza"
+                android:text="@string/tag_si"
                 android:textStyle="bold"/>
 
 
@@ -295,14 +295,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_tuberia"
+        android:id="@+id/linearLayout_obs_orientacion"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tuberia"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_orientacion_anuncio"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -342,7 +342,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tuberia" />
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_orientacion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
