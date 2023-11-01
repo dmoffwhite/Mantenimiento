@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
 
-                android:text="@string/welcome"
+                android:text="@string/label_pmi_boton"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -172,6 +172,7 @@
                 android:hint="@string/boton_obs"
                 app:endIconContentDescription="Ingresa observación"
                 app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -316,6 +317,7 @@
                 android:hint="@string/boton_obs"
                 app:endIconContentDescription="Ingresa observación"
                 app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -460,6 +462,7 @@
                 android:hint="@string/boton_obs"
                 app:endIconContentDescription="Ingresa observación"
                 app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -604,6 +607,7 @@
                 android:hint="@string/boton_obs"
                 app:endIconContentDescription="Ingresa observación"
                 app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -748,6 +752,7 @@
                 android:hint="@string/boton_obs"
                 app:endIconContentDescription="Ingresa observación"
                 app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -892,6 +897,7 @@
                 android:hint="@string/boton_obs"
                 app:endIconContentDescription="Ingresa observación"
                 app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText

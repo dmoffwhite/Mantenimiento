@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
 
-                android:text="@string/welcome"
+                android:text="@string/label_pmi_gabinete"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -169,6 +169,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -313,6 +314,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -460,6 +462,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -603,6 +606,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -746,6 +750,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -889,6 +894,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -1033,6 +1039,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -1178,6 +1185,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -1321,6 +1329,7 @@
                 app:endIconDrawable="@drawable/inspect"
                 app:endIconMode="custom"
                 app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
