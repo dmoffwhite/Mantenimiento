@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
 
 public class MenuPMI extends AppCompatActivity {
@@ -32,7 +33,7 @@ public class MenuPMI extends AppCompatActivity {
         pararayosCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuPMI.this, PararayosPMI.class);
+                Intent intent = new Intent(MenuPMI.this, PararayoPMI.class);
                 startActivity(intent);
             }
         });
@@ -116,6 +117,15 @@ public class MenuPMI extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MenuPMI.this, SistemaTierrasPMI.class);
                 startActivity(intent);
+            }
+        });
+
+        ImageButton img = findViewById(R.id.back);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+
             }
         });
 

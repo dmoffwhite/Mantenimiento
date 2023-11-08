@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondomenu"
-    tools:context=".RegistroMantenimientoPMI">
+    tools:context=".ElectificacionLPR">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="24dp"
-            android:text="@string/label_pmi_registroM"
+            android:text="@string/label_lpr_electrificacion"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -41,10 +42,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.507" />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_tapa_registro"
+        android:id="@+id/linearLayout_alimentacion"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
@@ -64,13 +66,14 @@
             android:layout_gravity="center"
             android:gravity="center"
             >
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/tapa_registroM"
+                android:text="@string/revision_electrificacion_lpr"
 
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -156,14 +159,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_tapa"
+        android:id="@+id/linearLayout_obs_alimentacion"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tapa_registro"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_alimentacion"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -193,155 +196,9 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout_tornillos_registro"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="4dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tapa"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-        >
-
-
-        <LinearLayout
-            android:layout_width="150sp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tornillos_registroM"
-
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="120sp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_limpieza"
-                android:textStyle="bold"/>
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:text="@string/tag_si"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:theme="@style/colored_checkBox"
-                    android:button="@drawable/image_checkbox"/>
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tag_no"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:theme="@style/colored_checkBox"
-                    android:button="@drawable/image_checkbox"
-                    />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="120sp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
-            >
-
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tag_estatus"
-                android:textStyle="bold"
-                android:gravity="center"/>
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:text="@string/tag_si"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:theme="@style/colored_checkBox"
-                    android:button="@drawable/image_checkbox"/>
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tag_no"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:theme="@style/colored_checkBox"
-                    android:button="@drawable/image_checkbox"/>
-
-            </RadioGroup>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_obs_tornillos"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="4dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tornillos_registro"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-
-        >
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:endIconMode="custom"
-            app:endIconTint="@color/azul_cierlo_fuerte"
-            app:endIconDrawable="@drawable/inspect"
-            android:hint="@string/boton_obs"
-            app:endIconContentDescription="Ingresa observación"
-            app:boxBackgroundColor="@color/white"
-            app:boxStrokeColor="@color/principal"
-            app:hintTextColor="@color/principal">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:maxLines="1"
-                android:imeOptions="actionNext"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
 
 
 
-    </LinearLayout>
 
     <ImageButton
         android:id="@+id/siguiente_menu"
@@ -354,6 +211,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tornillos" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_alimentacion" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

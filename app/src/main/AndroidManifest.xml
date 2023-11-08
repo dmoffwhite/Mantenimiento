@@ -16,6 +16,33 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".SistemaTierrasLPR"
+            android:exported="false" />
+        <activity
+            android:name=".EstructuraLPR"
+            android:exported="false" />
+        <activity
+            android:name=".CimentacionLPR"
+            android:exported="false" />
+        <activity
+            android:name=".AnclasLPR"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroMantenimientoLPR"
+            android:exported="false" />
+        <activity
+            android:name=".GabineteLPR"
+            android:exported="false" />
+        <activity
+            android:name=".ElectificacionLPR"
+            android:exported="false" />
+        <activity
+            android:name=".EquipamientoLPR"
+            android:exported="false" />
+        <activity
+            android:name=".PararayoLPR"
+            android:exported="false" />
+        <activity
             android:name=".SistemaTierrasPMI"
             android:exported="false" />
         <activity
@@ -31,7 +58,7 @@
             android:name=".EquipamientoPMI"
             android:exported="false" />
         <activity
-            android:name=".PararayosPMI"
+            android:name=".PararayoPMI"
             android:exported="false" />
         <activity
             android:name=".BotonPanicoPMI"

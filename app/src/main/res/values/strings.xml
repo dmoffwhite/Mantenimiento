@@ -26,7 +26,7 @@
 
     <string name="label_pmi_datos">Datos</string>
     <string name="label_pmi_postes">Postes</string>
-    <string name="label_pmi_pararayos">Pararayos</string>
+    <string name="label_pmi_pararayos">Pararayo</string>
     <string name="label_pmi_brazo">Brazos</string>
     <string name="label_pmi_equipamiento">Equipamiento</string>
     <string name="label_pmi_gabinete">Gabinete</string>
@@ -34,7 +34,7 @@
     <string name="label_pmi_boton">Boton</string>
     <string name="label_pmi_registroM">Registro</string>
     <string name="label_pmi_anclas">Anclas</string>
-    <string name="label_pmi_cimentacion">Cimentacion</string>
+    <string name="label_pmi_cimentacion">Cimentación</string>
     <string name="label_pmi_tierra">Sistema tierra</string>
 
 
@@ -126,6 +126,52 @@
     <string name="registro_sistema">Registro en una sola pieza</string>
     <string name="conectores_sistema">Estado de conectores (cables sueltos o sulfatados)</string>
     <string name="cables_sistema">Cables no visibles hacia el registro</string>
+
+
+    <!-- Activity Pararayo LPR -->
+    <string name="faraday_lpr">Punta faraday</string>
+
+    <!--Activity Equipamiento LPR -->
+    <string name="radio_equipamiento_lpr">Radio</string>
+    <string name="camara_equipamiento_lpr">Camaras tipo: LPR</string>
+
+    <!-- Activity Electrificacion LPR -->
+    <string name="revision_electrificacion_lpr">Revisión de alimentación eléctrica</string>
+
+    <!-- Activity Gabinete LPR -->
+    <string name="tuberia_gabinete_lpr">Tuberia licuatite en salida y llegada a columna</string>
+    <string name="tapa_gabinete_lpr">Tapa (tornillos de seguridad)</string>
+    <string name="cables_gabinete_lpr">Cables al interior del gabinete (peinados y con cinchos)</string>
+    <string name="exterior_gabinete_lpr">Exterior de gabinete (oxidacion, golpes, etc.)</string>
+    <string name="ciernas_gabinete_lpr">Ciernas (fijación y que coincida calibre de cable con entrada a cierna)</string>
+    <string name="neutro_gabinete_lpr">Cable neutro en llegada a cierna</string>
+    <string name="ventilador_gabinete_lpr">Ventilador</string>
+    <string name="filtros_gabinete_lpr">Filtros</string>
+    <string name="silicon_gabinete_lpr">Silicon</string>
+
+    <!-- Activity Registro Mantenimiento LPR -->
+    <string name="tapa_registro_lpr">Tuberia galvanizada</string>
+    <string name="tornillos_registro_lpr">Tornillos de seguridad tipo TORX</string>
+
+    <!-- Activity Anclas LPR -->
+    <string name="cuerda_anclas_lpr">Cuerda de anda (minimo 3 cuerdas)</string>
+    <string name="tuercas_anclas_lpr">Tuercas, rondana de presión, rondana plana</string>
+
+    <!-- Activity Cimentacion LPR -->
+    <string name="acabado_cimentacion_lpr">Acabado en superficie de cimentación</string>
+    <string name="superficie_cimentacion_lpr">Superficie de cimentación sin acero expuesto</string>
+    <string name="grout_cimentacion_lpr">Presenta grouty drenaje de grout</string>
+
+    <!-- Activity Estructura LPR -->
+    <string name="tornillos_estructura_lpr">Tornillos en brida (mismo sentido)</string>
+    <string name="galvanizado_estructura_lpr">Galvanizado (oxidación)</string>
+
+
+    <!-- Activity Sistema Tierras LPR -->
+    <string name="nivel_sistema_lpr">Nivel de piso terminado (banqueta y jardin)</string>
+    <string name="registro_sistema_lpr">Registro en una sola pieza</string>
+    <string name="conectores_sistema_lpr">Estado de conectores (cables sueltos o sulfatados)</string>
+    <string name="cables_sistema_lpr">Cables no visibles hacia el registro</string>
 
 
 </resources>

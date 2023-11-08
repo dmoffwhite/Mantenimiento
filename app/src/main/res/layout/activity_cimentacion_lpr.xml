@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondomenu"
-    tools:context=".SistemaTierrasPMI">
-
+    tools:context=".CimentacionLPR">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -16,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <ImageButton
             android:id="@+id/back"
@@ -34,18 +34,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="24dp"
-            android:text="@string/label_pmi_tierra"
+            android:text="@string/label_pmi_cimentacion"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/back"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.507" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_nivel_sistema"
+        android:id="@+id/linearLayout_acabado_cimentacion"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
@@ -69,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/nivel_sistema"
+                android:text="@string/acabado_cimentacion_lpr"
 
                 android:textStyle="bold"/>
 
@@ -156,15 +155,16 @@
 
     </LinearLayout>
 
+
     <LinearLayout
-        android:id="@+id/linearLayout_obs_nivel"
+        android:id="@+id/linearLayout_obs_acabado"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_nivel_sistema"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_acabado_cimentacion"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -189,17 +189,20 @@
                 android:imeOptions="actionNext"
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
+
+
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_registro_sistema"
+        android:id="@+id/linearLayout_superficie_cimentacion"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_nivel"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_acabado"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         >
@@ -216,8 +219,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/registro_sistema"
-
+                android:text="@string/superficie_cimentacion_lpr"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -299,17 +301,19 @@
 
             </RadioGroup>
         </LinearLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_registro"
+        android:id="@+id/linearLayout_obs_superficie"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_registro_sistema"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_superficie_cimentacion"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -334,17 +338,20 @@
                 android:imeOptions="actionNext"
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
+
+
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_estado_sistema"
+        android:id="@+id/linearLayout_grout_cimentacion"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_registro"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_superficie"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         >
@@ -361,8 +368,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/conectores_sistema"
-
+                android:text="@string/grout_cimentacion_lpr"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -444,162 +450,19 @@
 
             </RadioGroup>
         </LinearLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout_obs_estado"
+        android:id="@+id/linearLayout_obs_grout"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_estado_sistema"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-
-        >
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:endIconMode="custom"
-            app:endIconTint="@color/azul_cierlo_fuerte"
-            app:endIconDrawable="@drawable/inspect"
-            android:hint="@string/boton_obs"
-            app:endIconContentDescription="Ingresa observación"
-            app:boxBackgroundColor="@color/white"
-            app:boxStrokeColor="@color/principal"
-            app:hintTextColor="@color/principal">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:maxLines="1"
-                android:imeOptions="actionNext"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_cables_sistema"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="4dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_estado"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-        >
-
-
-        <LinearLayout
-            android:layout_width="150sp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/cables_sistema"
-
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="120sp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_limpieza"
-                android:textStyle="bold"/>
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:text="@string/tag_si"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:theme="@style/colored_checkBox"
-                    android:button="@drawable/image_checkbox"/>
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tag_no"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:theme="@style/colored_checkBox"
-                    android:button="@drawable/image_checkbox"
-                    />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="120sp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
-            >
-
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tag_estatus"
-                android:textStyle="bold"
-                android:gravity="center"/>
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:text="@string/tag_si"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:theme="@style/colored_checkBox"
-                    android:button="@drawable/image_checkbox"/>
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tag_no"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:theme="@style/colored_checkBox"
-                    android:button="@drawable/image_checkbox"/>
-
-            </RadioGroup>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_obs_cables"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="4dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_cables_sistema"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_grout_cimentacion"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
 
@@ -637,12 +500,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_cables" />
-
-
-
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_grout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

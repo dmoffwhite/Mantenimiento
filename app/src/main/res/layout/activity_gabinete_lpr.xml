@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/tuberia_gabinete"
+                    android:text="@string/tuberia_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -217,7 +217,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/tapa_gabinete"
+                    android:text="@string/tapa_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -365,7 +365,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/cables_gabinete"
+                    android:text="@string/cables_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -509,7 +509,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/exterior_gabinete"
+                    android:text="@string/exterior_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -653,7 +653,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/fijacion_gabinete"
+                    android:text="@string/ciernas_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -797,7 +797,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/orientacion_gabinete"
+                    android:text="@string/neutro_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -942,7 +942,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/cable_neutro_gabinete"
+                    android:text="@string/ventilador_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -1087,7 +1087,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/ventilador_gabinete"
+                    android:text="@string/filtros_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -1232,7 +1232,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/filtros_gabinete"
+                    android:text="@string/silicon_gabinete_lpr"
                     android:textStyle="bold" />
 
             </LinearLayout>

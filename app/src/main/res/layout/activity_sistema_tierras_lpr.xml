@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondomenu"
-    tools:context=".SistemaTierrasPMI">
+    tools:context=".SistemaTierrasLPR">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/nivel_sistema"
+                android:text="@string/nivel_sistema_lpr"
 
                 android:textStyle="bold"/>
 
@@ -216,7 +216,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/registro_sistema"
+                android:text="@string/registro_sistema_lpr"
 
                 android:textStyle="bold"/>
 
@@ -361,7 +361,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/conectores_sistema"
+                android:text="@string/conectores_sistema_lpr"
 
                 android:textStyle="bold"/>
 
@@ -506,7 +506,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/cables_sistema"
+                android:text="@string/cables_sistema_lpr"
 
                 android:textStyle="bold"/>
 
@@ -638,11 +638,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_cables" />
-
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

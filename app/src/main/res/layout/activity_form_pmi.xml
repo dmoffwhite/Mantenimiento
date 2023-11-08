@@ -113,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:imeOptions="actionNext"
+                    android:imeOptions="actionDone"
                     android:textColor="@color/black"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -163,6 +163,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
+                    android:imeOptions="actionDone"
                     android:textColor="@color/black"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -208,6 +209,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
+                    android:imeOptions="actionDone"
                     android:textColor="@color/black"
                     />
 
@@ -218,50 +220,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/input_pmi_mes"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-
-                app:endIconMode="custom"
-                app:endIconTint="@color/azul_cierlo_fuerte"
-                app:endIconDrawable="@drawable/calendar"
-                app:endIconContentDescription="Selecciona mes"
-                app:boxStrokeColor="@color/principal"
-                android:hint="@string/input_mes"
-                app:boxBackgroundColor="@color/white"
-                app:hintTextColor="@color/principal">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout6"
@@ -272,7 +230,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
 
         <LinearLayout
@@ -297,6 +255,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
                     android:textColor="@color/black"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -383,6 +343,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
                     android:textColor="@color/black"/>
 
             </com.google.android.material.textfield.TextInputLayout>
