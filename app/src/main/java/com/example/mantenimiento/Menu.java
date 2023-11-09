@@ -31,7 +31,7 @@ public class Menu extends AppCompatActivity {
         lpr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Menu.this, MenuLPR.class);
+                Intent intent = new Intent(Menu.this, FormLPR.class);
                 startActivity(intent);
             }
         });

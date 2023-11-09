@@ -14,12 +14,12 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Calendar;
 
-public class FormPMI extends AppCompatActivity {
+public class FormLPR extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form_pmi);
+        setContentView(R.layout.activity_form_lpr);
 
         TextInputLayout inputLayoutFecha = findViewById(R.id.input_pmi_fecha);
         TextInputEditText inputEditTextFecha = (TextInputEditText) inputLayoutFecha.getEditText();
@@ -34,7 +34,7 @@ public class FormPMI extends AppCompatActivity {
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FormPMI.this, MenuPMI.class);
+                Intent intent = new Intent(FormLPR.this, MenuPMI.class);
                 startActivity(intent);
             }
         });
@@ -58,5 +58,4 @@ public class FormPMI extends AppCompatActivity {
         // Mostrar el DatePickerDialog
         datePicker.show();
     }
-
 }

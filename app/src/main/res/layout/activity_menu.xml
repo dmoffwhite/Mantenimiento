@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,95 +8,90 @@
     android:background="@drawable/fondoini"
     tools:context=".Menu">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.7"
-        android:layout_marginTop="20dp"
-        >
+    <!-- Imagen superior -->
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/logini" />
+    <!-- CardView -->
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="229dp"
+        android:layout_height="227dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logini"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="319dp"
+        android:layout_height="312dp"
+        android:layout_marginBottom="260dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:contentPadding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Menú con dos botones -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="88dp">
-z
+            android:layout_marginTop="20sp"
+            android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="251dp"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="150dp"
-                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:text="@string/welcome"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
 
-                > <!-- Establece layout_gravity en center para centrar el CardView -->
+            <TextView
+                android:layout_marginTop="15sp"
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/choice"
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/welcome"
-                        android:textColor="@color/black"
-                        android:textSize="32dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:alpha="0.7"
-                        android:text="@string/choice"
-                        android:textColor="@color/black"
-                        android:textSize="13dp" />
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                    </RelativeLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/pmi_menu"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="15dp"
-                        android:text="@string/pmi"
-                        android:textColor="@color/white"
-                        app:backgroundTint="#004793"
-                        app:cornerRadius="10dp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
 
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/lpr_menu"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="20dp"
-                        android:text="@string/lpr"
-                        android:textColor="@color/white"
-                        app:backgroundTint="#004793"
-                        app:cornerRadius="10dp" />
-                </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pmi_menu"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15sp"
+                android:layout_height="55sp"
+                android:text="@string/pmi"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                app:backgroundTint="#004793"
+                app:cornerRadius="10dp" />
 
-            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/lpr_menu"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15sp"
+                android:layout_height="55sp"
+                android:text="@string/lpr"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                app:backgroundTint="#004793"
+                app:cornerRadius="10dp" />
 
 
         </LinearLayout>
 
+    </androidx.cardview.widget.CardView>
 
-    </RelativeLayout>
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

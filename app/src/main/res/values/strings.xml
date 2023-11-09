@@ -48,17 +48,27 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-    <!--Activity form Pmi-->
+    <!--Activity form PMI-->
     <string name="tipo_mantenimiento">TIPO DE MANTENIMIENTO:</string>
     <string name="tag_preventivo">PREVENTIVO</string>
     <string name="tag_correctivo">CORRECTIVO</string>
     <string name="input_pmi_id">PMI ID</string>
     <string name="input_folio">FOLIO</string>
     <string name="input_cuadrilla">CUADRILLA</string>
-    <string name="input_mes">MES</string>
     <string name="input_fecha">FECHA DE VISITA</string>
     <string name="input_placas">PLACAS DEL VEHICULO</string>
     <string name="input_municipio">MUNICIPIO</string>
+
+    <!--Activity form LPR-->
+    <string name="tipo_lpr_mantenimiento">TIPO DE MANTENIMIENTO:</string>
+    <string name="tag_lpr_preventivo">PREVENTIVO</string>
+    <string name="tag_lpr_correctivo">CORRECTIVO</string>
+    <string name="input_lpr_id">LPR ID</string>
+    <string name="input_lpr_folio">FOLIO</string>
+    <string name="input_lpr_cuadrilla">CUADRILLA</string>
+    <string name="input_lpr_fecha">FECHA DE VISITA</string>
+    <string name="input_lpr_placas">PLACAS DEL VEHICULO</string>
+    <string name="input_lpr_municipio">MUNICIPIO</string>
 
     <!--Activity Poste Pmi-->
     <string name="conectores_tapon">Conectores tapon</string>

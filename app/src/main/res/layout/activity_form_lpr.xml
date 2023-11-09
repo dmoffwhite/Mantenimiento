@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormPMI"
+    tools:context=".FormLPR"
     android:background="@drawable/fondomenu">
 
 
@@ -60,7 +60,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tipo_mantenimiento"
+                android:text="@string/tipo_lpr_mantenimiento"
 
 
                 android:textStyle="bold"/>
@@ -69,7 +69,7 @@
                 android:id="@+id/preventivo"
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
-                android:text="@string/tag_preventivo"
+                android:text="@string/tag_lpr_preventivo"
                 android:buttonTint="@color/azul_cierlo_fuerte"
                 android:theme="@style/colored_checkBox"
                 android:button="@drawable/image_checkbox"
@@ -79,7 +79,7 @@
                 android:id="@+id/correctivo"
                 android:layout_width="match_parent"
                 android:layout_height="26dp"
-                android:text="@string/tag_correctivo"
+                android:text="@string/tag_lpr_correctivo"
                 android:buttonTint="@color/azul_cierlo_fuerte"
                 android:theme="@style/colored_checkBox"
                 android:button="@drawable/image_checkbox"
@@ -103,7 +103,7 @@
                 app:endIconDrawable="@drawable/id"
                 app:endIconContentDescription="Ingresa id"
                 app:boxStrokeColor="@color/principal"
-                android:hint="@string/input_pmi_id"
+                android:hint="@string/input_lpr_id"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal"
 
@@ -156,7 +156,7 @@
                 app:endIconDrawable="@drawable/folio"
                 app:endIconContentDescription="Ingresa folio"
                 app:boxStrokeColor="@color/principal"
-                android:hint="@string/input_folio"
+                android:hint="@string/input_lpr_folio"
                 app:hintTextColor="@color/principal"
                 app:boxBackgroundColor="@color/white">
 
@@ -203,7 +203,7 @@
                 app:endIconDrawable="@drawable/cuadrilla"
                 app:endIconContentDescription="Ingresa cuadrilla"
                 app:boxStrokeColor="@color/principal"
-                android:hint="@string/input_cuadrilla"
+                android:hint="@string/input_lpr_cuadrilla"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 
@@ -251,7 +251,7 @@
                 app:endIconDrawable="@drawable/visita"
                 app:endIconContentDescription="Selecciona fecha"
                 app:boxStrokeColor="@color/principal"
-                android:hint="@string/input_fecha"
+                android:hint="@string/input_lpr_fecha"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 
@@ -299,7 +299,7 @@
                 app:endIconDrawable="@drawable/carro"
                 app:endIconContentDescription="Inserte placas"
                 app:boxStrokeColor="@color/principal"
-                android:hint="@string/input_placas"
+                android:hint="@string/input_lpr_placas"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 
@@ -345,7 +345,7 @@
                 app:endIconDrawable="@drawable/municipio"
                 app:endIconContentDescription="Seleccione municipio"
                 app:boxStrokeColor="@color/principal"
-                android:hint="@string/input_municipio"
+                android:hint="@string/input_lpr_municipio"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 

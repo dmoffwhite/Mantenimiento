@@ -10,7 +10,15 @@
         <item name="android:textColorSecondary">@android:color/darker_gray</item>
     </style>
 
-    
+    <style name="DatePickerTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorAccent">@color/azul_cierlo_fuerte</item> <!-- Cambia el color del texto seleccionado y los elementos interactivos -->
+        <item name="android:textColorPrimary">@color/black</item> <!-- Cambia el color del texto principal -->
+        <item name="android:background">@color/white</item> <!-- Cambia el color de fondo del diálogo -->
+        <!-- Otros atributos para personalizar el DatePickerDialog según tus necesidades -->
+    </style>
+
+
+
 
 
 
