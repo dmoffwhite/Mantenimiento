@@ -38,6 +38,17 @@ public class FormLPR extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*Intent intent = new Intent(AnclasLPR.this, MenuLPR.class);
+                startActivity(intent);*/
+                finish();
+
+            }
+        });
     }
 
     private void mostrarDatePicker(final TextInputEditText inputEditTextFecha) {
