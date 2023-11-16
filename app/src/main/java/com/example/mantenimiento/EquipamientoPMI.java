@@ -22,5 +22,6 @@ public class EquipamientoPMI extends AppCompatActivity {
 
             }
         });
+
     }
 }

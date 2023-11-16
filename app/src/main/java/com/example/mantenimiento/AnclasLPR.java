@@ -24,5 +24,6 @@ public class AnclasLPR extends AppCompatActivity {
 
             }
         });
+
     }
 }

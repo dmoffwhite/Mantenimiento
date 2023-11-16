@@ -120,6 +120,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_lprID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
@@ -171,6 +172,7 @@
                 app:boxBackgroundColor="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_folio_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
@@ -218,6 +220,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_cuadrilla_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
@@ -266,6 +269,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_fecha_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
@@ -314,6 +318,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_placas_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
@@ -360,6 +365,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_municipio_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"

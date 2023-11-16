@@ -14,8 +14,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="229dp"
-        android:layout_height="227dp"
+        android:layout_width="280dp"
+        android:layout_height="277dp"
         android:scaleType="centerCrop"
         android:src="@drawable/logini"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
@@ -28,12 +28,14 @@
         android:id="@+id/cardView"
         android:layout_width="319dp"
         android:layout_height="312dp"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="196dp"
+        android:backgroundTint="@color/white"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:contentPadding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent">
 
         <!-- Menú con dos botones -->
@@ -49,43 +51,43 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/welcome"
-                android:textStyle="bold"
-                android:textSize="25sp"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textAlignment="center" />
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_marginTop="15sp"
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
                 android:layout_weight="1"
                 android:text="@string/choice"
 
-                android:textSize="15sp"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textAlignment="center" />
+                android:textSize="15sp" />
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/pmi_menu"
                 android:layout_width="match_parent"
-                android:layout_marginTop="15sp"
                 android:layout_height="55sp"
+                android:layout_marginTop="15sp"
                 android:text="@string/pmi"
-                android:textSize="15sp"
                 android:textColor="@color/white"
+                android:textSize="15sp"
                 app:backgroundTint="#004793"
                 app:cornerRadius="10dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/lpr_menu"
                 android:layout_width="match_parent"
-                android:layout_marginTop="15sp"
                 android:layout_height="55sp"
+                android:layout_marginTop="15sp"
                 android:text="@string/lpr"
-                android:textSize="15sp"
                 android:textColor="@color/white"
+                android:textSize="15sp"
                 app:backgroundTint="#004793"
                 app:cornerRadius="10dp" />
 

@@ -22,5 +22,7 @@ public class GabineteLPR extends AppCompatActivity {
 
             }
         });
+
+
     }
 }

@@ -4,7 +4,7 @@
     <string name="password">Contraseña</string>
     <string name="user">Nombre de usuario</string>
     <string name="sign">Por favor acceda con su cuenta</string>
-    <string name="sign_inicio">Mantenimientos LPR Y PMI</string>
+    <string name="sign_inicio">Mantenimientos PMI y LPR</string>
     <string name="welcome">Bienvenido</string>
     <string name="choice">Elija el mantenimiento</string>
     <string name="pmi">Mantenimiento PMI</string>

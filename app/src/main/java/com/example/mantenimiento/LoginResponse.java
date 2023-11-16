@@ -2,11 +2,21 @@ package com.example.mantenimiento;
 
 public class LoginResponse {
     private int status;
+
+    private int userId;
     private String token;
     private String nombreU;
 
     public LoginResponse(){
 
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getStatus() {

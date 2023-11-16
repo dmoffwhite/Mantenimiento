@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 login(nombreU, password);
             }
         });
+
     }
 
 
@@ -76,10 +77,12 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
                     LoginResponse loginResponse = response.body();
                     String token = loginResponse.getToken();
-                    String nombreU = loginResponse.getNombreU();
+                    int idUsuario = loginResponse.getUserId();
 
                     Toast.makeText(MainActivity.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, Menu.class);
+                    intent.putExtra("idUsuario", idUsuario);
+                    intent.putExtra("token", token);
                     startActivity(intent);
                     finish();
                 } else {
