@@ -4,6 +4,8 @@ public class FormResponseLPR {
 
     private int status;
     private int idUsuario;
+
+    private int idMantenimiento;
     private  String municipio;
     private String folio;
     private String cuadrilla;
@@ -78,5 +80,14 @@ public class FormResponseLPR {
 
     public void setLpr_id(String lpr_id) {
         this.lpr_id = lpr_id;
+    }
+
+    public int getIdMantenimiento() {
+
+        return idMantenimiento;
+    }
+
+    public void setIdMantenimiento(int idMantenimiento) {
+        this.idMantenimiento = idMantenimiento;
     }
 }

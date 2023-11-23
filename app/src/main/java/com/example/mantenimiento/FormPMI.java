@@ -35,6 +35,8 @@ public class FormPMI extends AppCompatActivity {
     private EditText municipioPMI;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +60,7 @@ public class FormPMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     checkBoxCorrectivo.setChecked(false);
-                     tipoMantenimiento = "preventivo";
+                     tipoMantenimiento = "PREVENTIVO";
                 }
             }
         });
@@ -68,7 +70,7 @@ public class FormPMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     checkBoxPreventivo.setChecked(false);
-                     tipoMantenimiento = "correctivo";
+                     tipoMantenimiento = "CORRECTIVO";
                 }
             }
         });
@@ -156,7 +158,6 @@ public class FormPMI extends AppCompatActivity {
         }
 
         ApiService apiService = ApiClient.getClient();
-
         int idUsuario = ((Menu) getParent()).getIdUsuario();
 
         Call<FormResponsePMI> call = apiService.storeMantenimientoPMI(idUsuario, pmiID, folio, cuadrilla, fecha, placas, tipoMantenimiento, municipio);
@@ -164,9 +165,12 @@ public class FormPMI extends AppCompatActivity {
             @Override
             public void onResponse(Call<FormResponsePMI> call, Response<FormResponsePMI> response) {
                 if(response.isSuccessful()){
-                    FormResponsePMI formResponse = response.body();
+                    FormResponsePMI formResponsePMI = response.body();
+                    int idMantenimiento = formResponsePMI.getIdMantenimiento();
                     Toast.makeText(FormPMI.this, "Registro guardado", Toast.LENGTH_SHORT).show();
+                    AppData.getInstance().setIdMantenimiento(idMantenimiento);
                     Intent intent = new Intent(FormPMI.this, MenuPMI.class);
+                    intent.putExtra("idMantenimiento" , idMantenimiento);
                     startActivity(intent);
                 }
                 else {

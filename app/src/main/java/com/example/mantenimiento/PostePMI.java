@@ -17,20 +17,20 @@ import retrofit2.Response;
 
 public class PostePMI extends AppCompatActivity {
 
-    private String getConectoresLimpieza;
-    private String getConectoresEstatus;
+    private boolean getConectoresLimpieza;
+    private boolean getConectoresEstatus;
     private EditText obsConectoresPMI;
 
-    private String getElementosLimpieza;
-    private String getElementosEstatus;
+    private boolean getElementosLimpieza;
+    private boolean getElementosEstatus;
     private EditText obsElementosPMI;
 
-    private String getSeccionesLimpieza;
-    private String getSeccionesEstatus;
+    private boolean getSeccionesLimpieza;
+    private boolean getSeccionesEstatus;
     private EditText obsSeccionesPMI;
 
-    private String getPinturaLimpieza;
-    private String getPinturaEstatus;
+    private boolean getPinturaLimpieza;
+    private boolean getPinturaEstatus;
     private EditText obsPinturaPMI;
 
 
@@ -67,7 +67,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxLimpiezaConectoresSI.setChecked(false);
-                    getConectoresLimpieza = "No";
+                    getConectoresLimpieza = !isChecked;
                 }
             }
         });
@@ -77,7 +77,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxLimpiezaConectoresNO.setChecked(false);
-                    getConectoresLimpieza = "Si";
+                    getConectoresLimpieza = isChecked;
                 }
             }
         });
@@ -87,7 +87,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     checkBoxEstatusConectoresSI.setChecked(false);
-                    getConectoresEstatus = "No";
+                    getConectoresEstatus = !isChecked;
                 }
             }
         });
@@ -97,7 +97,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     checkBoxEstatusConectoresNO.setChecked(false);
-                    getElementosLimpieza = "Si";
+                    getElementosEstatus = isChecked;
                 }
             }
         });
@@ -109,7 +109,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     checkBoxLimpiezaElementosSI.setChecked(false);
-                    getElementosLimpieza = "No";
+                    getElementosLimpieza = !isChecked;
                 }
             }
         });
@@ -119,7 +119,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     checkBoxLimpiezaElementosNO.setChecked(false);
-                    getElementosLimpieza = "Si";
+                    getElementosLimpieza = isChecked;
                 }
             }
         });
@@ -129,7 +129,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxEstatusElementosSI.setChecked(false);
-                    getElementosEstatus = "No";
+                    getElementosEstatus = !isChecked;
                 }
             }
         });
@@ -139,7 +139,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxEstatusElementosNO.setChecked(false);
-                    getElementosEstatus = "Si";
+                    getElementosEstatus = isChecked;
                 }
             }
         });
@@ -151,7 +151,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxLimpiezaSeccionesSI.setChecked(false);
-                    getSeccionesLimpieza = "No";
+                    getSeccionesLimpieza = !isChecked;
                 }
             }
         });
@@ -161,7 +161,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxLimpiezaSeccionesNO.setChecked(false);
-                    getSeccionesLimpieza = "Si";
+                    getSeccionesLimpieza = isChecked;
                 }
             }
         });
@@ -171,7 +171,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxEstatusSeccionesSI.setChecked(false);
-                    getSeccionesEstatus = "No";
+                    getSeccionesEstatus = !isChecked;
                 }
             }
         });
@@ -181,7 +181,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     checkBoxEstatusSeccionesNO.setChecked(false);
-                    getSeccionesEstatus = "Si";
+                    getSeccionesEstatus = isChecked;
                 }
             }
         });
@@ -192,7 +192,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxLimpiezaPinturaSI.setChecked(false);
-                    getPinturaLimpieza = "No";
+                    getPinturaLimpieza = !isChecked;
                 }
             }
         });
@@ -202,7 +202,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     checkBoxLimpiezaPinturaNO.setChecked(false);
-                    getPinturaLimpieza = "Si";
+                    getPinturaLimpieza = isChecked;
                 }
             }
         });
@@ -212,7 +212,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxEstatusPinturaSi.setChecked(false);
-                    getPinturaEstatus = "No";
+                    getPinturaEstatus = !isChecked;
                 }
             }
         });
@@ -222,7 +222,7 @@ public class PostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     checkBoxEstatusPinturaNO.setChecked(false);
-                    getPinturaEstatus = "Si";
+                    getPinturaEstatus = isChecked;
                 }
             }
         });
@@ -238,27 +238,36 @@ public class PostePMI extends AppCompatActivity {
         obsPinturaPMI = findViewById(R.id.ob_pin_pos_pmi);
 
 
-        ImageButton img = findViewById(R.id.back);
-        img.setOnClickListener(new View.OnClickListener() {
+        ImageButton save = findViewById(R.id.siguiente_menu);
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String obsConectores  = obsConectoresPMI.getText().toString();
                 String obsElementos = obsElementosPMI.getText().toString();
                 String obsSecciones = obsSeccionesPMI.getText().toString();
                 String obsPintura = obsPinturaPMI.getText().toString();
+                storePoste(getConectoresLimpieza, getConectoresEstatus,  getElementosLimpieza, getElementosEstatus,  getSeccionesLimpieza, getSeccionesEstatus,  getPinturaLimpieza, getPinturaEstatus);
+            }
+        });
+
+        ImageButton img = findViewById(R.id.back);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 finish();
-                storePoste(getConectoresLimpieza, getConectoresEstatus, obsConectores, getElementosLimpieza, getElementosEstatus, obsElementos, getSeccionesLimpieza, getSeccionesEstatus, obsSecciones, getPinturaLimpieza, getPinturaEstatus, obsPintura);
             }
         });
     }
 
-    private void storePoste(String getConectoresLimpieza, String getConectoresEstatus, String obsConectores, String getElementosLimpieza, String getElementosEstatus, String obsElementos, String getSeccionesLimpieza, String getSeccionesEstatus, String obsSecciones, String getPinturaLimpieza, String getPinturaEstatus, String obsPintura) {
+    private void storePoste(boolean getConectoresLimpieza, boolean getConectoresEstatus,  boolean getElementosLimpieza, boolean getElementosEstatus, boolean getSeccionesLimpieza, boolean getSeccionesEstatus,  boolean getPinturaLimpieza, boolean getPinturaEstatus) {
 
         ApiService apiService = ApiClient.getClient();
 
-        int idUsuario = ((Menu) getParent()).getIdUsuario();
 
-        Call<PosteResponsePMI> call = apiService.storePostePMI(idUsuario, getConectoresLimpieza, getConectoresEstatus, obsConectores, getElementosLimpieza, getElementosEstatus, obsElementos, getSeccionesLimpieza, getSeccionesEstatus, obsSecciones, getPinturaLimpieza, getPinturaEstatus, obsPintura);
+        int idMantenimiento = AppData.getInstance().getIdMantenimiento();
+
+
+        Call<PosteResponsePMI> call = apiService.storePostePMI(idMantenimiento, getConectoresLimpieza, getConectoresEstatus,  getElementosLimpieza, getElementosEstatus,  getSeccionesLimpieza, getSeccionesEstatus,  getPinturaLimpieza, getPinturaEstatus);
         call.enqueue(new Callback<PosteResponsePMI>() {
             @Override
             public void onResponse(Call<PosteResponsePMI> call, Response<PosteResponsePMI> response) {

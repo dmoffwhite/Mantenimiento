@@ -6,6 +6,8 @@ public class FormResponsePMI {
     private int status;
 
     private int idUsuario;
+
+    private int idMantenimiento;
     private String municipio;
 
     private String folio;
@@ -84,5 +86,13 @@ public class FormResponsePMI {
 
     public void setPmi_id(String pmi_id) {
         this.pmi_id = pmi_id;
+    }
+
+    public int getIdMantenimiento(){
+        return idMantenimiento;
+    }
+
+    public void setIdMantenimiento(int idMantenimiento) {
+        this.idMantenimiento = idMantenimiento;
     }
 }

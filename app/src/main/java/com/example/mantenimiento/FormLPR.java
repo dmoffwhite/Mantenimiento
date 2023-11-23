@@ -35,6 +35,8 @@ public class FormLPR extends AppCompatActivity {
     private EditText municipioLPR;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +57,7 @@ public class FormLPR extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxCorrectivo.setChecked(false);
-                    tipoMantenimiento = "preventivo";
+                    tipoMantenimiento = "PREVENTIVO";
                 }
             }
         });
@@ -65,7 +67,7 @@ public class FormLPR extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxPreventivo.setChecked(false);
-                    tipoMantenimiento = "correctivo";
+                    tipoMantenimiento = "CORRECTIVO";
                 }
             }
         });
@@ -90,8 +92,6 @@ public class FormLPR extends AppCompatActivity {
                 String fecha = fechaLPR.getText().toString();
                 String placas = placasLPR.getText().toString();
                 String municipio = municipioLPR.getText().toString();
-                Intent intent = new Intent(FormLPR.this, MenuPMI.class);
-                startActivity(intent);
                 storeMantenimiento(tipoMantenimiento, lprID, folio, cuadrilla, fecha, placas, municipio);
 
             }
@@ -153,7 +153,10 @@ public class FormLPR extends AppCompatActivity {
             public void onResponse(Call<FormResponseLPR> call, Response<FormResponseLPR> response) {
                 if (response.isSuccessful()){
                     FormResponseLPR formResponseLPR=response.body();
+                    int idMantenimiento = formResponseLPR.getIdMantenimiento();
                     Toast.makeText(FormLPR.this, "Registro guardado", Toast.LENGTH_SHORT).show();
+
+                    AppData.getInstance().setIdMantenimiento(idMantenimiento);
                     Intent intent = new Intent(FormLPR.this, MenuLPR.class);
                     startActivity(intent);
                 }else {
@@ -186,4 +189,6 @@ public class FormLPR extends AppCompatActivity {
         // Mostrar el DatePickerDialog
         datePicker.show();
     }
+
+
 }

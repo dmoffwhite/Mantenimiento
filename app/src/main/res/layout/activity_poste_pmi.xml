@@ -650,7 +650,7 @@
         android:id="@+id/siguiente_menu"
         android:layout_width="222dp"
         android:layout_height="63dp"
-        android:layout_marginTop="50sp"
+        android:layout_marginTop="52dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/botonsiguiente"
