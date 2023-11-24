@@ -70,6 +70,52 @@ public interface ApiService {
             @Field("tub_conx_est") boolean getTuberiaEstatus
     );
 
+    @POST("api/equipamiento/create")
+    Call<EquipResponsePMI> storeEquipPMI(
+            @Field("idMantenimiento") int idMantenimiento,
+            @Field("radio_lim") boolean getRadioLimpieza,
+            @Field("radio_est") boolean getRadioEstatus,
+            @Field("cam_ptz_lim") boolean getPTZLimpieza,
+            @Field("cam_ptz_est") boolean getPTZEstatus,
+            @Field("cam_fij_lim") boolean getFijaLimpieza,
+            @Field("cam_fij_est") boolean getFijaEstatus,
+            @Field("cam_an_lim") boolean getAnaliLimpieza,
+            @Field("cam_an_est") boolean getAnaliEstatus
+    );
+
+    @POST("api/gabinete/create")
+    Call<GabResponsePMI> storeGab(
+          @Field("idMantenimiento") int idMantenimiento,
+          @Field("tub_lim") boolean geTuberiaLimpieza,
+          @Field("tub_est") boolean geTuberiaEstatus,
+          @Field("tapa_lim") boolean getTapaLimpieza,
+          @Field("tapa_est") boolean getTapaEstatus,
+          @Field("cables_lim") boolean getCabInLimpieza,
+          @Field("cables_est") boolean getCabInEstatus,
+          @Field("ext_gab_lim") boolean getExteriorLimpieza,
+          @Field("ext_gab_est") boolean getExteriorEstatus,
+          @Field("fij_clem_lim") boolean getFijacionLimpieza,
+          @Field("fij_clem_est") boolean getFijacionEstatus,
+          @Field("orientacion_lim") boolean getOrientacionLimpieza,
+          @Field("orientacion_est") boolean getOrientacionEstatus,
+          @Field("cable_neu_lim") boolean getCablenNLimpieza,
+          @Field("cable_neu_est") boolean getCableNEstatus,
+          @Field("ventilador_lim") boolean getVentiladorLimpieza,
+          @Field("ventilador_est") boolean getVentiladorEstatus,
+          @Field("filtros_lim") boolean getFiltrosLimpieza,
+          @Field("filtros_est") boolean getFiltrosEstatus
+    );
+
+    @POST("api/anuncio/create")
+    Call<AnuncioResponsePMI> storeAnuncio(
+            @Field("idMantenimiento") int idMantenimiento,
+            @Field("estr_lim") boolean getEstructuraLimpieza,
+            @Field("estr_est") boolean getEstructuraEstatus,
+            @Field("orient_lim") boolean getOrientacionLimpieza,
+            @Field("orient_est") boolean getOrientacionEstatus
+    );
+
+
 
 
 }

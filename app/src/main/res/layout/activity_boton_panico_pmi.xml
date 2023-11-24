@@ -99,6 +99,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/limpieza_val_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -106,6 +107,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/limpieza_val_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -139,6 +141,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/estatus_val_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -146,6 +149,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/estatus_val_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -246,6 +250,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/limpieza_torn_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -253,6 +258,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/limpieza_torn_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -286,6 +292,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/estatus_torn_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -293,6 +300,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/estatus_torn_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -391,6 +399,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/limpieza_acab_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -398,6 +407,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/limpieza_acab_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -431,6 +441,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/estatus_acab_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -438,6 +449,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/estatus_acab_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -536,6 +548,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/limpieza_conx_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -543,6 +556,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/limpieza_conx_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -576,6 +590,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/estatus_conx_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -583,6 +598,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/estatus_conx_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -681,6 +697,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/limpieza_cab_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -688,6 +705,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/limpieza_cab_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -721,6 +739,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/estatus_cab_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -728,6 +747,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/estatus_cab_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -826,6 +846,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/limpieza_fimw_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -833,6 +854,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/limpieza_fimw_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"
@@ -866,6 +888,7 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
+                        android:id="@+id/estatus_fimw_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:text="@string/tag_si"
@@ -873,6 +896,7 @@
                         android:theme="@style/colored_checkBox"
                         android:button="@drawable/image_checkbox"/>
                     <CheckBox
+                        android:id="@+id/estatus_fimw_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/tag_no"

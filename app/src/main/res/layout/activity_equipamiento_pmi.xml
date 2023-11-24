@@ -186,7 +186,7 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id=""
+                android:id="@+id/ob_rad_equi_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"
@@ -341,7 +341,7 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id=""
+                android:id="@+id/ob_ptz_equi_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"
@@ -455,7 +455,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
-                    android:id="@+id/estatus_fija_si"
+                    android:id="@+id/estatus_fija_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -494,12 +494,12 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id=""
+                android:id="@+id/ob_fija_equi_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:maxLines="1"
                 android:imeOptions="actionNext"
-                android:textColor="@color/black"/>
+                android:maxLines="1"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -645,12 +645,12 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id=""
+                android:id="@+id/ob_an_equi_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:maxLines="1"
                 android:imeOptions="actionNext"
-                android:textColor="@color/black"/>
+                android:maxLines="1"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
