@@ -96,6 +96,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -183,6 +184,7 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"
@@ -243,6 +245,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"

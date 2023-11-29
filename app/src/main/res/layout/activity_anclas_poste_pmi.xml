@@ -94,6 +94,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_cuerd_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -101,6 +102,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_cuerd_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -134,6 +136,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_cuerd_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -141,6 +144,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_cuerd_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -181,6 +185,7 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_cuerd_anc_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"
@@ -244,6 +249,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_piezas_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -251,6 +257,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_piezas_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -284,6 +291,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_piezas_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -291,6 +299,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_piezas_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -331,6 +340,7 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_piezas_anc_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"

@@ -96,6 +96,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_ban_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -103,6 +104,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_ban_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -136,6 +138,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_ban_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -143,6 +146,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_ban_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -183,6 +187,7 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_ban_tierra_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"
@@ -243,6 +248,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_reg_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -250,6 +256,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_reg_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -283,6 +290,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_reg_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -290,6 +298,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_reg_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -328,6 +337,7 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_reg_tierra_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"
@@ -388,6 +398,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_estcon_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -395,6 +406,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_estcon_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -428,6 +440,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_estcon_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -435,6 +448,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_estcon_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -473,6 +487,7 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_estcon_tierra_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"
@@ -533,6 +548,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_cabn_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -540,6 +556,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_cabn_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -573,6 +590,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_cabn_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -580,6 +598,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_cabn_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -618,6 +637,8 @@
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_cabn_tierra_pmi"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"

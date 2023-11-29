@@ -190,6 +190,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_val_boton_pmi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:maxLines="1"
@@ -339,6 +340,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_tor_boton_pmi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:maxLines="1"
@@ -488,6 +490,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_sup_boton_pmi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:maxLines="1"
@@ -637,6 +640,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_conx_boton_pmi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:maxLines="1"
@@ -786,6 +790,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_cab_boton_pmi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:maxLines="1"
@@ -935,6 +940,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_fim_boton_pmi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:maxLines="1"

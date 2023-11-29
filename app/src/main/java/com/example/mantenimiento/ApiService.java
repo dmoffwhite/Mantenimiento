@@ -84,7 +84,7 @@ public interface ApiService {
     );
 
     @POST("api/gabinete/create")
-    Call<GabResponsePMI> storeGab(
+    Call<GabResponsePMI> storeGabPMI(
           @Field("idMantenimiento") int idMantenimiento,
           @Field("tub_lim") boolean geTuberiaLimpieza,
           @Field("tub_est") boolean geTuberiaEstatus,
@@ -107,7 +107,7 @@ public interface ApiService {
     );
 
     @POST("api/anuncio/create")
-    Call<AnuncioResponsePMI> storeAnuncio(
+    Call<AnuncioResponsePMI> storeAnuncioPMI(
             @Field("idMantenimiento") int idMantenimiento,
             @Field("estr_lim") boolean getEstructuraLimpieza,
             @Field("estr_est") boolean getEstructuraEstatus,
@@ -115,6 +115,67 @@ public interface ApiService {
             @Field("orient_est") boolean getOrientacionEstatus
     );
 
+    @POST("api/boton/create")
+    Call<BotonResponsePMI> storeBotonPMI(
+            @Field("idMantenimiento") int idMantenimiento,
+            @Field("val_com_lim") boolean getValidacionLimpieza,
+            @Field("val_com_est") boolean getValidacionEstatus,
+            @Field("aju_tor_lim") boolean getTornillosLimpieza,
+            @Field("aju_tor_est") boolean getTornillosEstatus,
+            @Field("acab_lim") boolean getSuperficieLimpieza,
+            @Field("acab_est") boolean getSuperficieEstatus,
+            @Field("rev_conx_lim") boolean getConexionesLimpieza,
+            @Field("rev_conx_est") boolean getConexionesEstatus,
+            @Field("rem_cab_lim") boolean getCableadoLimpieza,
+            @Field("rem_cab_est") boolean getCableadoEstatus,
+            @Field("act_firw_lim") boolean getFimwareLimpieza,
+            @Field("act_firw_est") boolean getFimwareEstatus
+    );
+
+    @POST("api/registro/create")
+    Call<RegistroResponsePMI> storeRegistroPMI(
+            @Field("idMantenimiento") int idMantenimiento,
+            @Field("tap_galb_lim") boolean getGalvLimpieza,
+            @Field("tap_galb_est") boolean getGalvEstatus,
+            @Field("torn_seg_lim") boolean getTorxLimpieza,
+            @Field("torn_seg_est") boolean getTorxEstatus
+    );
+
+    @POST("api/anclas/create")
+    Call<AnclasResponsePMI> storeAnclasPMI(
+            @Field("idMantenimiento") int idMantenimiento,
+            @Field("cuerda_lim") boolean getCuerdaLimpieza,
+            @Field("cuerda_est") boolean getCuerdaEstatus,
+            @Field("tr_rond_lim") boolean getPiezasLimpieza,
+            @Field("tr_rond_est") boolean getPiezasEstatus
+    );
+
+    @POST("api/cimentacion/create")
+    Call<CimResponsePMI> storeCimentacionPMI(
+            @Field("idMantenimiento") int idMantenimiento,
+            @Field("nPiso_lim") boolean  getNivelLimpieza,
+            @Field("nPiso_est") boolean getNivelEstatus,
+            @Field("aSuper_lim") boolean getAcabLimpieza,
+            @Field("aSuper_est") boolean getAcabEstatus,
+            @Field("superficie_lim") boolean getExpLimpieza,
+            @Field("superficie_est") boolean getExpEstatus,
+            @Field("pGrout_lim") boolean getGroutLimpieza,
+            @Field("pGrout_est") boolean getGroutEstatus
+    );
+
+    @POST("api/sistema/create")
+    Call<SistemaResponsePMI> storeSistemaPMI(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("nPisoT_lim") boolean getNivelLimpieza,
+      @Field("nPisoT_est") boolean getNivelEstatus,
+      @Field("rPieza_lim") boolean getRegistroLimpieza,
+      @Field("rPieza_est") boolean getRegistroEstatus,
+      @Field("eConect_lim") boolean getEstadoCLimpieza,
+      @Field("eConect_est") boolean getEstadoCEstado,
+      @Field("cNV_lim") boolean getCablesNLimpieza,
+      @Field("cNV_est") boolean getCablesNEstatus
+
+    );
 
 
 

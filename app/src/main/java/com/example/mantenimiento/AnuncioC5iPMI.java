@@ -153,7 +153,7 @@ public class AnuncioC5iPMI extends AppCompatActivity {
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<AnuncioResponsePMI> call = apiService.storeAnuncio(idMantenimiento, getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus);
+        Call<AnuncioResponsePMI> call = apiService.storeAnuncioPMI(idMantenimiento, getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus);
         call.enqueue(new Callback<AnuncioResponsePMI>() {
             @Override
             public void onResponse(Call<AnuncioResponsePMI> call, Response<AnuncioResponsePMI> response) {

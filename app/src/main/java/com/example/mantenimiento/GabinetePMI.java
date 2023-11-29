@@ -483,7 +483,7 @@ public class GabinetePMI extends AppCompatActivity {
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<GabResponsePMI> call = apiService.storeGab(idMantenimiento, geTuberiaLimpieza, geTuberiaEstatus, getTapaLimpieza, getTapaEstatus, getCabInLimpieza, getCabInEstatus, getExteriorLimpieza, getExteriorEstatus, getFijacionLimpieza, getFijacionEstatus, getOrientacionLimpieza, getOrientacionEstatus, getCablenNLimpieza, getCableNEstatus, getVentiladorLimpieza, getVentiladorEstatus, getFiltrosLimpieza, getFiltrosEstatus);
+        Call<GabResponsePMI> call = apiService.storeGabPMI(idMantenimiento, geTuberiaLimpieza, geTuberiaEstatus, getTapaLimpieza, getTapaEstatus, getCabInLimpieza, getCabInEstatus, getExteriorLimpieza, getExteriorEstatus, getFijacionLimpieza, getFijacionEstatus, getOrientacionLimpieza, getOrientacionEstatus, getCablenNLimpieza, getCableNEstatus, getVentiladorLimpieza, getVentiladorEstatus, getFiltrosLimpieza, getFiltrosEstatus);
         call.enqueue(new Callback<GabResponsePMI>() {
             @Override
             public void onResponse(Call<GabResponsePMI> call, Response<GabResponsePMI> response) {
