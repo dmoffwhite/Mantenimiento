@@ -96,6 +96,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_tub_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -104,6 +105,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_tub_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -135,6 +137,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_tub_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -143,6 +146,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_tub_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -183,6 +187,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_tub_gab_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"
@@ -242,6 +247,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_seg_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -250,6 +256,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_seg_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -280,6 +287,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_seg_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -288,6 +296,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_seg_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -328,6 +337,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_seg_gab_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"
@@ -390,6 +400,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_cab_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -398,6 +409,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_cab_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -428,6 +440,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_cab_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -436,6 +449,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_cab_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -476,6 +490,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_cab_gab_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"
@@ -534,6 +549,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_ext_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -542,6 +558,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_ext_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -572,6 +589,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_ext_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -580,6 +598,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_ext_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -620,6 +639,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_ext_gab_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"
@@ -678,6 +698,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_cier_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -686,6 +707,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_cier_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -716,6 +738,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_cier_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -724,6 +747,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_cier_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -764,6 +788,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_cier_gab_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"
@@ -822,6 +847,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_cabn_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -830,6 +856,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_cabn_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -860,6 +887,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_cabnc_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -868,6 +896,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_cabnc_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -908,6 +937,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_cabnC_gab_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"
@@ -967,6 +997,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_vent_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -975,6 +1006,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_vent_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -1005,14 +1037,16 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_vent_lpr_si"
                         android:layout_width="match_parent"
-                        android:layout_height="27sp"
+                        android:layout_height="wrap_content"
                         android:button="@drawable/image_checkbox"
                         android:buttonTint="@color/azul_cierlo_fuerte"
                         android:text="@string/tag_si"
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_vent_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -1053,6 +1087,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_vent_ga_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"
@@ -1112,6 +1147,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_filt_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -1120,6 +1156,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_filt_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -1150,6 +1187,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_filt_lpr_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -1158,6 +1196,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_filt_lpr_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -1199,6 +1238,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_filt_ga_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"
@@ -1257,6 +1297,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/limpieza_sil_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -1265,6 +1306,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/limpieza_sil_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -1295,6 +1337,7 @@
                     android:layout_height="match_parent">
 
                     <CheckBox
+                        android:id="@+id/estatus_sil_si"
                         android:layout_width="match_parent"
                         android:layout_height="27sp"
                         android:button="@drawable/image_checkbox"
@@ -1303,6 +1346,7 @@
                         android:theme="@style/colored_checkBox" />
 
                     <CheckBox
+                        android:id="@+id/estatus_sil_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@drawable/image_checkbox"
@@ -1343,6 +1387,7 @@
                 app:hintTextColor="@color/principal">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_sil_gab_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:imeOptions="actionNext"

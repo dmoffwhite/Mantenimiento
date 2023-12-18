@@ -120,6 +120,15 @@ public class MenuPMI extends AppCompatActivity {
             }
         });
 
+        CardView obs = findViewById(R.id.btn_pmi_obsgrl);
+        obs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuPMI.this, ObservacionGrlPMI.class);
+                startActivity(intent);
+            }
+        });
+
         ImageButton img = findViewById(R.id.back);
         img.setOnClickListener(new View.OnClickListener() {
             @Override

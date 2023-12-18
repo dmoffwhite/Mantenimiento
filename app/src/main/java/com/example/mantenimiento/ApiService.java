@@ -1,10 +1,14 @@
 package com.example.mantenimiento;
 
+import android.widget.EditText;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public interface ApiService {
     @FormUrlEncoded
@@ -176,6 +180,122 @@ public interface ApiService {
       @Field("cNV_est") boolean getCablesNEstatus
 
     );
+
+
+    //LPR
+    @POST("api/pararayosLPR/create")
+    Call<PararayoResponseLPR> storePararayosLPR(
+            @Field("idMantenimiento") int idMantenimiento,
+            @Field("pFaraday_lim") boolean getPuntaLimpieza,
+            @Field("pFaraday_est") boolean getPuntaEstatus
+    );
+
+    @POST("api/equipamientoLPR/create")
+    Call<EquipResponseLPR> storeEquipLPR(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("radio_lim") boolean getRadioLimpieza,
+      @Field("radio_est") boolean getRadioEstatus,
+      @Field("cam_lpr_lim") boolean getCamLimpieza,
+      @Field("cam_lpr_est") boolean getCamEstatus
+    );
+
+
+    @POST("api/electrificacionLPR/create")
+    Call<ElectResponseLPR> storeElecLPR(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("ali_elec_lim") boolean getRevisionLimpieza,
+      @Field("ali_elec_est") boolean getRevisionEstatus
+    );
+
+    @POST("api/gabineteLPR/create")
+    Call<GabResponseLPR> storeGabLPR(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("tuberia_lim") boolean getTubLicLimpieza,
+      @Field("tuberia_est") boolean getTubLicEstatus,
+      @Field("tapa_lim") boolean getTorSegLimpieza,
+      @Field("tapa_est") boolean getTorSegEstatus,
+      @Field("cab_int_lim") boolean getCabLimpieza,
+      @Field("cab_int_est") boolean getCabEstatus,
+      @Field("ext_gab_lim") boolean getExtLimpieza,
+      @Field("ext_gab_est") boolean getExtEstatus,
+      @Field("cierna_lim") boolean getCierLimpieza,
+      @Field("cierna_est") boolean getCierEstatus,
+      @Field("cab_neu_lim") boolean getCabNeuLimpieza,
+      @Field("cab_neu_est") boolean getCabNeuEstatus,
+      @Field("vent_lim") boolean getVentLimpieza,
+      @Field("vent_est") boolean getVentEstatus,
+      @Field("filt_lim") boolean getFiltLimpieza,
+      @Field("filt_est") boolean getFiltEstatus,
+      @Field("sil_lim") boolean getSilLimpieza,
+      @Field("sil_est") boolean getSilEstatus
+    );
+
+    @POST("api/registroLPR/create")
+    Call<RegistroResponseLPR> storeRegLPR(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("tap_gal_lim") boolean getGalvLimpieza,
+      @Field("tap_gal_est") boolean getGalvEstatus,
+      @Field("torn_lim") boolean getTorxLimpieza,
+      @Field("torn_est") boolean getTorxEstatus
+    );
+
+    @POST("api/anclasLPR/create")
+    Call<AnclasResponseLPR> storeAnclasLPR(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("cuerda_gal_lim") boolean getCuerdaLimpieza,
+      @Field("cuerda_gal_est") boolean getCuerdaEstatus,
+      @Field("tu_rop_ron_lim") boolean getPiezasLimpieza,
+      @Field("tu_rop_ron_est") boolean getPiezasEstatus
+    );
+
+    @POST("api/cimentacionLPR/create")
+    Call<CimResponseLPR> storeCimLPR(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("super_cim_lim") boolean getAcabLimpieza,
+      @Field("super_cim_est") boolean getAcabEstatus,
+      @Field("super_sin_lim") boolean getExpLimpieza,
+      @Field("super_sin_est") boolean getExpEstatus,
+      @Field("grout_lim") boolean getGroutLimpieza,
+      @Field("grout_est") boolean getGroutEstatus
+    );
+
+    @POST("api/estructuraLPR/create")
+    Call<EstResponseLPR> storeEstLPR(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("tor_brida_lim") boolean getTorbLimpieza,
+      @Field("tor_brida_est") boolean getTorbEstatus,
+      @Field("galv_lim") boolean getGalvLimpieza,
+      @Field("galv_est") boolean getGalvEstatus
+    );
+
+    @POST("api/sistemaLPR/create")
+    Call<SistemaResponseLPR> storeSisLPR(
+      @Field("idMantenimiento") int idMantenimiento,
+      @Field("nPiso_lim") boolean getNivelLimpieza,
+      @Field("nPiso_est") boolean getNivelEstatus,
+      @Field("rPieza_lim") boolean getRegistroLimpieza,
+      @Field("rPieza_est") boolean getRegistroEstatus,
+      @Field("eConec_lim") boolean getEstadoCLimpieza,
+      @Field("eConec_est") boolean getEstadoCEstado,
+      @Field("cNV_lim") boolean getCablesNLimpieza,
+      @Field("cNV_est") boolean getCablesNEstatus
+    );
+
+    @PUT("api/mantenimiento/edit/{id}")
+    Call<ObsResponseLPR> updateOBSLPR(
+            @Path("id") int idMantenimiento,
+            @Field("obser_grl") String obsGrl
+    );
+
+    @PUT("api/mantenimiento/edit/{id}")
+    Call<ObsResponsePMI> updateOBSPMI(
+            @Path("id") int idMantenimiento,
+            @Field("obser_grl") String obsGrl
+    );
+
+
+
+
 
 
 

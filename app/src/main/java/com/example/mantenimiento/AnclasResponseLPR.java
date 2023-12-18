@@ -2,7 +2,7 @@ package com.example.mantenimiento;
 
 import com.google.gson.annotations.SerializedName;
 
-public class SistemaResponsePMI {
+public class AnclasResponseLPR {
     @SerializedName("success")
     private boolean success;
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -18,23 +19,32 @@ public class GabinetePMI extends AppCompatActivity {
 
     private boolean geTuberiaLimpieza;
     private boolean geTuberiaEstatus;
+    private EditText obsTubPMI;
 
     private boolean getTapaLimpieza;
     private boolean getTapaEstatus;
+    private EditText obsTapaPMI;
     private boolean getCabInLimpieza;
     private boolean getCabInEstatus;
+    private EditText obsCabInPMI;
     private boolean getExteriorLimpieza;
     private boolean getExteriorEstatus;
+    private EditText obsExteriorPMI;
     private boolean getFijacionLimpieza;
     private boolean getFijacionEstatus;
+    private EditText obsFijacionPMI;
     private boolean getOrientacionLimpieza;
     private boolean getOrientacionEstatus;
+    private EditText obsOrientacionPMI;
     private boolean getCablenNLimpieza;
     private boolean getCableNEstatus;
+    private EditText obsCablePMI;
     private boolean getVentiladorLimpieza;
     private boolean getVentiladorEstatus;
+    private EditText obsVentiladorPMI;
     private boolean getFiltrosLimpieza;
     private boolean getFiltrosEstatus;
+    private EditText obsFiltrosPMI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -460,10 +470,32 @@ public class GabinetePMI extends AppCompatActivity {
             }
         });
 
+        obsTubPMI = findViewById(R.id.ob_tuli_ga_pmi);
+        obsTapaPMI = findViewById(R.id.ob_tap_ga_pmi);
+        obsCabInPMI = findViewById(R.id.ob_cai_ga_pmi);
+        obsExteriorPMI = findViewById(R.id.ob_ext_ga_pmi);
+        obsFijacionPMI = findViewById(R.id.ob_fija_ga_pmi);
+        obsOrientacionPMI = findViewById(R.id.ob_ori_ga_pmi);
+        obsCablePMI = findViewById(R.id.ob_neu_ga_pmi);
+        obsVentiladorPMI = findViewById(R.id.ob_vent_ga_pmi);
+        obsFiltrosPMI = findViewById(R.id.ob_filt_ga_pmi);
+
+
+
         ImageButton save = findViewById(R.id.siguiente_menu);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String obsTub = obsTubPMI.getText().toString();
+                String obsTapa = obsTapaPMI.getText().toString();
+                String obsCabIn = obsCabInPMI.getText().toString();
+                String obsExt = obsExteriorPMI.getText().toString();
+                String obsFijacion = obsFijacionPMI.getText().toString();
+                String obsOrientacion = obsOrientacionPMI.getText().toString();
+                String obsCable = obsCablePMI.getText().toString();
+                String obsVentilador = obsVentiladorPMI.getText().toString();
+                String obsFiltros = obsFiltrosPMI.getText().toString();
+
                 storeGabinete(geTuberiaLimpieza, geTuberiaEstatus, getTapaLimpieza, getTapaEstatus, getCabInLimpieza, getCabInEstatus, getExteriorLimpieza, getExteriorEstatus, getFijacionLimpieza, getFijacionEstatus, getOrientacionLimpieza, getOrientacionEstatus, getCablenNLimpieza, getCableNEstatus, getVentiladorLimpieza, getVentiladorEstatus, getFiltrosLimpieza, getFiltrosEstatus);
             }
         });
@@ -497,7 +529,7 @@ public class GabinetePMI extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<GabResponsePMI> call, Throwable t) {
-                Toast.makeText(GabinetePMI.this, "Error de conexión", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GabinetePMI.this, "Error en la conexión" + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }

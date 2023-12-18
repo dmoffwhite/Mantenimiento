@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
@@ -32,7 +34,7 @@ public class FormLPR extends AppCompatActivity {
     private EditText placasLPR;
     private String tipoMantenimiento;
 
-    private EditText municipioLPR;
+    private AutoCompleteTextView municipioLPR;
 
 
 
@@ -42,6 +44,20 @@ public class FormLPR extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_lpr);
 
+        AutoCompleteTextView autoCompleteMunicipio = findViewById(R.id.edittext_municipio_lpr);
+        ArrayAdapter<String> municipioAdapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_dropdown_item_1line,
+                getResources().getStringArray(R.array.array_municipios)
+        );
+        autoCompleteMunicipio.setAdapter(municipioAdapter);
+
+        autoCompleteMunicipio.setOnItemClickListener((parent, view, position, id) -> {
+            String selectedMunicipio = (String) parent.getItemAtPosition(position);
+            Toast.makeText(this, "Municipio seleccionado" + selectedMunicipio, Toast.LENGTH_SHORT).show();
+
+        });
+
         CheckBox checkBoxPreventivo = findViewById(R.id.preventivo);
         CheckBox checkBoxCorrectivo = findViewById(R.id.correctivo);
 
@@ -50,7 +66,7 @@ public class FormLPR extends AppCompatActivity {
         cuadrillaLPR = findViewById(R.id.edittext_cuadrilla_lpr);
         fechaLPR = findViewById(R.id.edittext_fecha_lpr);
         placasLPR = findViewById(R.id.edittext_placas_lpr);
-        municipioLPR = findViewById(R.id.edittext_municipio_lpr);
+        municipioLPR = autoCompleteMunicipio;
 
         checkBoxPreventivo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -91,7 +107,7 @@ public class FormLPR extends AppCompatActivity {
                 String cuadrilla = cuadrillaLPR.getText().toString();
                 String fecha = fechaLPR.getText().toString();
                 String placas = placasLPR.getText().toString();
-                String municipio = municipioLPR.getText().toString();
+                String municipio = autoCompleteMunicipio.getEditableText().toString();
                 storeMantenimiento(tipoMantenimiento, lprID, folio, cuadrilla, fecha, placas, municipio);
 
             }

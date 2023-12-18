@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
@@ -32,7 +34,7 @@ public class FormPMI extends AppCompatActivity {
     private EditText placasPMI;
 
     private String tipoMantenimiento;
-    private EditText municipioPMI;
+    private AutoCompleteTextView municipioPMI;
 
 
 
@@ -41,6 +43,20 @@ public class FormPMI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_pmi);
+
+        AutoCompleteTextView autoCompleteMunicipio = findViewById(R.id.edittext_municipio_pmi);
+        ArrayAdapter<String> municipioAdapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_dropdown_item_1line,
+                getResources().getStringArray(R.array.array_municipios)
+        );
+        autoCompleteMunicipio.setAdapter(municipioAdapter);
+
+        autoCompleteMunicipio.setOnItemClickListener((parent, view, position, id) -> {
+            String selectedMunicipio = (String) parent.getItemAtPosition(position);
+            Toast.makeText(this, "Municipio seleccionado" + selectedMunicipio, Toast.LENGTH_SHORT).show();
+
+        });
 
 
 
@@ -52,7 +68,7 @@ public class FormPMI extends AppCompatActivity {
         cuadrillaPMI = findViewById(R.id.edittext_cuadrilla_pmi);
         fechaPMI = findViewById(R.id.edittext_fecha_pmi);
         placasPMI = findViewById(R.id.edittext_placas_pmi);
-        municipioPMI = findViewById(R.id.edittext_municipio_pmi);
+        municipioPMI = autoCompleteMunicipio;
 
 
         checkBoxPreventivo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -100,7 +116,7 @@ public class FormPMI extends AppCompatActivity {
                 String cuadrilla = cuadrillaPMI.getText().toString();
                 String fecha = fechaPMI.getText().toString();
                 String placas = placasPMI.getText().toString();
-                String municipio = municipioPMI.getText().toString();
+                String municipio = autoCompleteMunicipio.getEditableText().toString();
                 Intent intent = new Intent(FormPMI.this, MenuPMI.class);
                 startActivity(intent);
                 storeMantenimiento(tipoMantenimiento, pmiID, folio, cuadrilla, fecha, placas, municipio);

@@ -229,7 +229,7 @@ public class CimentacionPMI extends AppCompatActivity {
                 String obsAcab = obsSupPMI.getText().toString();
                 String obsExp = obsExpPMI.getText().toString();
                 String obsGrout = obsGroutPMI.getText().toString();
-                storeCiemntacion(getNivelLimpieza, getNivelEstatus, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus);
+                storeCimentacion(getNivelLimpieza, getNivelEstatus, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus);
                 
             }
         });
@@ -248,7 +248,7 @@ public class CimentacionPMI extends AppCompatActivity {
 
     }
 
-    private void storeCiemntacion(boolean getNivelLimpieza, boolean getNivelEstatus, boolean getAcabLimpieza, boolean getAcabEstatus, boolean getExpLimpieza, boolean getExpEstatus, boolean getGroutLimpieza, boolean getGroutEstatus) {
+    private void storeCimentacion(boolean getNivelLimpieza, boolean getNivelEstatus, boolean getAcabLimpieza, boolean getAcabEstatus, boolean getExpLimpieza, boolean getExpEstatus, boolean getGroutLimpieza, boolean getGroutEstatus) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
@@ -267,7 +267,7 @@ public class CimentacionPMI extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<CimResponsePMI> call, Throwable t) {
-                Toast.makeText(CimentacionPMI.this, "Error de conexion", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CimentacionPMI.this, "Error de conexión", Toast.LENGTH_SHORT).show();
             }
         });
     }

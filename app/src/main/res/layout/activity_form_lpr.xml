@@ -355,23 +355,18 @@
                 android:id="@+id/input_pmi_municipio"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:endIconMode="custom"
-                app:endIconTint="@color/azul_cierlo_fuerte"
-                app:endIconDrawable="@drawable/municipio"
-                app:endIconContentDescription="Seleccione municipio"
                 app:boxStrokeColor="@color/principal"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:hint="@string/input_lpr_municipio"
                 app:boxBackgroundColor="@color/white"
                 app:hintTextColor="@color/principal">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <AutoCompleteTextView
                     android:id="@+id/edittext_municipio_lpr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:imeOptions="actionDone"
-                    android:inputType="textCapCharacters"
-                    android:textColor="@color/black"/>
+                    android:inputType="none"
+                    android:imeOptions="actionDone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

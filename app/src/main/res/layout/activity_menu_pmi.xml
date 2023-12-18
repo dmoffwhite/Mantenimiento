@@ -413,7 +413,7 @@
             android:layout_width="90sp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="8dp"
-            android:layout_margin="10sp"
+            android:layout_margin="8sp"
             app:cardBackgroundColor="@color/white"
             style="@style/MyCardViewStyle">
 
@@ -447,6 +447,7 @@
             android:layout_width="90sp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="8dp"
+            android:layout_marginRight="8sp"
             app:cardBackgroundColor="@color/white"
             style="@style/MyCardViewStyle">
 
@@ -474,6 +475,39 @@
 
 
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_pmi_obsgrl"
+            android:layout_width="90sp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white"
+            style="@style/MyCardViewStyle">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="70sp"
+                    android:layout_height="70sp"
+                    android:background="@drawable/menu_obs" />
+
+                <TextView
+                    android:textColor="@color/principal"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/label_pmi_obsgrl" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
 
 
 

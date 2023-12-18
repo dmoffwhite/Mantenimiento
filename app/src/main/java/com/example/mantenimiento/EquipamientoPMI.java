@@ -268,8 +268,7 @@ public class EquipamientoPMI extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<EquipResponsePMI> call, Throwable t) {
-                Toast.makeText(EquipamientoPMI.this, "Error de conexión", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(EquipamientoPMI.this, "Error en la conexión" + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }

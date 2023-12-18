@@ -97,6 +97,15 @@ public class MenuLPR extends AppCompatActivity {
             }
         });
 
+        CardView obs = findViewById(R.id.btn_lpr_tierras);
+        obs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuLPR.this, ObservacionGrlLPR.class);
+                startActivity(intent);
+            }
+        });
+
         ImageButton img = findViewById(R.id.back);
         img.setOnClickListener(new View.OnClickListener() {
             @Override

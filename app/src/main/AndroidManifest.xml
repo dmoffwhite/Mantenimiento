@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ObservacionGrlLPR"
+            android:exported="false" />
+        <activity
+            android:name=".ObservacionGrlPMI"
+            android:exported="false" />
+        <activity
             android:name=".FormLPR"
             android:exported="false" />
         <activity

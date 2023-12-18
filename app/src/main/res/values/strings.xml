@@ -36,6 +36,7 @@
     <string name="label_pmi_anclas">Anclas</string>
     <string name="label_pmi_cimentacion">Cimentación</string>
     <string name="label_pmi_tierra">Sistema tierra</string>
+    <string name="label_pmi_obsgrl">Observación</string>
 
 
     <string name="components_pmi">Componentes PMI</string>
@@ -182,6 +183,8 @@
     <string name="registro_sistema_lpr">Registro en una sola pieza</string>
     <string name="conectores_sistema_lpr">Estado de conectores (cables sueltos o sulfatados)</string>
     <string name="cables_sistema_lpr">Cables no visibles hacia el registro</string>
+
+    <string name="obsr_grl">Observación general</string>
 
 
 </resources>
