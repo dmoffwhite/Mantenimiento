@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,859 +9,1420 @@
     tools:context=".GabinetePMI">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
-        android:layout_height="92sp"
-        android:background="@drawable/header_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="92sp"
+            android:background="@drawable/header_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            android:text="@string/welcome"
-            android:textColor="@color/white"
-            android:textSize="20sp"
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:text="@string/label_pmi_gabinete"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.507" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_tuberia_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tuberia_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_tublic_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_tublic_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_tublic_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_tublic_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_tuberia"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_tuberia_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_tuli_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_tapa_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tuberia">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tapa_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_tap_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_tap_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_tap_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_tap_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_tapa"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_tapa_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_tap_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_cables_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_tapa">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/cables_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_int_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_int_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_int_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_int_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_cablesI"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_cables_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_cai_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_exterior_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_cablesI">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/exterior_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_ext_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_ext_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_ext_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_ext_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_exterior"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_exterior_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_ext_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_fijacion_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_exterior">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fijacion_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_fijc_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_fijc_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_fijc_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_fijc_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_fijacion"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_fijacion_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_fija_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_orientacion_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_fijacion">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/orientacion_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_ori_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_ori_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_ori_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_ori_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_orientacion"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_orientacion_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_ori_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_cableN_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_orientacion">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/cable_neutro_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_neu_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_neu_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_neu_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_neu_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_cableN"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_cableN_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_neu_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_ventilador_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_cableN">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/ventilador_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_vent_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_vent_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_vent_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_vent_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_ventilador"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_ventilador_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_vent_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_filtros_gabinete"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_ventilador">
+
+
+            <LinearLayout
+                android:layout_width="150sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/filtros_gabinete"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_limpieza"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/limpieza_filt_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/limpieza_filt_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tag_estatus"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/estatus_filt_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="27sp"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_si"
+                        android:theme="@style/colored_checkBox" />
+
+                    <CheckBox
+                        android:id="@+id/estatus_filt_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/image_checkbox"
+                        android:buttonTint="@color/azul_cierlo_fuerte"
+                        android:text="@string/tag_no"
+                        android:theme="@style/colored_checkBox" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_obs_filtros"
+            android:layout_width="0dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10sp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_filtros_gabinete"
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/boton_obs"
+                app:boxBackgroundColor="@color/white"
+                app:endIconContentDescription="Ingresa observación"
+                app:endIconDrawable="@drawable/inspect"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:boxStrokeColor="@color/principal"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ob_filt_ga_pmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/siguiente_menu"
+            android:layout_width="222dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="50sp"
+            android:layout_marginBottom="90dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/botonsiguiente"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_filtros" />
+
+
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout_tuberia_gabinete"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tuberia_gabinete"
 
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="140sp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_limpieza"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_estatus"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_obs_uno"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tuberia_gabinete"
-
-        >
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/boton_obs"
-            app:boxBackgroundColor="@color/white"
-            app:endIconContentDescription="Ingresa observación"
-            app:endIconDrawable="@drawable/inspect"
-            app:endIconMode="custom"
-            app:endIconTint="@color/azul_cierlo_fuerte"
-            app:hintTextColor="@color/principal">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionNext"
-                android:maxLines="1"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_tapa_gabinete"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_uno">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tapa_gabinete"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="140sp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_limpieza"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_estatus"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_obs_dos"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tapa_gabinete"
-
-        >
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/boton_obs"
-            app:boxBackgroundColor="@color/white"
-            app:endIconContentDescription="Ingresa observación"
-            app:endIconDrawable="@drawable/inspect"
-            app:endIconMode="custom"
-            app:endIconTint="@color/azul_cierlo_fuerte"
-            app:hintTextColor="@color/principal">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionNext"
-                android:maxLines="1"
-                android:textColor="@color/black" />
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_cables_gabinete"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_dos">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/cables_gabinete"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="140sp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_limpieza"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_estatus"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_obs_cablesI"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_cables_gabinete"
-
-        >
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/boton_obs"
-            app:boxBackgroundColor="@color/white"
-            app:endIconContentDescription="Ingresa observación"
-            app:endIconDrawable="@drawable/inspect"
-            app:endIconMode="custom"
-            app:endIconTint="@color/azul_cierlo_fuerte"
-            app:hintTextColor="@color/principal">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionNext"
-                android:maxLines="1"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_exterior_gabinete"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_cablesI">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/exterior_gabinete"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="140sp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_limpieza"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_estatus"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_obs_exterior"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_exterior_gabinete"
-
-        >
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/boton_obs"
-            app:boxBackgroundColor="@color/white"
-            app:endIconContentDescription="Ingresa observación"
-            app:endIconDrawable="@drawable/inspect"
-            app:endIconMode="custom"
-            app:endIconTint="@color/azul_cierlo_fuerte"
-            app:hintTextColor="@color/principal">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionNext"
-                android:maxLines="1"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_fijacion_gabinete"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_exterior">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/fijacion_gabinete"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="140sp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_limpieza"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_estatus"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_obs_fijacion"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_fijacion_gabinete"
-
-        >
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/boton_obs"
-            app:boxBackgroundColor="@color/white"
-            app:endIconContentDescription="Ingresa observación"
-            app:endIconDrawable="@drawable/inspect"
-            app:endIconMode="custom"
-            app:endIconTint="@color/azul_cierlo_fuerte"
-            app:hintTextColor="@color/principal">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionNext"
-                android:maxLines="1"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout_orientacion_gabinete"
-        android:layout_width="0dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_fijacion">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/fijacion_gabinete"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="140sp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_limpieza"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/tag_estatus"
-                android:textStyle="bold" />
-
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="27sp"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_si"
-                    android:theme="@style/colored_checkBox" />
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:button="@drawable/image_checkbox"
-                    android:buttonTint="@color/azul_cierlo_fuerte"
-                    android:text="@string/tag_no"
-                    android:theme="@style/colored_checkBox" />
-
-            </RadioGroup>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
 
 

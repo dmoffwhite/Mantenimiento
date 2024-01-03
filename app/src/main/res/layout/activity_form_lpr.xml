@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormLPR"
+    android:background="@drawable/fondomenu">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="92sp"
+        android:background="@drawable/header_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="25sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10sp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo_lpr_mantenimiento"
+
+
+                android:textStyle="bold"/>
+
+            <CheckBox
+                android:id="@+id/preventivo"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text="@string/tag_lpr_preventivo"
+                android:buttonTint="@color/azul_cierlo_fuerte"
+                android:theme="@style/colored_checkBox"
+                android:button="@drawable/image_checkbox"
+                />
+
+            <CheckBox
+                android:id="@+id/correctivo"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="@string/tag_lpr_correctivo"
+                android:buttonTint="@color/azul_cierlo_fuerte"
+                android:theme="@style/colored_checkBox"
+                android:button="@drawable/image_checkbox"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_pmi_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:endIconDrawable="@drawable/id"
+                app:endIconContentDescription="Ingresa id"
+                app:boxStrokeColor="@color/principal"
+                android:hint="@string/input_lpr_id"
+                app:boxBackgroundColor="@color/white"
+                app:hintTextColor="@color/principal"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_lprID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_pmi_folio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:endIconDrawable="@drawable/folio"
+                app:endIconContentDescription="Ingresa folio"
+                app:boxStrokeColor="@color/principal"
+                android:hint="@string/input_lpr_folio"
+                app:hintTextColor="@color/principal"
+                app:boxBackgroundColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_folio_lpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_pmi_cuadrilla"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:endIconDrawable="@drawable/cuadrilla"
+                app:endIconContentDescription="Ingresa cuadrilla"
+                app:boxStrokeColor="@color/principal"
+                android:hint="@string/input_lpr_cuadrilla"
+                app:boxBackgroundColor="@color/white"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_cuadrilla_lpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/black"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_pmi_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:endIconDrawable="@drawable/visita"
+                app:endIconContentDescription="Selecciona fecha"
+                app:boxStrokeColor="@color/principal"
+                android:hint="@string/input_lpr_fecha"
+                app:boxBackgroundColor="@color/white"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_fecha_lpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:clickable="true"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_pmi_placas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="custom"
+                app:endIconTint="@color/azul_cierlo_fuerte"
+                app:endIconDrawable="@drawable/carro"
+                app:endIconContentDescription="Inserte placas"
+                app:boxStrokeColor="@color/principal"
+                android:hint="@string/input_lpr_placas"
+                app:boxBackgroundColor="@color/white"
+                app:hintTextColor="@color/principal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_placas_lpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_pmi_municipio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:boxStrokeColor="@color/principal"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="@string/input_lpr_municipio"
+                app:boxBackgroundColor="@color/white"
+                app:hintTextColor="@color/principal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/edittext_municipio_lpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:imeOptions="actionDone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/siguiente"
+        android:layout_width="222dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="90sp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/botonsiguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

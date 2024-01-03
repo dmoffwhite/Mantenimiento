@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondomenu"
+    tools:context=".SistemaTierrasPMI">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="0dp"
+        android:layout_height="92sp"
+        android:background="@drawable/header_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:text="@string/label_pmi_tierra"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_nivel_sistema"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="150sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/nivel_sistema"
+
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_limpieza"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/limpieza_ban_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:id="@+id/limpieza_ban_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/estatus_ban_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:id="@+id/estatus_ban_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_nivel"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_nivel_sistema"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/principal"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_ban_tierra_pmi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_registro_sistema"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_nivel"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="150sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/registro_sistema"
+
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_limpieza"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/limpieza_reg_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:id="@+id/limpieza_reg_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/estatus_reg_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:id="@+id/estatus_reg_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_registro"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_registro_sistema"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/principal"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_reg_tierra_pmi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_estado_sistema"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_registro"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="150sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/conectores_sistema"
+
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_limpieza"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/limpieza_estcon_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:id="@+id/limpieza_estcon_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/estatus_estcon_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:id="@+id/estatus_estcon_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_estado"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_estado_sistema"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/principal"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_estcon_tierra_pmi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_cables_sistema"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_estado"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="150sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/cables_sistema"
+
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tag_limpieza"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/limpieza_cabn_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:id="@+id/limpieza_cabn_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_estatus"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/estatus_cabn_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="27sp"
+                    android:text="@string/tag_si"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+                <CheckBox
+                    android:id="@+id/estatus_cabn_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tag_no"
+                    android:buttonTint="@color/azul_cierlo_fuerte"
+                    android:theme="@style/colored_checkBox"
+                    android:button="@drawable/image_checkbox"/>
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_obs_cables"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_cables_sistema"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endIconMode="custom"
+            app:endIconTint="@color/azul_cierlo_fuerte"
+            app:endIconDrawable="@drawable/inspect"
+            android:hint="@string/boton_obs"
+            app:endIconContentDescription="Ingresa observación"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/principal"
+            app:hintTextColor="@color/principal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_cabn_tierra_pmi"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/siguiente_menu"
+        android:layout_width="222dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="50sp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/botonsiguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_obs_cables" />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

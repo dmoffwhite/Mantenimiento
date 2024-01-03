@@ -9,27 +9,37 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="92sp"
         android:background="@drawable/header_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
-            android:text="@string/welcome"
+            android:layout_marginStart="24dp"
+            android:text="@string/label_pmi_postes"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.05"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -48,7 +58,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="150sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -57,6 +67,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/conectores_tapon"
 
                 android:textStyle="bold"/>
@@ -64,7 +75,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="140sp"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -84,6 +95,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_con_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -91,6 +103,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_con_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -103,7 +116,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -124,6 +137,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_con_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -131,6 +145,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_con_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -167,13 +182,14 @@
             android:hint="@string/boton_obs"
             app:endIconContentDescription="Ingresa observación"
             app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/principal"
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_con_pos_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:maxLines="1"
-                android:imeOptions="actionNext"
+                android:imeOptions="actionDone"
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -196,7 +212,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="150sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -205,13 +221,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/elementos_ajenos"
                 android:textStyle="bold"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="140sp"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -222,7 +239,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/tag_si"
+                android:text="@string/tag_limpieza"
                 android:textStyle="bold"/>
 
 
@@ -231,6 +248,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_ele_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -238,6 +256,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_ele_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -250,7 +269,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -270,6 +289,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_ele_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -277,6 +297,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_ele_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -315,12 +336,13 @@
             android:hint="@string/boton_obs"
             app:endIconContentDescription="Ingresa observación"
             app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/principal"
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_ele_pos_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:maxLines="1"
                 android:imeOptions="actionNext"
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -342,7 +364,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="150sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -351,14 +373,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/ligado_sanacion"
-
                 android:textStyle="bold"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="140sp"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -378,6 +400,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_secc_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -385,6 +408,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_secc_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -397,7 +421,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -418,6 +442,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_secc_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -425,6 +450,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_secc_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -459,12 +485,13 @@
             android:hint="@string/boton_obs"
             app:endIconContentDescription="Ingresa observación"
             app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/principal"
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_secc_pos_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:maxLines="1"
                 android:imeOptions="actionNext"
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -486,7 +513,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="150sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -495,13 +522,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/aplicacion_pintura"
                 android:textStyle="bold"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="140sp"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -521,6 +549,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/limpieza_pint_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -528,6 +557,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/limpieza_pint_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -540,7 +570,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
@@ -561,6 +591,7 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
+                    android:id="@+id/estatus_pint_si"
                     android:layout_width="match_parent"
                     android:layout_height="27sp"
                     android:text="@string/tag_si"
@@ -568,6 +599,7 @@
                     android:theme="@style/colored_checkBox"
                     android:button="@drawable/image_checkbox"/>
                 <CheckBox
+                    android:id="@+id/estatus_pint_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tag_no"
@@ -600,12 +632,13 @@
             android:hint="@string/boton_obs"
             app:endIconContentDescription="Ingresa observación"
             app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/principal"
             app:hintTextColor="@color/principal">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ob_pin_pos_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:maxLines="1"
                 android:imeOptions="actionNext"
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -617,7 +650,7 @@
         android:id="@+id/siguiente_menu"
         android:layout_width="222dp"
         android:layout_height="63dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="52dp"
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/botonsiguiente"

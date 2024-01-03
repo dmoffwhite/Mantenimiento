@@ -1,25 +1,22 @@
 package com.example.mantenimiento;
 
-import java.util.Date;
+public class FormResponseLPR {
 
-public class MantenimientoResponsePMI {
     private int status;
-
     private int idUsuario;
-    private String municipio;
-    private int mes;
+
+    private int idMantenimiento;
+    private  String municipio;
     private String folio;
     private String cuadrilla;
-    private Date fecha_visita;
+    private String fecha_visita;
     private String tipo_mantenimiento;
     private String placas_vehiculo;
-    private int pmi_id;
+    private String lpr_id;
 
     public int getStatus(){return status;}
 
-    public void setStatus(int status) {
-        this.status = status;
-    }
+    public void setStatus(int status){this.status = status;}
 
     public int getIdUsuario() {
         return idUsuario;
@@ -35,14 +32,6 @@ public class MantenimientoResponsePMI {
 
     public void setMunicipio(String municipio) {
         this.municipio = municipio;
-    }
-
-    public int getMes() {
-        return mes;
-    }
-
-    public void setMes(int mes) {
-        this.mes = mes;
     }
 
     public String getFolio() {
@@ -61,11 +50,11 @@ public class MantenimientoResponsePMI {
         this.cuadrilla = cuadrilla;
     }
 
-    public Date getFecha_visita() {
+    public String getFecha_visita() {
         return fecha_visita;
     }
 
-    public void setFecha_visita(Date fecha_visita) {
+    public void setFecha_visita(String fecha_visita) {
         this.fecha_visita = fecha_visita;
     }
 
@@ -85,11 +74,20 @@ public class MantenimientoResponsePMI {
         this.placas_vehiculo = placas_vehiculo;
     }
 
-    public int getPmi_id() {
-        return pmi_id;
+    public String getLpr_id() {
+        return lpr_id;
     }
 
-    public void setPmi_id(int pmi_id) {
-        this.pmi_id = pmi_id;
+    public void setLpr_id(String lpr_id) {
+        this.lpr_id = lpr_id;
+    }
+
+    public int getIdMantenimiento() {
+
+        return idMantenimiento;
+    }
+
+    public void setIdMantenimiento(int idMantenimiento) {
+        this.idMantenimiento = idMantenimiento;
     }
 }

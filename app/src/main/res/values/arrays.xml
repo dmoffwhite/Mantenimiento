@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_municipios">
+        <item>AGUASCALIENTES</item>
+        <item>ASIENTOS</item>
+        <item>CALVILLO</item>
+        <item>COSIO</item>
+        <item>JESUS MARIA</item>
+        <item>PABELLON DE ARTEAGA</item>
+        <item>RINCON DE ROMOS</item>
+        <item>SAN JOSE DE GRACIA</item>
+        <item>TEPEZALA</item>
+        <item>EL LLANO</item>
+        <item>SAN FRANCISCO DE LOS ROMO</item>
+    </string-array>
+</resources>

@@ -4,7 +4,7 @@
     <string name="password">Contraseña</string>
     <string name="user">Nombre de usuario</string>
     <string name="sign">Por favor acceda con su cuenta</string>
-    <string name="sign_inicio">Mantenimientos LPR Y PMI</string>
+    <string name="sign_inicio">Mantenimientos PMI y LPR</string>
     <string name="welcome">Bienvenido</string>
     <string name="choice">Elija el mantenimiento</string>
     <string name="pmi">Mantenimiento PMI</string>
@@ -26,7 +26,7 @@
 
     <string name="label_pmi_datos">Datos</string>
     <string name="label_pmi_postes">Postes</string>
-    <string name="label_pmi_pararayos">Pararayos</string>
+    <string name="label_pmi_pararayos">Pararayo</string>
     <string name="label_pmi_brazo">Brazos</string>
     <string name="label_pmi_equipamiento">Equipamiento</string>
     <string name="label_pmi_gabinete">Gabinete</string>
@@ -34,8 +34,9 @@
     <string name="label_pmi_boton">Boton</string>
     <string name="label_pmi_registroM">Registro</string>
     <string name="label_pmi_anclas">Anclas</string>
-    <string name="label_pmi_cimentacion">Cimentacion</string>
+    <string name="label_pmi_cimentacion">Cimentación</string>
     <string name="label_pmi_tierra">Sistema tierra</string>
+    <string name="label_pmi_obsgrl">Observación</string>
 
 
     <string name="components_pmi">Componentes PMI</string>
@@ -48,17 +49,27 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-    <!--Activity form Pmi-->
+    <!--Activity form PMI-->
     <string name="tipo_mantenimiento">TIPO DE MANTENIMIENTO:</string>
     <string name="tag_preventivo">PREVENTIVO</string>
     <string name="tag_correctivo">CORRECTIVO</string>
     <string name="input_pmi_id">PMI ID</string>
     <string name="input_folio">FOLIO</string>
     <string name="input_cuadrilla">CUADRILLA</string>
-    <string name="input_mes">MES</string>
     <string name="input_fecha">FECHA DE VISITA</string>
     <string name="input_placas">PLACAS DEL VEHICULO</string>
     <string name="input_municipio">MUNICIPIO</string>
+
+    <!--Activity form LPR-->
+    <string name="tipo_lpr_mantenimiento">TIPO DE MANTENIMIENTO:</string>
+    <string name="tag_lpr_preventivo">PREVENTIVO</string>
+    <string name="tag_lpr_correctivo">CORRECTIVO</string>
+    <string name="input_lpr_id">LPR ID</string>
+    <string name="input_lpr_folio">FOLIO</string>
+    <string name="input_lpr_cuadrilla">CUADRILLA</string>
+    <string name="input_lpr_fecha">FECHA DE VISITA</string>
+    <string name="input_lpr_placas">PLACAS DEL VEHICULO</string>
+    <string name="input_lpr_municipio">MUNICIPIO</string>
 
     <!--Activity Poste Pmi-->
     <string name="conectores_tapon">Conectores tapon</string>
@@ -67,13 +78,22 @@
     <string name="tag_no">No</string>
     <string name="tag_estatus">Estatus</string>
     <string name="boton_obs">Observación</string>
-    <string name="elementos_ajenos">Elementos ajenos</string>
-    <string name="ligado_sanacion">Ligado y sanación</string>
-    <string name="aplicacion_pintura">Aplicación pintura</string>
+    <string name="elementos_ajenos">Elementos ajenos al poste</string>
+    <string name="ligado_sanacion">Ligado y sanación en las secciones oxidadas</string>
+    <string name="aplicacion_pintura">Aplicación de pintura antioxido</string>
+
+    <!--Activity Pararayos -->
+    <string name="punta_pararayos">Punta faraday</string>
 
     <!--Activity Brazos Pmi-->
-    <string name="carcasa">Carcasa o Gurda</string>
-    <string name="tuberia_brazos">Tuberia y Conexiones</string>
+    <string name="carcasa_brazos">Carcasa o guarda</string>
+    <string name="tuberia_brazos">Tuberia y conexiones</string>
+
+    <!-- Activity Equipamiento -->
+    <string name="radio_equipamiento">Radio</string>
+    <string name="camapras_ptz_equipamiento">Camaras tipo: PTZ</string>
+    <string name="camapras_fija_equipamiento">Camaras tipo: FIJA</string>
+    <string name="camapras_analiticas_equipamiento">Camaras tipo: ANALITICAS</string>
 
     <!--Activity Gabinete Pmi -->
     <string name="tuberia_gabinete">Tuberia licuatite</string>
@@ -85,6 +105,86 @@
     <string name="cable_neutro_gabinete">Cable neutro</string>
     <string name="ventilador_gabinete">Ventilador</string>
     <string name="filtros_gabinete">Filtros</string>
+
+    <!--Activity AnuncioC5i Pmi -->
+    <string name="estructura_anuncio">Estructura</string>
+    <string name="orientacion_anuncio">Orientación</string>
+
+    <!--Activity Boton Pmi -->
+    <string name="validacion_boton">Validación de comunicación y llamada de prueba</string>
+    <string name="ajuste_boton">Ajuste o reposición tornillos de seguridad tipo torx</string>
+    <string name="acabado_boton">Acabado de superficie de vano B.P.</string>
+    <string name="revision_boton">Revisión de conexiones</string>
+    <string name="reemplazo_boton">Reemplazo de cableado en casos requeridos</string>
+    <string name="firmware_boton">Actualización de firmware</string>
+
+    <!-- Activity Registro Mantenimiento PMI -->
+    <string name="tapa_registroM"> Tapa galvanizada</string>
+    <string name="tornillos_registroM"> Tornillos de seguridad tipo torx</string>
+
+    <!-- Activity Anclas Poste PMI -->
+    <string name="cuerda_anclas">Cuerda de ancla(minimo 3 cuerdas)</string>
+    <string name="tuercas_anclas">Tuercas, rondana de presion, rondana plana</string>
+
+    <!-- Activity Cimentacion PMI -->
+    <string name="piso_cimentacion">Nivel de piso terminado</string>
+    <string name="acabado_cimentacion">Acabado en superficie de cimentacion</string>
+    <string name="superficie_cimentacion">Superficie de cimentacion sin acero expuesto</string>
+    <string name="grout_cimentacion">Presenta grout y drenaje de grout</string>
+
+    <!-- Activity Sistema Tierras PMI -->
+    <string name="nivel_sistema">Nivel de piso terminado (banqueta y jardin)</string>
+    <string name="registro_sistema">Registro en una sola pieza</string>
+    <string name="conectores_sistema">Estado de conectores (cables sueltos o sulfatados)</string>
+    <string name="cables_sistema">Cables no visibles hacia el registro</string>
+
+
+    <!-- Activity Pararayo LPR -->
+    <string name="faraday_lpr">Punta faraday</string>
+
+    <!--Activity Equipamiento LPR -->
+    <string name="radio_equipamiento_lpr">Radio</string>
+    <string name="camara_equipamiento_lpr">Camaras tipo: LPR</string>
+
+    <!-- Activity Electrificacion LPR -->
+    <string name="revision_electrificacion_lpr">Revisión de alimentación eléctrica</string>
+
+    <!-- Activity Gabinete LPR -->
+    <string name="tuberia_gabinete_lpr">Tuberia licuatite en salida y llegada a columna</string>
+    <string name="tapa_gabinete_lpr">Tapa (tornillos de seguridad)</string>
+    <string name="cables_gabinete_lpr">Cables al interior del gabinete (peinados y con cinchos)</string>
+    <string name="exterior_gabinete_lpr">Exterior de gabinete (oxidacion, golpes, etc.)</string>
+    <string name="ciernas_gabinete_lpr">Ciernas (fijación y que coincida calibre de cable con entrada a cierna)</string>
+    <string name="neutro_gabinete_lpr">Cable neutro en llegada a cierna</string>
+    <string name="ventilador_gabinete_lpr">Ventilador</string>
+    <string name="filtros_gabinete_lpr">Filtros</string>
+    <string name="silicon_gabinete_lpr">Silicon</string>
+
+    <!-- Activity Registro Mantenimiento LPR -->
+    <string name="tapa_registro_lpr">Tuberia galvanizada</string>
+    <string name="tornillos_registro_lpr">Tornillos de seguridad tipo TORX</string>
+
+    <!-- Activity Anclas LPR -->
+    <string name="cuerda_anclas_lpr">Cuerda de anda (minimo 3 cuerdas)</string>
+    <string name="tuercas_anclas_lpr">Tuercas, rondana de presión, rondana plana</string>
+
+    <!-- Activity Cimentacion LPR -->
+    <string name="acabado_cimentacion_lpr">Acabado en superficie de cimentación</string>
+    <string name="superficie_cimentacion_lpr">Superficie de cimentación sin acero expuesto</string>
+    <string name="grout_cimentacion_lpr">Presenta grouty drenaje de grout</string>
+
+    <!-- Activity Estructura LPR -->
+    <string name="tornillos_estructura_lpr">Tornillos en brida (mismo sentido)</string>
+    <string name="galvanizado_estructura_lpr">Galvanizado (oxidación)</string>
+
+
+    <!-- Activity Sistema Tierras LPR -->
+    <string name="nivel_sistema_lpr">Nivel de piso terminado (banqueta y jardin)</string>
+    <string name="registro_sistema_lpr">Registro en una sola pieza</string>
+    <string name="conectores_sistema_lpr">Estado de conectores (cables sueltos o sulfatados)</string>
+    <string name="cables_sistema_lpr">Cables no visibles hacia el registro</string>
+
+    <string name="obsr_grl">Observación general</string>
 
 
 </resources>
