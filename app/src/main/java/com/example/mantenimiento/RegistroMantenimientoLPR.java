@@ -43,80 +43,69 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxLimpiezaTubGalvSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTubGalvSI.setChecked(false);
-                    getTubGalLimpieza = !isChecked;
-                }
+
+                    getTubGalLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaTubGalvNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTubGalvNO.setChecked(false);
-                    getTubGalLimpieza = isChecked;
-                }
+
+                    getTubGalLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusTubGalvSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTubGalvSI.setChecked(false);
-                    getTubGalEstatus = !isChecked;
-                }
+                    getTubGalEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusTubGalvNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTubGalvNO.setChecked(false);
-                    getTubGalEstatus = isChecked;
-                }
+
+                    getTubGalEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaTorSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTorSI.setChecked(false);
-                    getTorSLimpieza = !isChecked;
-                }
+
+                    getTorSLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaTorNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTorNO.setChecked(false);
-                    getTorSLimpieza = isChecked;
-                }
+
+                    getTorSLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusTorSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTorSI.setChecked(false);
-                    getTorSEstatus = !isChecked;
-                }
+
+                    getTorSEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusTorNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTorNO.setChecked(false);
-                    getTorSEstatus = isChecked;
-                }
+                    getTorSEstatus = !isChecked;
             }
         });
 
@@ -129,7 +118,7 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
             public void onClick(View view) {
                 String obsTubGalv = obsTubGalvLPR.getText().toString();
                 String obsTor = obsTorSLPR.getText().toString();
-                storeRegistro(getTubGalLimpieza, getTubGalEstatus, getTorSLimpieza, getTorSEstatus);
+                storeRegistro(getTubGalLimpieza, getTubGalEstatus, getTorSLimpieza, getTorSEstatus, obsTubGalv, obsTor);
             }
         });
 
@@ -145,12 +134,12 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
 
     }
 
-    private void storeRegistro(boolean getTubGalLimpieza, boolean getTubGalEstatus, boolean getTorSLimpieza, boolean getTorSEstatus) {
+    private void storeRegistro(boolean getTubGalLimpieza, boolean getTubGalEstatus, boolean getTorSLimpieza, boolean getTorSEstatus, String obsTubGalv, String obsTor) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<RegistroResponseLPR> call = apiService.storeRegLPR(idMantenimiento, getTubGalLimpieza, getTubGalEstatus, getTorSLimpieza, getTorSEstatus);
+        Call<RegistroResponseLPR> call = apiService.storeRegLPR(idMantenimiento, getTubGalLimpieza, getTubGalEstatus, getTorSLimpieza, getTorSEstatus, obsTubGalv, obsTor);
         call.enqueue(new Callback<RegistroResponseLPR>() {
             @Override
             public void onResponse(Call<RegistroResponseLPR> call, Response<RegistroResponseLPR> response) {

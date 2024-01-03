@@ -44,80 +44,60 @@ public class BrazosPMI extends AppCompatActivity {
         checkBoxLimpiezaCarcasaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxLimpiezaCarcasaSI.setChecked(false);
-                    getCarcasaLimpieza = !isChecked;
-                }
+                getCarcasaLimpieza = isChecked;
             }
         });
 
         checkBoxLimpiezaCarcasaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxLimpiezaCarcasaNO.setChecked(false);
-                    getCarcasaLimpieza = isChecked;
-                }
+                    getCarcasaLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusCarcasaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCarcasaSI.setChecked(false);
-                    getCarcasaEstatus = !isChecked;
-                }
+                    getCarcasaEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusCarcasaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCarcasaNO.setChecked(false);
-                    getCarcasaEstatus = isChecked;
-                }
+                    getCarcasaEstatus = !isChecked;
             }
         });
 
         checkBoxLimpiezaTuberiaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTuberiaSI.setChecked(false);
-                    getTuberiaLimpieza = !isChecked;
-                }
+                    getTuberiaLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaTuberiaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTuberiaNO.setChecked(false);
-                    getTuberiaLimpieza = isChecked;
-                }
+                    getTuberiaLimpieza = !isChecked;
             }
         });
 
         checkBoxEstatusTuberiaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTuberiaSI.setChecked(false);
-                    getTuberiaEstatus = !isChecked;
-                }
+                    getTuberiaEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusTuberiaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTuberiaNO.setChecked(false);
                     getTuberiaEstatus = !isChecked;
-                }
             }
         });
 
@@ -130,7 +110,7 @@ public class BrazosPMI extends AppCompatActivity {
             public void onClick(View view) {
                 String obsCarcasa = obsCarcasaBrazosPMI.getText().toString();
                 String obsTuberia = obsTuberiaBrazosPMI.getText().toString();
-                storeBrazos(getCarcasaLimpieza, getCarcasaEstatus, getTuberiaLimpieza, getTuberiaEstatus);
+                storeBrazos(getCarcasaLimpieza, getCarcasaEstatus, getTuberiaLimpieza, getTuberiaEstatus, obsCarcasa, obsTuberia);
             }
         });
 
@@ -147,12 +127,12 @@ public class BrazosPMI extends AppCompatActivity {
 
     }
 
-    private void storeBrazos(boolean getCarcasaLimpieza, boolean getCarcasaEstatus, boolean getTuberiaLimpieza, boolean getTuberiaEstatus) {
+    private void storeBrazos(boolean getCarcasaLimpieza, boolean getCarcasaEstatus, boolean getTuberiaLimpieza, boolean getTuberiaEstatus, String obsCarcasa, String obsTuberia) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<BrazosResponsePMI> call = apiService.storeBrazosPMI(idMantenimiento, getCarcasaLimpieza, getCarcasaEstatus, getTuberiaLimpieza, getTuberiaEstatus);
+        Call<BrazosResponsePMI> call = apiService.storeBrazosPMI(idMantenimiento, getCarcasaLimpieza, getCarcasaEstatus, getTuberiaLimpieza, getTuberiaEstatus, obsCarcasa, obsTuberia);
         call.enqueue(new Callback<BrazosResponsePMI>() {
             @Override
             public void onResponse(Call<BrazosResponsePMI> call, Response<BrazosResponsePMI> response) {

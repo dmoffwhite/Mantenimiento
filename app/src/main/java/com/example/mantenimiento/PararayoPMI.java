@@ -41,40 +41,33 @@ public class PararayoPMI extends AppCompatActivity {
         checkBoxLimpiezaPuntaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaPuntaSI.setChecked(false);
-                    getPuntaLimpieza = !isChecked;
-                }
+                    getPuntaLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaPuntaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaPuntaNO.setChecked(false);
-                    getPuntaLimpieza = isChecked;
-                }
+                    getPuntaLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusPuntaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxEstatusPuntaSI.setChecked(false);
-                    getPuntaEstatus = !isChecked;
-                }
+                    getPuntaEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusPuntaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxEstatusPuntaNO.setChecked(false);
-                    getPuntaEstatus = isChecked;
-                }
+
+                    getPuntaEstatus = !isChecked;
+
             }
         });
 
@@ -85,7 +78,7 @@ public class PararayoPMI extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String obsPuntaFaraday = obsPuntaFaradayPMI.getText().toString();
-                storePararayo(getPuntaLimpieza, getPuntaEstatus);
+                storePararayo(getPuntaLimpieza, getPuntaEstatus, obsPuntaFaraday);
             }
         });
 
@@ -102,12 +95,12 @@ public class PararayoPMI extends AppCompatActivity {
 
 
 
-    private void storePararayo(boolean getPuntaLimpieza, boolean getPuntaEstatus) {
+    private void storePararayo(boolean getPuntaLimpieza, boolean getPuntaEstatus, String obsPuntaFaraday) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<PararayoResponsePMI> call = apiService.storePararayosPMI(idMantenimiento, getPuntaLimpieza, getPuntaEstatus);
+        Call<PararayoResponsePMI> call = apiService.storePararayosPMI(idMantenimiento, getPuntaLimpieza, getPuntaEstatus, obsPuntaFaraday);
         call.enqueue(new Callback<PararayoResponsePMI>() {
             @Override
             public void onResponse(Call<PararayoResponsePMI> call, Response<PararayoResponsePMI> response) {

@@ -43,70 +43,53 @@ public class AnclasPostePMI extends AppCompatActivity {
         checkBoxLimpiezaCuerdaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaCuerdaSI.setChecked(false);
-                    getCuerdaLimpieza = !isChecked;
-                }
+                    getCuerdaLimpieza = isChecked;
             }
         });
 
         checkBoxLimpiezaCuerdaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaCuerdaNO.setChecked(false);
-                    getCuerdaLimpieza = isChecked;
-                }
+                    getCuerdaLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusCuerdaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCuerdaSI.setChecked(false);
-                    getCuerdaEstatus = !isChecked;
-                }
+                    getCuerdaEstatus = isChecked;
             }
         });
 
         checkBoxEstatusCuerdaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCuerdaNO.setChecked(false);
-                    getCuerdaEstatus = isChecked;
-                }
+                    getCuerdaEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaPiezasSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaPiezasSI.setChecked(false);
-                    getPiezasLimpieza = !isChecked;
-                }
+                    getPiezasLimpieza = isChecked;
             }
         });
 
         checkBoxLimpiezaPiezasNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaPiezasNO.setChecked(false);
-                    getPiezasLimpieza = isChecked;
-                }
+                    getPiezasLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusPiezasSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusPiezasSI.setChecked(false);
-                    getPiezasEstatus =!isChecked;
-                }
+                    getPiezasEstatus =isChecked;
+
             }
         });
 
@@ -115,7 +98,7 @@ public class AnclasPostePMI extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     checkBoxEstatusPiezasNO.setChecked(false);
-                    getPiezasEstatus =isChecked;
+                    getPiezasEstatus =!isChecked;
                 }
             }
         });
@@ -129,7 +112,7 @@ public class AnclasPostePMI extends AppCompatActivity {
             public void onClick(View view) {
                 String obsCuerda = obsCuerdaAnclasPMI.getText().toString();
                 String obsPiezas = obsPiezasAnclasPMI.getText().toString();
-                storeAnclas(getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus);
+                storeAnclas(getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus, obsCuerda, obsPiezas);
             }
         });
 
@@ -144,12 +127,12 @@ public class AnclasPostePMI extends AppCompatActivity {
 
     }
 
-    private void storeAnclas(boolean getCuerdaLimpieza, boolean getCuerdaEstatus, boolean getPiezasLimpieza, boolean getPiezasEstatus) {
+    private void storeAnclas(boolean getCuerdaLimpieza, boolean getCuerdaEstatus, boolean getPiezasLimpieza, boolean getPiezasEstatus, String obsCuerda, String obsPiezas) {
     ApiService apiService = ApiClient.getClient();
 
     int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<AnclasResponsePMI> call = apiService.storeAnclasPMI(idMantenimiento, getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus);
+        Call<AnclasResponsePMI> call = apiService.storeAnclasPMI(idMantenimiento, getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus, obsCuerda, obsPiezas);
         call.enqueue(new Callback<AnclasResponsePMI>() {
             @Override
             public void onResponse(Call<AnclasResponsePMI> call, Response<AnclasResponsePMI> response) {

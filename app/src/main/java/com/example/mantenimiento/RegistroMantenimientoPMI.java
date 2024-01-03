@@ -43,80 +43,71 @@ public class RegistroMantenimientoPMI extends AppCompatActivity {
         checkBoxLimpiezaGalvSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaGalvSI.setChecked(false);
-                    getGalvLimpieza = !isChecked;
-                }
+
+                    getGalvLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaGalvNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaGalvNO.setChecked(false);
-                    getGalvLimpieza = isChecked;
-                }
+
+                    getGalvLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusGalvSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxEstatusGalvSI.setChecked(false);
-                    getGalvEstatus = !isChecked;
-                }
+
+                    getGalvEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusGalvNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxEstatusGalvNO.setChecked(false);
-                    getGalvEstatus = isChecked;
-                }
+
+                    getGalvEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaTorxSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTorxSI.setChecked(false);
-                    getTorxLimpieza = !isChecked;
-                }
+
+                    getTorxLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaTorxNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTorxNO.setChecked(false);
-                    getTorxLimpieza = isChecked;
-                }
+
+                    getTorxLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusTorxSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTorxSI.setChecked(false);
-                    getTorxEstatus = !isChecked;
-                }
+                    getTorxEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusTorxNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTorxNO.setChecked(false);
-                    getTorxEstatus = isChecked;
-                }
+
+                    getTorxEstatus = !isChecked;
+
             }
         });
 
@@ -129,7 +120,7 @@ public class RegistroMantenimientoPMI extends AppCompatActivity {
             public void onClick(View view) {
                 String obsGalv = obsGalvRegistroPMI.getText().toString();
                 String obsTorx = obsTorxRegistroPMI.getText().toString();
-                storeRegistro(getGalvLimpieza, getGalvEstatus, getTorxLimpieza, getTorxEstatus);
+                storeRegistro(getGalvLimpieza, getGalvEstatus, getTorxLimpieza, getTorxEstatus, obsGalv, obsTorx);
             }
         });
 
@@ -144,12 +135,12 @@ public class RegistroMantenimientoPMI extends AppCompatActivity {
 
     }
 
-    private void storeRegistro(boolean getGalvLimpieza, boolean getGalvEstatus, boolean getTorxLimpieza, boolean getTorxEstatus) {
+    private void storeRegistro(boolean getGalvLimpieza, boolean getGalvEstatus, boolean getTorxLimpieza, boolean getTorxEstatus, String obsGalv, String obsTorx) {
     ApiService apiService = ApiClient.getClient();
 
     int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call <RegistroResponsePMI> call = apiService.storeRegistroPMI(idMantenimiento, getGalvLimpieza, getGalvEstatus, getTorxLimpieza, getTorxEstatus);
+        Call <RegistroResponsePMI> call = apiService.storeRegistroPMI(idMantenimiento, getGalvLimpieza, getGalvEstatus, getTorxLimpieza, getTorxEstatus, obsGalv, obsTorx);
         call.enqueue(new Callback<RegistroResponsePMI>() {
             @Override
             public void onResponse(Call<RegistroResponsePMI> call, Response<RegistroResponsePMI> response) {

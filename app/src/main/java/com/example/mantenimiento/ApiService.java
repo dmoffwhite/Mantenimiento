@@ -54,7 +54,11 @@ public interface ApiService {
             @Field("lij_san_lim") boolean getSeccionesLimpieza,
             @Field("lij_san_est") boolean getSeccionesEstatus,
             @Field("pint_oxid_lim") boolean getPinturaLimpieza,
-            @Field("pint_oxid_est") boolean getPinturaEstatus
+            @Field("pint_oxid_est") boolean getPinturaEstatus,
+            @Field("OBSERVACION_TAPON") String obsConectores,
+            @Field("OBSERVACION_ELEMENTOS") String obsElementos,
+            @Field("OBSERVACION_LIJADO") String obsSecciones,
+            @Field("OBSERVACION_PINTURA") String obsPintura
 
     );
 
@@ -62,7 +66,8 @@ public interface ApiService {
     Call<PararayoResponsePMI> storePararayosPMI(
                 @Field("idMantenimiento") int idMantenimiento,
                 @Field("ptn_fardy_lim") boolean getPuntaLimpieza,
-                @Field("ptn_fardy_est") boolean getPuntaEstatus
+                @Field("ptn_fardy_est") boolean getPuntaEstatus,
+                @Field("OBSERVACION_FARADAY") String obsPuntaFaraday
     );
 
     @POST("api/brazos/create")
@@ -71,7 +76,9 @@ public interface ApiService {
             @Field("carcasa_lim") boolean getCarcasaLimpieza,
             @Field("carcasa_est") boolean getCarcasaEstatus,
             @Field("tub_conx_lim") boolean getTuberiaLimpieza,
-            @Field("tub_conx_est") boolean getTuberiaEstatus
+            @Field("tub_conx_est") boolean getTuberiaEstatus,
+            @Field("OBSERVACION_CARCASA") String obsCarcasa,
+            @Field("OBSERVACION_TUBERIA") String obsTuberia
     );
 
     @POST("api/equipamiento/create")
@@ -84,7 +91,11 @@ public interface ApiService {
             @Field("cam_fij_lim") boolean getFijaLimpieza,
             @Field("cam_fij_est") boolean getFijaEstatus,
             @Field("cam_an_lim") boolean getAnaliLimpieza,
-            @Field("cam_an_est") boolean getAnaliEstatus
+            @Field("cam_an_est") boolean getAnaliEstatus,
+            @Field("OBSERVACION_RADIO") String obsRadio,
+            @Field("OBSERVACION_CAM_PTZ") String obsPTZ,
+            @Field("OBSERVACION_CAM_FIJ") String obsFija,
+            @Field("OBSERVACION_CAM_ANC") String obsAna
     );
 
     @POST("api/gabinete/create")
@@ -107,7 +118,16 @@ public interface ApiService {
           @Field("ventilador_lim") boolean getVentiladorLimpieza,
           @Field("ventilador_est") boolean getVentiladorEstatus,
           @Field("filtros_lim") boolean getFiltrosLimpieza,
-          @Field("filtros_est") boolean getFiltrosEstatus
+          @Field("filtros_est") boolean getFiltrosEstatus,
+          @Field("OBSERVACION_TUBERIA") String obsTub,
+          @Field("OBSERVACION_TAPA") String obsTapa,
+          @Field("OBSERVACION_CABLES") String obsCabIn,
+          @Field("OBSERVACION_EXTERIOR") String obsExt,
+          @Field("OBSERVACION_FIJACION") String obsFijacion,
+          @Field("OBSERVACION_ORIENTACION") String obsOrientacion,
+          @Field("OBSERVACION_CAB_NEU") String obsCable,
+          @Field("OBSERVACION_VENTILADOR") String obsVentilador,
+          @Field("OBSERVACION_FILTROS") String obsFiltros
     );
 
     @POST("api/anuncio/create")
@@ -116,7 +136,9 @@ public interface ApiService {
             @Field("estr_lim") boolean getEstructuraLimpieza,
             @Field("estr_est") boolean getEstructuraEstatus,
             @Field("orient_lim") boolean getOrientacionLimpieza,
-            @Field("orient_est") boolean getOrientacionEstatus
+            @Field("orient_est") boolean getOrientacionEstatus,
+            @Field("OBSERVACION_ESTRUCTURA") String obsEstructura,
+            @Field("OBSERVACION_ORIENTACION") String obsOrientacion
     );
 
     @POST("api/boton/create")
@@ -133,7 +155,13 @@ public interface ApiService {
             @Field("rem_cab_lim") boolean getCableadoLimpieza,
             @Field("rem_cab_est") boolean getCableadoEstatus,
             @Field("act_firw_lim") boolean getFimwareLimpieza,
-            @Field("act_firw_est") boolean getFimwareEstatus
+            @Field("act_firw_est") boolean getFimwareEstatus,
+            @Field("OBSERVACION_VALIDACION") String obsValidacion,
+            @Field("OBSERVACION_AJUSTE") String obsTornillos,
+            @Field("OBSERVACION_ACABADO") String obsSuperficie,
+            @Field("OBSERVACION_REVISION") String obsConexiones,
+            @Field("OBSERVACION_REEMPLAZO") String obsCableado,
+            @Field("OBSERVACION_FIRMWARE") String obsFimware
     );
 
     @POST("api/registro/create")
@@ -142,7 +170,9 @@ public interface ApiService {
             @Field("tap_galb_lim") boolean getGalvLimpieza,
             @Field("tap_galb_est") boolean getGalvEstatus,
             @Field("torn_seg_lim") boolean getTorxLimpieza,
-            @Field("torn_seg_est") boolean getTorxEstatus
+            @Field("torn_seg_est") boolean getTorxEstatus,
+            @Field("OBSERVACION_GALB") String obsGalv,
+            @Field("OBSERVACION_SEG") String obsTorx
     );
 
     @POST("api/anclas/create")
@@ -151,7 +181,9 @@ public interface ApiService {
             @Field("cuerda_lim") boolean getCuerdaLimpieza,
             @Field("cuerda_est") boolean getCuerdaEstatus,
             @Field("tr_rond_lim") boolean getPiezasLimpieza,
-            @Field("tr_rond_est") boolean getPiezasEstatus
+            @Field("tr_rond_est") boolean getPiezasEstatus,
+            @Field("OBSERVACION_CUERDA") String obsCuerda,
+            @Field("OBSERVACION_TR_ROND") String obsPiezas
     );
 
     @POST("api/cimentacion/create")
@@ -164,7 +196,11 @@ public interface ApiService {
             @Field("superficie_lim") boolean getExpLimpieza,
             @Field("superficie_est") boolean getExpEstatus,
             @Field("pGrout_lim") boolean getGroutLimpieza,
-            @Field("pGrout_est") boolean getGroutEstatus
+            @Field("pGrout_est") boolean getGroutEstatus,
+            @Field("OBSERVACION_NIVEL") String obsNivel,
+            @Field("OBSERVACION_SUPER") String obsAcab,
+            @Field("OBSERVACION_SUPERFICIE") String obsExp,
+            @Field("OBSERVACION_GROUT") String obsGrout
     );
 
     @POST("api/sistema/create")
@@ -177,8 +213,11 @@ public interface ApiService {
       @Field("eConect_lim") boolean getEstadoCLimpieza,
       @Field("eConect_est") boolean getEstadoCEstado,
       @Field("cNV_lim") boolean getCablesNLimpieza,
-      @Field("cNV_est") boolean getCablesNEstatus
-
+      @Field("cNV_est") boolean getCablesNEstatus,
+      @Field("OBSERVACION_NIVELP") String obsNivel,
+      @Field("OBSERVACION_REGISTRO") String obsRegistro,
+      @Field("OBSERVACION_ESTADO") String obsEstado,
+      @Field("OBSERVACION_CABN") String obsCables
     );
 
 
@@ -187,7 +226,11 @@ public interface ApiService {
     Call<PararayoResponseLPR> storePararayosLPR(
             @Field("idMantenimiento") int idMantenimiento,
             @Field("pFaraday_lim") boolean getPuntaLimpieza,
-            @Field("pFaraday_est") boolean getPuntaEstatus
+            @Field("pFaraday_est") boolean getPuntaEstatus,
+            @Field("mastil_lim") boolean getMastilLimpieza,
+            @Field("mastil_est") boolean getMastilEstatus,
+            @Field("OBSERVACION_FARADAY") String obsPuntaFaraday,
+            @Field("OBSERVACION_MASTIL") String obsMastil
     );
 
     @POST("api/equipamientoLPR/create")
@@ -196,7 +239,9 @@ public interface ApiService {
       @Field("radio_lim") boolean getRadioLimpieza,
       @Field("radio_est") boolean getRadioEstatus,
       @Field("cam_lpr_lim") boolean getCamLimpieza,
-      @Field("cam_lpr_est") boolean getCamEstatus
+      @Field("cam_lpr_est") boolean getCamEstatus,
+      @Field("OBSERVACION_RADIO") String obsRadio,
+      @Field("OBSERVACION_CAM_LPR") String obsCam
     );
 
 
@@ -204,7 +249,8 @@ public interface ApiService {
     Call<ElectResponseLPR> storeElecLPR(
       @Field("idMantenimiento") int idMantenimiento,
       @Field("ali_elec_lim") boolean getRevisionLimpieza,
-      @Field("ali_elec_est") boolean getRevisionEstatus
+      @Field("ali_elec_est") boolean getRevisionEstatus,
+      @Field("OBSERVACION_REVISION_ALIM") String obsRevision
     );
 
     @POST("api/gabineteLPR/create")
@@ -227,7 +273,16 @@ public interface ApiService {
       @Field("filt_lim") boolean getFiltLimpieza,
       @Field("filt_est") boolean getFiltEstatus,
       @Field("sil_lim") boolean getSilLimpieza,
-      @Field("sil_est") boolean getSilEstatus
+      @Field("sil_est") boolean getSilEstatus,
+      @Field("OBSERVACION_TUBERIA") String obsTub,
+      @Field("OBSERVACION_TAPA") String obsTor,
+      @Field("OBSERVACION_CABLES") String obsCab,
+      @Field("OBSERVACION_EXTERIOR") String obsExt,
+      @Field("OBSERVACION_CIERNA") String obsCier,
+      @Field("OBSERVACION_CAB_NEU") String obsCabN,
+      @Field("OBSERVACION_VENTILADOR") String obsVent,
+      @Field("OBSERVACION_FILTROS") String obsFilt,
+      @Field("OBSERVACION_SILICON") String obsSil
     );
 
     @POST("api/registroLPR/create")
@@ -236,7 +291,9 @@ public interface ApiService {
       @Field("tap_gal_lim") boolean getGalvLimpieza,
       @Field("tap_gal_est") boolean getGalvEstatus,
       @Field("torn_lim") boolean getTorxLimpieza,
-      @Field("torn_est") boolean getTorxEstatus
+      @Field("torn_est") boolean getTorxEstatus,
+      @Field("OBSERVACION_GALB") String obsTubGalv,
+      @Field("OBSERVACION_SEG") String obsTor
     );
 
     @POST("api/anclasLPR/create")
@@ -245,7 +302,9 @@ public interface ApiService {
       @Field("cuerda_gal_lim") boolean getCuerdaLimpieza,
       @Field("cuerda_gal_est") boolean getCuerdaEstatus,
       @Field("tu_rop_ron_lim") boolean getPiezasLimpieza,
-      @Field("tu_rop_ron_est") boolean getPiezasEstatus
+      @Field("tu_rop_ron_est") boolean getPiezasEstatus,
+      @Field("OBSERVACION_CUERDA_GAL") String obsCuerda,
+      @Field("OBSERVACION_PIEZAS") String obsPiezas
     );
 
     @POST("api/cimentacionLPR/create")
@@ -256,7 +315,10 @@ public interface ApiService {
       @Field("super_sin_lim") boolean getExpLimpieza,
       @Field("super_sin_est") boolean getExpEstatus,
       @Field("grout_lim") boolean getGroutLimpieza,
-      @Field("grout_est") boolean getGroutEstatus
+      @Field("grout_est") boolean getGroutEstatus,
+      @Field("OBSERVACION_ACABADO_SUP") String obsAcab,
+      @Field("OBSERVACION_SUPERFICEI_CIM") String obsExp,
+      @Field("OBSERVACION_GROUT") String obsGrout
     );
 
     @POST("api/estructuraLPR/create")
@@ -265,7 +327,9 @@ public interface ApiService {
       @Field("tor_brida_lim") boolean getTorbLimpieza,
       @Field("tor_brida_est") boolean getTorbEstatus,
       @Field("galv_lim") boolean getGalvLimpieza,
-      @Field("galv_est") boolean getGalvEstatus
+      @Field("galv_est") boolean getGalvEstatus,
+      @Field("OBSERVACION_TOR") String obsTor,
+      @Field("OBSERVACION_GALV") String obsGalv
     );
 
     @POST("api/sistemaLPR/create")
@@ -278,7 +342,11 @@ public interface ApiService {
       @Field("eConec_lim") boolean getEstadoCLimpieza,
       @Field("eConec_est") boolean getEstadoCEstado,
       @Field("cNV_lim") boolean getCablesNLimpieza,
-      @Field("cNV_est") boolean getCablesNEstatus
+      @Field("cNV_est") boolean getCablesNEstatus,
+      @Field("OBSERVACION_NIVELP") String obsNivel,
+      @Field("OBSERVACION_REGISTRO") String obsRegistro,
+      @Field("OBSERVACION_ESTADO") String obsEstado,
+      @Field("OBSERVACION_CABN") String obsCables
     );
 
     @PUT("api/mantenimiento/edit/{id}")
@@ -292,6 +360,7 @@ public interface ApiService {
             @Path("id") int idMantenimiento,
             @Field("obser_grl") String obsGrl
     );
+
 
 
 

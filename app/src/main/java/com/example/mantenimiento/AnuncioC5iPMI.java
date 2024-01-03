@@ -44,40 +44,32 @@ public class AnuncioC5iPMI extends AppCompatActivity {
         checkBoxLimpiezaEstrSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaEstrSI.setChecked(false);
-                    getEstructuraLimpieza = !isChecked;
-                }
+                    getEstructuraLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaEstrNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaEstrNO.setChecked(false);
-                    getEstructuraLimpieza = isChecked;
-                }
+                    getEstructuraLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusEstrSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusEstrSI.setChecked(false);
-                    getEstructuraEstatus = !isChecked;
-                }
+                    getEstructuraEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusEstrNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusEstrNO.setChecked(false);
-                    getEstructuraEstatus = isChecked;
-                }
+                    getEstructuraEstatus = !isChecked;
+
             }
         });
 
@@ -85,40 +77,30 @@ public class AnuncioC5iPMI extends AppCompatActivity {
         checkBoxLimpiezaOriSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaOriSI.setChecked(false);
-                    getOrientacionLimpieza = !isChecked;
-                }
+                    getOrientacionLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaOriNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaOriNO.setChecked(false);
-                    getOrientacionLimpieza = isChecked;
-                }
+                    getOrientacionLimpieza = !isChecked;
             }
         });
 
         checkBoxEstatusOriSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusOriSI.setChecked(false);
-                    getOrientacionEstatus = !isChecked;
-                }
+                    getOrientacionEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusOriNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusOriNO.setChecked(false);
-                    getOrientacionEstatus = isChecked;
-                }
+                    getOrientacionEstatus = !isChecked;
             }
         });
 
@@ -131,7 +113,7 @@ public class AnuncioC5iPMI extends AppCompatActivity {
             public void onClick(View view) {
                 String obsEstructura = obsEstructuraAnuPMI.getText().toString();
                 String obsOrientacion = obsOrientaAnuPMI.getText().toString();
-                storeAnuncio(getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus);
+                storeAnuncio(getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus, obsEstructura, obsOrientacion);
             }
         });
 
@@ -148,12 +130,12 @@ public class AnuncioC5iPMI extends AppCompatActivity {
 
     }
 
-    private void storeAnuncio(boolean getEstructuraLimpieza, boolean getEstructuraEstatus, boolean getOrientacionLimpieza, boolean getOrientacionEstatus) {
+    private void storeAnuncio(boolean getEstructuraLimpieza, boolean getEstructuraEstatus, boolean getOrientacionLimpieza, boolean getOrientacionEstatus, String obsEstructura, String obsOrientacion) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<AnuncioResponsePMI> call = apiService.storeAnuncioPMI(idMantenimiento, getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus);
+        Call<AnuncioResponsePMI> call = apiService.storeAnuncioPMI(idMantenimiento, getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus, obsEstructura, obsOrientacion);
         call.enqueue(new Callback<AnuncioResponsePMI>() {
             @Override
             public void onResponse(Call<AnuncioResponsePMI> call, Response<AnuncioResponsePMI> response) {

@@ -59,162 +59,138 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxLimpiezaNivelSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaNivelSI.setChecked(false);
-                    getNivelLimpieza = !isChecked;
-                }
+
+                    getNivelLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaNivelNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaNivelNO.setChecked(false);
-                    getNivelLimpieza = isChecked;
-                }
+
+                    getNivelLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusNivelSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusNivelSI.setChecked(false);
-                    getNivelEstatus = !isChecked;
-                }
+
+                    getNivelEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusNivelNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusNivelNO.setChecked(false);
-                    getNivelEstatus = isChecked;
-                }
+
+                    getNivelEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaRegSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaRegSI.setChecked(false);
-                    getRegistroLimpieza = !isChecked;
+                    getRegistroLimpieza = isChecked;
 
-                }
             }
         });
 
         checkBoxLimpiezaRegNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaRegNO.setChecked(false);
-                    getRegistroLimpieza = isChecked;
 
-                }
+                    getRegistroLimpieza = !isChecked;
+
+
             }
         });
 
         checkBoxEstatusRegSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusRegSI.setChecked(false);
-                    getRegistroEstatus = !isChecked;
-                }
+
+                    getRegistroEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusRegNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusRegNO.setChecked(false);
-                    getRegistroEstatus = isChecked;
-                }
+                    getRegistroEstatus = !isChecked;
             }
         });
 
         checkBoxLimpiezaEstSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaEstSI.setChecked(false);
-                    getEstadoCLimpieza = !isChecked;
-                }
+                    getEstadoCLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaEstNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaEstNO.setChecked(false);
-                    getEstadoCLimpieza = isChecked;
-                }
+
+                    getEstadoCLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusEstSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusEstSI.setChecked(false);
-                    getEstadoCEstado = !isChecked;
-                }
+                    getEstadoCEstado = isChecked;
+
             }
         });
 
         checkBoxEstatusEstNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusEstNO.setChecked(false);
-                    getEstadoCEstado = isChecked;
-                }
+
+                    getEstadoCEstado = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaCabSI.setChecked(false);
-                    getCablesNLimpieza = !isChecked;
-                }
+                    getCablesNLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaCabNO.setChecked(false);
-                    getCablesNLimpieza = isChecked;
-                }
+
+                    getCablesNLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCabSI.setChecked(false);
-                    getCablesNEstatus = !isChecked;
-                }
+                    getCablesNEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCabNO.setChecked(false);
-                    getCablesNEstatus = isChecked;
-                }
+
+                    getCablesNEstatus = !isChecked;
+
             }
         });
 
@@ -231,7 +207,7 @@ public class SistemaTierrasLPR extends AppCompatActivity {
                 String obsRegistro = obsRegistroPMI.getText().toString();
                 String obsEstado = obsEstadoPMI.getText().toString();
                 String obsCables = obsCablesPMI.getText().toString();
-                storeSistema(getNivelLimpieza, getNivelEstatus, getRegistroLimpieza, getRegistroEstatus, getEstadoCLimpieza, getEstadoCEstado, getCablesNLimpieza, getCablesNEstatus);
+                storeSistema(getNivelLimpieza, getNivelEstatus, getRegistroLimpieza, getRegistroEstatus, getEstadoCLimpieza, getEstadoCEstado, getCablesNLimpieza, getCablesNEstatus, obsNivel, obsRegistro, obsEstado, obsCables);
             }
         });
 
@@ -246,13 +222,13 @@ public class SistemaTierrasLPR extends AppCompatActivity {
 
     }
 
-    private void storeSistema(boolean getNivelLimpieza, boolean getNivelEstatus, boolean getRegistroLimpieza, boolean getRegistroEstatus, boolean getEstadoCLimpieza, boolean getEstadoCEstado, boolean getCablesNLimpieza, boolean getCablesNEstatus) {
+    private void storeSistema(boolean getNivelLimpieza, boolean getNivelEstatus, boolean getRegistroLimpieza, boolean getRegistroEstatus, boolean getEstadoCLimpieza, boolean getEstadoCEstado, boolean getCablesNLimpieza, boolean getCablesNEstatus, String obsNivel, String obsRegistro, String obsEstado, String obsCables) {
 
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<SistemaResponseLPR> call = apiService.storeSisLPR(idMantenimiento, getNivelLimpieza, getNivelEstatus, getRegistroLimpieza, getRegistroEstatus, getEstadoCLimpieza, getEstadoCEstado, getCablesNLimpieza, getCablesNEstatus);
+        Call<SistemaResponseLPR> call = apiService.storeSisLPR(idMantenimiento, getNivelLimpieza, getNivelEstatus, getRegistroLimpieza, getRegistroEstatus, getEstadoCLimpieza, getEstadoCEstado, getCablesNLimpieza, getCablesNEstatus, obsNivel, obsRegistro, obsEstado, obsCables);
         call.enqueue(new Callback<SistemaResponseLPR>() {
             @Override
             public void onResponse(Call<SistemaResponseLPR> call, Response<SistemaResponseLPR> response) {

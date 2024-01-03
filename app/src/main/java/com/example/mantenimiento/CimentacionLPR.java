@@ -51,120 +51,95 @@ public class CimentacionLPR extends AppCompatActivity {
         checkBoxLimpiezaAcabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaAcabSI.setChecked(false);
-                    getAcabLimpieza = !isChecked;
-                }
+                    getAcabLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaAcabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaAcabNO.setChecked(false);
-                    getAcabLimpieza = isChecked;
-                }
+                    getAcabLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusAcabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusAcabSI.setChecked(false);
-                    getAcabEstatus = !isChecked;
-                }
+                    getAcabEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusAcabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusAcabNO.setChecked(false);
-                    getAcabEstatus = isChecked;
-                }
+                    getAcabEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaExpSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxLimpiezaExpSI.setChecked(false);
-                    getExpLimpieza = !isChecked;
-                }
+                    getExpLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaExpNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxLimpiezaExpNO.setChecked(false);
-                    getExpLimpieza = isChecked;
-                }
+                    getExpLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusExpSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusExpSI.setChecked(false);
-                    getExpEstatus = !isChecked;
-                }
+                    getExpEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusExpNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusExpNO.setChecked(false);
-                    getExpEstatus = isChecked;
-                }
+                    getExpEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaGroSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaGroSI.setChecked(false);
-                    getGroutLimpieza = !isChecked;
-                }
+                    getGroutLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaGroNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaGroNO.setChecked(false);
-                    getGroutLimpieza = isChecked;
-                }
+                    getGroutLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusGroSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusGroSI.setChecked(false);
-                    getGroutEstatus = !isChecked;
-                }
+                    getGroutEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusGroNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusGroNO.setChecked(false);
-                    getGroutEstatus = isChecked;
-                }
+                    getGroutEstatus = !isChecked;
             }
         });
 
@@ -179,7 +154,7 @@ public class CimentacionLPR extends AppCompatActivity {
                 String obsAcab = obsSupPMI.getText().toString();
                 String obsExp = obsExpPMI.getText().toString();
                 String obsGrout = obsGroutPMI.getText().toString();
-                storeCimentacion(getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus);
+                storeCimentacion(getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus, obsAcab, obsExp, obsGrout);
 
             }
         });
@@ -195,11 +170,11 @@ public class CimentacionLPR extends AppCompatActivity {
 
     }
 
-    private void storeCimentacion(boolean getAcabLimpieza, boolean getAcabEstatus, boolean getExpLimpieza, boolean getExpEstatus, boolean getGroutLimpieza, boolean getGroutEstatus) {
+    private void storeCimentacion(boolean getAcabLimpieza, boolean getAcabEstatus, boolean getExpLimpieza, boolean getExpEstatus, boolean getGroutLimpieza, boolean getGroutEstatus, String obsAcab, String obsExp, String obsGrout) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
-        Call<CimResponseLPR> call = apiService.storeCimLPR(idMantenimiento, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus);
+        Call<CimResponseLPR> call = apiService.storeCimLPR(idMantenimiento, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus, obsAcab, obsExp, obsGrout);
         call.enqueue(new Callback<CimResponseLPR>() {
             @Override
             public void onResponse(Call<CimResponseLPR> call, Response<CimResponseLPR> response) {

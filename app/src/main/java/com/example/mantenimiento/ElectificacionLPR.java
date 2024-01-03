@@ -35,40 +35,32 @@ public class ElectificacionLPR extends AppCompatActivity {
         checkBoxLimpiezaRevSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaRevSI.setChecked(false);
-                    getRevisionLimpieza = !isChecked;
-                }
+                    getRevisionLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaRevNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaRevNO.setChecked(false);
-                    getRevisionLimpieza = isChecked;
-                }
+                    getRevisionLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusRevSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusRevSI.setChecked(false);
-                    getRevisionEstatus = !isChecked;
-                }
+                    getRevisionEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusRevNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusRevNO.setChecked(false);
-                    getRevisionEstatus = isChecked;
-                }
+                    getRevisionEstatus = !isChecked;
+
             }
         });
 
@@ -79,7 +71,7 @@ public class ElectificacionLPR extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String obsRevision = obsRevisionLPR.getText().toString();
-                storeElectrificacion(getRevisionLimpieza, getRevisionEstatus);
+                storeElectrificacion(getRevisionLimpieza, getRevisionEstatus, obsRevision);
             }
         });
 
@@ -94,11 +86,11 @@ public class ElectificacionLPR extends AppCompatActivity {
 
     }
 
-    private void storeElectrificacion(boolean getRevisionLimpieza, boolean getRevisionEstatus) {
+    private void storeElectrificacion(boolean getRevisionLimpieza, boolean getRevisionEstatus, String obsRevision) {
         ApiService apiService = ApiClient.getClient();
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<ElectResponseLPR> call = apiService.storeElecLPR(idMantenimiento, getRevisionLimpieza, getRevisionEstatus);
+        Call<ElectResponseLPR> call = apiService.storeElecLPR(idMantenimiento, getRevisionLimpieza, getRevisionEstatus, obsRevision);
         call.enqueue(new Callback<ElectResponseLPR>() {
             @Override
             public void onResponse(Call<ElectResponseLPR> call, Response<ElectResponseLPR> response) {
