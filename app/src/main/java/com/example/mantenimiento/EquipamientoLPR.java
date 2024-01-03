@@ -45,10 +45,8 @@ public class EquipamientoLPR extends AppCompatActivity {
         checkBoxLimpiezaRadioSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaRadioSI.setChecked(false);
-                    getRadioLimpieza = !isChecked;
-                }
+                    getRadioLimpieza = isChecked;
+
 
             }
         });
@@ -56,10 +54,8 @@ public class EquipamientoLPR extends AppCompatActivity {
         checkBoxLimpiezaRadioNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaRadioNO.setChecked(false);
-                    getRadioLimpieza = isChecked;
-                }
+                    getRadioLimpieza = !isChecked;
+
             }
         });
 
@@ -67,60 +63,46 @@ public class EquipamientoLPR extends AppCompatActivity {
         checkBoxEstatusRadioSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusRadioSI.setChecked(false);
-                    getRadioEstatus = !isChecked;
-                }
+                    getRadioEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusRadioNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusRadioNO.setChecked(false);
-                    getRadioEstatus = isChecked;
-                }
+                    getRadioEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaCamSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaCamSI.setChecked(isChecked);
-                    getCamLimpieza = !isChecked;
-                }
+                    getCamLimpieza = isChecked;
             }
         });
 
         checkBoxLimpiezaCamNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaCamNO.setChecked(isChecked);
-                    getCamLimpieza = isChecked;
-                }
+                    getCamLimpieza = !isChecked;
             }
         });
 
         checkBoxEstatusCamSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCamSI.setChecked(isChecked);
-                    getCamEstatus = !isChecked;
-                }
+                    getCamEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusCamNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCamNO.setChecked(isChecked);
-                    getCamEstatus = isChecked;
-                }
+                    getCamEstatus = !isChecked;
+
             }
         });
 

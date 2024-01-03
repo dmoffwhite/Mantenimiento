@@ -44,40 +44,32 @@ public class AnuncioC5iPMI extends AppCompatActivity {
         checkBoxLimpiezaEstrSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaEstrSI.setChecked(false);
-                    getEstructuraLimpieza = !isChecked;
-                }
+                    getEstructuraLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaEstrNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaEstrNO.setChecked(false);
-                    getEstructuraLimpieza = isChecked;
-                }
+                    getEstructuraLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusEstrSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusEstrSI.setChecked(false);
-                    getEstructuraEstatus = !isChecked;
-                }
+                    getEstructuraEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusEstrNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusEstrNO.setChecked(false);
-                    getEstructuraEstatus = isChecked;
-                }
+                    getEstructuraEstatus = !isChecked;
+
             }
         });
 
@@ -85,40 +77,30 @@ public class AnuncioC5iPMI extends AppCompatActivity {
         checkBoxLimpiezaOriSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaOriSI.setChecked(false);
-                    getOrientacionLimpieza = !isChecked;
-                }
+                    getOrientacionLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaOriNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaOriNO.setChecked(false);
-                    getOrientacionLimpieza = isChecked;
-                }
+                    getOrientacionLimpieza = !isChecked;
             }
         });
 
         checkBoxEstatusOriSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusOriSI.setChecked(false);
-                    getOrientacionEstatus = !isChecked;
-                }
+                    getOrientacionEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusOriNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusOriNO.setChecked(false);
-                    getOrientacionEstatus = isChecked;
-                }
+                    getOrientacionEstatus = !isChecked;
             }
         });
 

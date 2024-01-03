@@ -54,7 +54,7 @@ public class FormLPR extends AppCompatActivity {
 
         autoCompleteMunicipio.setOnItemClickListener((parent, view, position, id) -> {
             String selectedMunicipio = (String) parent.getItemAtPosition(position);
-            Toast.makeText(this, "Municipio seleccionado" + selectedMunicipio, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Municipio seleccionado: " + selectedMunicipio, Toast.LENGTH_SHORT).show();
 
         });
 
@@ -108,6 +108,8 @@ public class FormLPR extends AppCompatActivity {
                 String fecha = fechaLPR.getText().toString();
                 String placas = placasLPR.getText().toString();
                 String municipio = autoCompleteMunicipio.getEditableText().toString();
+                Intent intent = new Intent(FormLPR.this, MenuPMI.class);
+                startActivity(intent);
                 storeMantenimiento(tipoMantenimiento, lprID, folio, cuadrilla, fecha, placas, municipio);
 
             }

@@ -54,7 +54,7 @@ public class FormPMI extends AppCompatActivity {
 
         autoCompleteMunicipio.setOnItemClickListener((parent, view, position, id) -> {
             String selectedMunicipio = (String) parent.getItemAtPosition(position);
-            Toast.makeText(this, "Municipio seleccionado" + selectedMunicipio, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Municipio seleccionado: " + selectedMunicipio, Toast.LENGTH_SHORT).show();
 
         });
 

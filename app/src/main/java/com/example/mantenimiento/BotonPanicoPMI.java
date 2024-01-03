@@ -75,240 +75,188 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaValSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaValSI.setChecked(false);
-                    getValidacionLimpieza = !isChecked;
-                }
+                    getValidacionLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaValNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaValNO.setChecked(false);
-                    getValidacionLimpieza = isChecked;
-                }
+                    getValidacionLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusValSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusValSI.setChecked(false);
-                    getValidacionEstatus = !isChecked;
-                }
+                    getValidacionEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusValNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusValNO.setChecked(false);
-                    getValidacionEstatus = isChecked;
-                }
+                    getValidacionEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaTornSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTornSI.setChecked(false);
-                    getTornillosLimpieza = !isChecked;
-                }
+                    getTornillosLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaTornNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaTornNO.setChecked(false);
-                    getTornillosLimpieza = isChecked;
-                }
+                    getTornillosLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusTornSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTornSI.setChecked(false);
-                    getTornillosEstatus = !isChecked;
-                }
+                    getTornillosEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusTornNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusTornNO.setChecked(false);
-                    getTornillosEstatus = isChecked;
-                }
+                    getTornillosEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaSupSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxLimpiezaSupSI.setChecked(false);
-                    getSuperficieLimpieza = !isChecked;
-                }
+                    getSuperficieLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaSupNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxLimpiezaSupNO.setChecked(false);
-                    getSuperficieLimpieza = isChecked;
-                }
+                    getSuperficieLimpieza = !isChecked;
             }
         });
 
         checkBoxEstatusSupSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusSupSI.setChecked(false);
-                    getSuperficieEstatus = !isChecked;
-                }
+                    getSuperficieEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusSupNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusSupNO.setChecked(false);
-                    getSuperficieEstatus = isChecked;
-                }
+                    getSuperficieEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaConxSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaConxSI.setChecked(false);
-                    getConexionesLimpieza = !isChecked;
-                }
+                    getConexionesLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaConxNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaConxNO.setChecked(false);
-                    getConexionesLimpieza = isChecked;
-                }
+                    getConexionesLimpieza = !isChecked;
+
             }
         });
 
         checkBoxEstatusConxSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusConxSI.setChecked(false);
-                    getConexionesEstatus = !isChecked;
-                }
+                    getConexionesEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusConxNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusConxNO.setChecked(false);
-                    getConexionesEstatus = isChecked;
-                }
+                    getConexionesEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaCabSI.setChecked(false);
-                    getCableadoLimpieza = !isChecked;
-                }
+                    getCableadoLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxLimpiezaCabNO.setChecked(false);
-                    getCableadoLimpieza = isChecked;
-                }
+                    getCableadoLimpieza = !isChecked;
             }
         });
 
         checkBoxEstatusCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCabSI.setChecked(false);
-                    getCableadoEstatus = !isChecked;
-                }
+                    getCableadoEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusCabNO.setChecked(false);
-                    getCableadoEstatus = isChecked;
-                }
+                    getCableadoEstatus = !isChecked;
+
             }
         });
 
         checkBoxLimpiezaFimSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxLimpiezaFimSI.setChecked(false);
-                    getFimwareLimpieza = !isChecked;
-                }
+                    getFimwareLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaFimNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    checkBoxLimpiezaFimNO.setChecked(false);
-                    getFimwareLimpieza = isChecked;
-                }
+                    getFimwareLimpieza = !isChecked;
             }
         });
 
         checkBoxEstatusFimSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusFimSI.setChecked(false);
-                    getFimwareEstatus = !isChecked;
-                }
+                    getFimwareEstatus = isChecked;
             }
         });
 
         checkBoxEstatusFimNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusFimNO.setChecked(false);
-                    getFimwareEstatus = isChecked;
-                }
+                    getFimwareEstatus = !isChecked;
+
             }
         });
 

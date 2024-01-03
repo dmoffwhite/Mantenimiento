@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String nombreU = usernameInput.getText().toString();
                 String password = passwordInput.getText().toString();
-                //Intent intent = new Intent(MainActivity.this, Menu.class);
-                //startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, Menu.class);
+                startActivity(intent);
                 login(nombreU, password);
             }
         });

@@ -32,7 +32,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent pmiIntent = new Intent(Menu.this, FormPMI.class);
-                pmiIntent.putExtra("idUsuario", idUsuario);
+                //pmiIntent.putExtra("idUsuario", idUsuario);
                 startActivity(pmiIntent);
             }
         });
@@ -41,7 +41,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent lprIntent = new Intent(Menu.this, FormLPR.class);
-                lprIntent.putExtra("idUsuario", idUsuario);
+                //lprIntent.putExtra("idUsuario", idUsuario);
                 startActivity(lprIntent);
             }
         });
