@@ -133,7 +133,7 @@ public class EquipamientoLPR extends AppCompatActivity {
             public void onClick(View view) {
                 String obsRadio = obsRadioEquipamientoLPR.getText().toString();
                 String obsCam = obsCamEquipamientoLPR.getText().toString();
-                storeEquipamiento(getRadioLimpieza, getRadioEstatus, getCamLimpieza, getCamEstatus);
+                storeEquipamiento(getRadioLimpieza, getRadioEstatus, getCamLimpieza, getCamEstatus, obsRadio, obsCam);
             }
         });
 
@@ -148,11 +148,11 @@ public class EquipamientoLPR extends AppCompatActivity {
 
     }
 
-    private void storeEquipamiento(boolean getRadioLimpieza, boolean getRadioEstatus, boolean getCamLimpieza, boolean getCamEstatus) {
+    private void storeEquipamiento(boolean getRadioLimpieza, boolean getRadioEstatus, boolean getCamLimpieza, boolean getCamEstatus, String obsRadio, String obsCam) {
         ApiService apiService = ApiClient.getClient();
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<EquipResponseLPR> call = apiService.storeEquipLPR(idMantenimiento, getRadioLimpieza, getRadioEstatus, getCamLimpieza, getCamEstatus);
+        Call<EquipResponseLPR> call = apiService.storeEquipLPR(idMantenimiento, getRadioLimpieza, getRadioEstatus, getCamLimpieza, getCamEstatus, obsRadio, obsCam);
         call.enqueue(new Callback<EquipResponseLPR>() {
             @Override
             public void onResponse(Call<EquipResponseLPR> call, Response<EquipResponseLPR> response) {

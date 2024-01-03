@@ -129,7 +129,7 @@ public class EstructuraLPR extends AppCompatActivity {
             public void onClick(View view) {
                 String obsTor = obsTorBLPR.getText().toString();
                 String obsGalv = obsGalvLPR.getText().toString();
-                storeEstructura(getTorbLimpieza, getTorbEstatus, getGalvLimpieza, getGalvEstatus);
+                storeEstructura(getTorbLimpieza, getTorbEstatus, getGalvLimpieza, getGalvEstatus, obsTor, obsGalv);
             }
         });
 
@@ -146,11 +146,11 @@ public class EstructuraLPR extends AppCompatActivity {
 
     }
 
-    private void storeEstructura(boolean getTorbLimpieza, boolean getTorbEstatus, boolean getGalvLimpieza, boolean getGalvEstatus) {
+    private void storeEstructura(boolean getTorbLimpieza, boolean getTorbEstatus, boolean getGalvLimpieza, boolean getGalvEstatus, String obsTor, String obsGalv) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
-        Call<EstResponseLPR> call = apiService.storeEstLPR(idMantenimiento, getTorbLimpieza, getTorbEstatus, getGalvLimpieza, getGalvEstatus);
+        Call<EstResponseLPR> call = apiService.storeEstLPR(idMantenimiento, getTorbLimpieza, getTorbEstatus, getGalvLimpieza, getGalvEstatus, obsTor, obsGalv);
         call.enqueue(new Callback<EstResponseLPR>() {
             @Override
             public void onResponse(Call<EstResponseLPR> call, Response<EstResponseLPR> response) {

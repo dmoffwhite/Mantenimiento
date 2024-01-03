@@ -129,7 +129,7 @@ public class RegistroMantenimientoPMI extends AppCompatActivity {
             public void onClick(View view) {
                 String obsGalv = obsGalvRegistroPMI.getText().toString();
                 String obsTorx = obsTorxRegistroPMI.getText().toString();
-                storeRegistro(getGalvLimpieza, getGalvEstatus, getTorxLimpieza, getTorxEstatus);
+                storeRegistro(getGalvLimpieza, getGalvEstatus, getTorxLimpieza, getTorxEstatus, obsGalv, obsTorx);
             }
         });
 
@@ -144,12 +144,12 @@ public class RegistroMantenimientoPMI extends AppCompatActivity {
 
     }
 
-    private void storeRegistro(boolean getGalvLimpieza, boolean getGalvEstatus, boolean getTorxLimpieza, boolean getTorxEstatus) {
+    private void storeRegistro(boolean getGalvLimpieza, boolean getGalvEstatus, boolean getTorxLimpieza, boolean getTorxEstatus, String obsGalv, String obsTorx) {
     ApiService apiService = ApiClient.getClient();
 
     int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call <RegistroResponsePMI> call = apiService.storeRegistroPMI(idMantenimiento, getGalvLimpieza, getGalvEstatus, getTorxLimpieza, getTorxEstatus);
+        Call <RegistroResponsePMI> call = apiService.storeRegistroPMI(idMantenimiento, getGalvLimpieza, getGalvEstatus, getTorxLimpieza, getTorxEstatus, obsGalv, obsTorx);
         call.enqueue(new Callback<RegistroResponsePMI>() {
             @Override
             public void onResponse(Call<RegistroResponsePMI> call, Response<RegistroResponsePMI> response) {

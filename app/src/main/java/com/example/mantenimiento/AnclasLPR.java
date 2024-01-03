@@ -128,7 +128,7 @@ public class AnclasLPR extends AppCompatActivity {
             public void onClick(View view) {
                 String obsCuerda = obsCuerdaAnclasPMI.getText().toString();
                 String obsPiezas = obsPiezasAnclasPMI.getText().toString();
-                storeAnclas(getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus);
+                storeAnclas(getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus, obsCuerda, obsPiezas);
             }
         });
 
@@ -143,11 +143,11 @@ public class AnclasLPR extends AppCompatActivity {
 
     }
 
-    private void storeAnclas(boolean getCuerdaLimpieza, boolean getCuerdaEstatus, boolean getPiezasLimpieza, boolean getPiezasEstatus) {
+    private void storeAnclas(boolean getCuerdaLimpieza, boolean getCuerdaEstatus, boolean getPiezasLimpieza, boolean getPiezasEstatus, String obsCuerda, String obsPiezas) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
-        Call<AnclasResponseLPR> call = apiService.storeAnclasLPR(idMantenimiento, getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus);
+        Call<AnclasResponseLPR> call = apiService.storeAnclasLPR(idMantenimiento, getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus, obsCuerda, obsPiezas);
         call.enqueue(new Callback<AnclasResponseLPR>() {
             @Override
             public void onResponse(Call<AnclasResponseLPR> call, Response<AnclasResponseLPR> response) {

@@ -129,7 +129,7 @@ public class AnclasPostePMI extends AppCompatActivity {
             public void onClick(View view) {
                 String obsCuerda = obsCuerdaAnclasPMI.getText().toString();
                 String obsPiezas = obsPiezasAnclasPMI.getText().toString();
-                storeAnclas(getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus);
+                storeAnclas(getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus, obsCuerda, obsPiezas);
             }
         });
 
@@ -144,12 +144,12 @@ public class AnclasPostePMI extends AppCompatActivity {
 
     }
 
-    private void storeAnclas(boolean getCuerdaLimpieza, boolean getCuerdaEstatus, boolean getPiezasLimpieza, boolean getPiezasEstatus) {
+    private void storeAnclas(boolean getCuerdaLimpieza, boolean getCuerdaEstatus, boolean getPiezasLimpieza, boolean getPiezasEstatus, String obsCuerda, String obsPiezas) {
     ApiService apiService = ApiClient.getClient();
 
     int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<AnclasResponsePMI> call = apiService.storeAnclasPMI(idMantenimiento, getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus);
+        Call<AnclasResponsePMI> call = apiService.storeAnclasPMI(idMantenimiento, getCuerdaLimpieza, getCuerdaEstatus, getPiezasLimpieza, getPiezasEstatus, obsCuerda, obsPiezas);
         call.enqueue(new Callback<AnclasResponsePMI>() {
             @Override
             public void onResponse(Call<AnclasResponsePMI> call, Response<AnclasResponsePMI> response) {

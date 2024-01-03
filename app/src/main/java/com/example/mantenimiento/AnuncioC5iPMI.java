@@ -131,7 +131,7 @@ public class AnuncioC5iPMI extends AppCompatActivity {
             public void onClick(View view) {
                 String obsEstructura = obsEstructuraAnuPMI.getText().toString();
                 String obsOrientacion = obsOrientaAnuPMI.getText().toString();
-                storeAnuncio(getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus);
+                storeAnuncio(getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus, obsEstructura, obsOrientacion);
             }
         });
 
@@ -148,12 +148,12 @@ public class AnuncioC5iPMI extends AppCompatActivity {
 
     }
 
-    private void storeAnuncio(boolean getEstructuraLimpieza, boolean getEstructuraEstatus, boolean getOrientacionLimpieza, boolean getOrientacionEstatus) {
+    private void storeAnuncio(boolean getEstructuraLimpieza, boolean getEstructuraEstatus, boolean getOrientacionLimpieza, boolean getOrientacionEstatus, String obsEstructura, String obsOrientacion) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<AnuncioResponsePMI> call = apiService.storeAnuncioPMI(idMantenimiento, getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus);
+        Call<AnuncioResponsePMI> call = apiService.storeAnuncioPMI(idMantenimiento, getEstructuraLimpieza, getEstructuraEstatus, getOrientacionLimpieza, getOrientacionEstatus, obsEstructura, obsOrientacion);
         call.enqueue(new Callback<AnuncioResponsePMI>() {
             @Override
             public void onResponse(Call<AnuncioResponsePMI> call, Response<AnuncioResponsePMI> response) {

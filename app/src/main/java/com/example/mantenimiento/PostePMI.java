@@ -246,7 +246,7 @@ public class PostePMI extends AppCompatActivity {
                 String obsElementos = obsElementosPMI.getText().toString();
                 String obsSecciones = obsSeccionesPMI.getText().toString();
                 String obsPintura = obsPinturaPMI.getText().toString();
-                storePoste(getConectoresLimpieza, getConectoresEstatus,  getElementosLimpieza, getElementosEstatus,  getSeccionesLimpieza, getSeccionesEstatus,  getPinturaLimpieza, getPinturaEstatus);
+                storePoste(getConectoresLimpieza, getConectoresEstatus,  getElementosLimpieza, getElementosEstatus,  getSeccionesLimpieza, getSeccionesEstatus,  getPinturaLimpieza, getPinturaEstatus, obsConectores, obsElementos, obsSecciones, obsPintura);
             }
         });
 
@@ -259,7 +259,7 @@ public class PostePMI extends AppCompatActivity {
         });
     }
 
-    private void storePoste(boolean getConectoresLimpieza, boolean getConectoresEstatus,  boolean getElementosLimpieza, boolean getElementosEstatus, boolean getSeccionesLimpieza, boolean getSeccionesEstatus,  boolean getPinturaLimpieza, boolean getPinturaEstatus) {
+    private void storePoste(boolean getConectoresLimpieza, boolean getConectoresEstatus,  boolean getElementosLimpieza, boolean getElementosEstatus, boolean getSeccionesLimpieza, boolean getSeccionesEstatus,  boolean getPinturaLimpieza, boolean getPinturaEstatus, String obsConectores, String obsElementos, String obsSecciones, String obsPintura) {
 
         ApiService apiService = ApiClient.getClient();
 
@@ -267,7 +267,7 @@ public class PostePMI extends AppCompatActivity {
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
 
-        Call<PosteResponsePMI> call = apiService.storePostePMI(idMantenimiento, getConectoresLimpieza, getConectoresEstatus,  getElementosLimpieza, getElementosEstatus,  getSeccionesLimpieza, getSeccionesEstatus,  getPinturaLimpieza, getPinturaEstatus);
+        Call<PosteResponsePMI> call = apiService.storePostePMI(idMantenimiento, getConectoresLimpieza, getConectoresEstatus,  getElementosLimpieza, getElementosEstatus,  getSeccionesLimpieza, getSeccionesEstatus,  getPinturaLimpieza, getPinturaEstatus, obsConectores, obsElementos, obsSecciones, obsPintura);
         call.enqueue(new Callback<PosteResponsePMI>() {
             @Override
             public void onResponse(Call<PosteResponsePMI> call, Response<PosteResponsePMI> response) {

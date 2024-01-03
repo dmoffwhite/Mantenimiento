@@ -79,7 +79,7 @@ public class ElectificacionLPR extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String obsRevision = obsRevisionLPR.getText().toString();
-                storeElectrificacion(getRevisionLimpieza, getRevisionEstatus);
+                storeElectrificacion(getRevisionLimpieza, getRevisionEstatus, obsRevision);
             }
         });
 
@@ -94,11 +94,11 @@ public class ElectificacionLPR extends AppCompatActivity {
 
     }
 
-    private void storeElectrificacion(boolean getRevisionLimpieza, boolean getRevisionEstatus) {
+    private void storeElectrificacion(boolean getRevisionLimpieza, boolean getRevisionEstatus, String obsRevision) {
         ApiService apiService = ApiClient.getClient();
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<ElectResponseLPR> call = apiService.storeElecLPR(idMantenimiento, getRevisionLimpieza, getRevisionEstatus);
+        Call<ElectResponseLPR> call = apiService.storeElecLPR(idMantenimiento, getRevisionLimpieza, getRevisionEstatus, obsRevision);
         call.enqueue(new Callback<ElectResponseLPR>() {
             @Override
             public void onResponse(Call<ElectResponseLPR> call, Response<ElectResponseLPR> response) {

@@ -233,7 +233,7 @@ public class EquipamientoPMI extends AppCompatActivity {
                 String obsPTZ = obsPTZEquipamientoPMI.getText().toString();
                 String obsFija = obsFijaEquipamientoPMI.getText().toString();
                 String obsAna = obsAnaliEquipamientoPMI.getText().toString();
-                storeEquipamiento(getRadioLimpieza, getRadioEstatus, getPTZLimpieza, getPTZEstatus, getFijaLimpieza, getFijaEstatus, getAnaliLimpieza, getAnaliEstatus);
+                storeEquipamiento(getRadioLimpieza, getRadioEstatus, getPTZLimpieza, getPTZEstatus, getFijaLimpieza, getFijaEstatus, getAnaliLimpieza, getAnaliEstatus, obsRadio, obsPTZ, obsFija, obsAna);
             }
         });
 
@@ -250,11 +250,11 @@ public class EquipamientoPMI extends AppCompatActivity {
 
     }
 
-    private void storeEquipamiento(boolean getRadioLimpieza, boolean getRadioEstatus, boolean getPTZLimpieza, boolean getPTZEstatus, boolean getFijaLimpieza, boolean getFijaEstatus, boolean getAnaliLimpieza, boolean getAnaliEstatus) {
+    private void storeEquipamiento(boolean getRadioLimpieza, boolean getRadioEstatus, boolean getPTZLimpieza, boolean getPTZEstatus, boolean getFijaLimpieza, boolean getFijaEstatus, boolean getAnaliLimpieza, boolean getAnaliEstatus, String obsRadio, String obsPTZ, String obsFija, String obsAna) {
         ApiService apiService = ApiClient.getClient();
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<EquipResponsePMI> call = apiService.storeEquipPMI(idMantenimiento, getRadioLimpieza, getRadioEstatus, getPTZLimpieza, getPTZEstatus, getFijaLimpieza, getFijaEstatus, getAnaliLimpieza, getAnaliEstatus);
+        Call<EquipResponsePMI> call = apiService.storeEquipPMI(idMantenimiento, getRadioLimpieza, getRadioEstatus, getPTZLimpieza, getPTZEstatus, getFijaLimpieza, getFijaEstatus, getAnaliLimpieza, getAnaliEstatus, obsRadio, obsPTZ, obsFija, obsAna);
         call.enqueue(new Callback<EquipResponsePMI>() {
             @Override
             public void onResponse(Call<EquipResponsePMI> call, Response<EquipResponsePMI> response) {

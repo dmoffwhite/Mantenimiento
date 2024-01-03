@@ -179,7 +179,7 @@ public class CimentacionLPR extends AppCompatActivity {
                 String obsAcab = obsSupPMI.getText().toString();
                 String obsExp = obsExpPMI.getText().toString();
                 String obsGrout = obsGroutPMI.getText().toString();
-                storeCimentacion(getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus);
+                storeCimentacion(getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus, obsAcab, obsExp, obsGrout);
 
             }
         });
@@ -195,11 +195,11 @@ public class CimentacionLPR extends AppCompatActivity {
 
     }
 
-    private void storeCimentacion(boolean getAcabLimpieza, boolean getAcabEstatus, boolean getExpLimpieza, boolean getExpEstatus, boolean getGroutLimpieza, boolean getGroutEstatus) {
+    private void storeCimentacion(boolean getAcabLimpieza, boolean getAcabEstatus, boolean getExpLimpieza, boolean getExpEstatus, boolean getGroutLimpieza, boolean getGroutEstatus, String obsAcab, String obsExp, String obsGrout) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
-        Call<CimResponseLPR> call = apiService.storeCimLPR(idMantenimiento, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus);
+        Call<CimResponseLPR> call = apiService.storeCimLPR(idMantenimiento, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus, obsAcab, obsExp, obsGrout);
         call.enqueue(new Callback<CimResponseLPR>() {
             @Override
             public void onResponse(Call<CimResponseLPR> call, Response<CimResponseLPR> response) {

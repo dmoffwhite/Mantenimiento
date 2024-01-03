@@ -130,7 +130,7 @@ public class BrazosPMI extends AppCompatActivity {
             public void onClick(View view) {
                 String obsCarcasa = obsCarcasaBrazosPMI.getText().toString();
                 String obsTuberia = obsTuberiaBrazosPMI.getText().toString();
-                storeBrazos(getCarcasaLimpieza, getCarcasaEstatus, getTuberiaLimpieza, getTuberiaEstatus);
+                storeBrazos(getCarcasaLimpieza, getCarcasaEstatus, getTuberiaLimpieza, getTuberiaEstatus, obsCarcasa, obsTuberia);
             }
         });
 
@@ -147,12 +147,12 @@ public class BrazosPMI extends AppCompatActivity {
 
     }
 
-    private void storeBrazos(boolean getCarcasaLimpieza, boolean getCarcasaEstatus, boolean getTuberiaLimpieza, boolean getTuberiaEstatus) {
+    private void storeBrazos(boolean getCarcasaLimpieza, boolean getCarcasaEstatus, boolean getTuberiaLimpieza, boolean getTuberiaEstatus, String obsCarcasa, String obsTuberia) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<BrazosResponsePMI> call = apiService.storeBrazosPMI(idMantenimiento, getCarcasaLimpieza, getCarcasaEstatus, getTuberiaLimpieza, getTuberiaEstatus);
+        Call<BrazosResponsePMI> call = apiService.storeBrazosPMI(idMantenimiento, getCarcasaLimpieza, getCarcasaEstatus, getTuberiaLimpieza, getTuberiaEstatus, obsCarcasa, obsTuberia);
         call.enqueue(new Callback<BrazosResponsePMI>() {
             @Override
             public void onResponse(Call<BrazosResponsePMI> call, Response<BrazosResponsePMI> response) {

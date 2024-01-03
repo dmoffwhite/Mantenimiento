@@ -477,7 +477,7 @@ public class GabineteLPR extends AppCompatActivity {
                 String obsVent = obsVentGabLPR.getText().toString();
                 String obsFilt = obsFiltGabLPR.getText().toString();
                 String obsSil = obsSilGabLPR.getText().toString();
-                storeGabinete(getTubLicLimpieza, getTubLicEstatus, getTorSegLimpieza, getTorSegEstatus, getCabLimpieza, getCabEstatus, getExtLimpieza, getExtEstatus, getCierLimpieza, getCierEstatus, getCabNeuLimpieza, getCabNeuEstatus, getVentLimpieza, getVentEstatus, getFiltLimpieza, getFiltEstatus, getSilLimpieza, getSilEstatus);
+                storeGabinete(getTubLicLimpieza, getTubLicEstatus, getTorSegLimpieza, getTorSegEstatus, getCabLimpieza, getCabEstatus, getExtLimpieza, getExtEstatus, getCierLimpieza, getCierEstatus, getCabNeuLimpieza, getCabNeuEstatus, getVentLimpieza, getVentEstatus, getFiltLimpieza, getFiltEstatus, getSilLimpieza, getSilEstatus, obsTub, obsTor, obsCab, obsExt, obsCier, obsCabN, obsVent, obsFilt, obsSil);
             }
         });
 
@@ -498,11 +498,11 @@ public class GabineteLPR extends AppCompatActivity {
 
     }
 
-    private void storeGabinete(boolean getTubLicLimpieza, boolean getTubLicEstatus, boolean getTorSegLimpieza, boolean getTorSegEstatus, boolean getCabLimpieza, boolean getCabEstatus, boolean getExtLimpieza, boolean getExtEstatus, boolean getCierLimpieza, boolean getCierEstatus, boolean getCabNeuLimpieza, boolean getCabNeuEstatus, boolean getVentLimpieza, boolean getVentEstatus, boolean getFiltLimpieza, boolean getFiltEstatus, boolean getSilLimpieza, boolean getSilEstatus) {
+    private void storeGabinete(boolean getTubLicLimpieza, boolean getTubLicEstatus, boolean getTorSegLimpieza, boolean getTorSegEstatus, boolean getCabLimpieza, boolean getCabEstatus, boolean getExtLimpieza, boolean getExtEstatus, boolean getCierLimpieza, boolean getCierEstatus, boolean getCabNeuLimpieza, boolean getCabNeuEstatus, boolean getVentLimpieza, boolean getVentEstatus, boolean getFiltLimpieza, boolean getFiltEstatus, boolean getSilLimpieza, boolean getSilEstatus, String obsTub, String obsTor, String obsCab, String obsExt, String obsCier, String obsCabN, String obsVent, String obsFilt, String obsSil) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
-        Call<GabResponseLPR> call = apiService.storeGabLPR(idMantenimiento, getTubLicLimpieza, getTubLicEstatus, getTorSegLimpieza, getTorSegEstatus, getCabLimpieza, getCabEstatus, getExtLimpieza, getExtEstatus, getCierLimpieza, getCierEstatus, getCabNeuLimpieza, getCabNeuEstatus, getVentLimpieza, getVentEstatus, getFiltLimpieza, getFiltEstatus, getSilLimpieza, getSilEstatus);
+        Call<GabResponseLPR> call = apiService.storeGabLPR(idMantenimiento, getTubLicLimpieza, getTubLicEstatus, getTorSegLimpieza, getTorSegEstatus, getCabLimpieza, getCabEstatus, getExtLimpieza, getExtEstatus, getCierLimpieza, getCierEstatus, getCabNeuLimpieza, getCabNeuEstatus, getVentLimpieza, getVentEstatus, getFiltLimpieza, getFiltEstatus, getSilLimpieza, getSilEstatus, obsTub, obsTor, obsCab, obsExt, obsCier, obsCabN, obsVent, obsFilt, obsSil);
         call.enqueue(new Callback<GabResponseLPR>() {
             @Override
             public void onResponse(Call<GabResponseLPR> call, Response<GabResponseLPR> response) {

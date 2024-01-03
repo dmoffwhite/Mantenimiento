@@ -129,7 +129,7 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
             public void onClick(View view) {
                 String obsTubGalv = obsTubGalvLPR.getText().toString();
                 String obsTor = obsTorSLPR.getText().toString();
-                storeRegistro(getTubGalLimpieza, getTubGalEstatus, getTorSLimpieza, getTorSEstatus);
+                storeRegistro(getTubGalLimpieza, getTubGalEstatus, getTorSLimpieza, getTorSEstatus, obsTubGalv, obsTor);
             }
         });
 
@@ -145,12 +145,12 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
 
     }
 
-    private void storeRegistro(boolean getTubGalLimpieza, boolean getTubGalEstatus, boolean getTorSLimpieza, boolean getTorSEstatus) {
+    private void storeRegistro(boolean getTubGalLimpieza, boolean getTubGalEstatus, boolean getTorSLimpieza, boolean getTorSEstatus, String obsTubGalv, String obsTor) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<RegistroResponseLPR> call = apiService.storeRegLPR(idMantenimiento, getTubGalLimpieza, getTubGalEstatus, getTorSLimpieza, getTorSEstatus);
+        Call<RegistroResponseLPR> call = apiService.storeRegLPR(idMantenimiento, getTubGalLimpieza, getTubGalEstatus, getTorSLimpieza, getTorSEstatus, obsTubGalv, obsTor);
         call.enqueue(new Callback<RegistroResponseLPR>() {
             @Override
             public void onResponse(Call<RegistroResponseLPR> call, Response<RegistroResponseLPR> response) {

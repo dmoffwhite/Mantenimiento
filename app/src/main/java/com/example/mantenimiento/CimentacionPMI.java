@@ -229,7 +229,7 @@ public class CimentacionPMI extends AppCompatActivity {
                 String obsAcab = obsSupPMI.getText().toString();
                 String obsExp = obsExpPMI.getText().toString();
                 String obsGrout = obsGroutPMI.getText().toString();
-                storeCimentacion(getNivelLimpieza, getNivelEstatus, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus);
+                storeCimentacion(getNivelLimpieza, getNivelEstatus, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus, obsNivel, obsAcab, obsExp, obsGrout);
                 
             }
         });
@@ -248,12 +248,12 @@ public class CimentacionPMI extends AppCompatActivity {
 
     }
 
-    private void storeCimentacion(boolean getNivelLimpieza, boolean getNivelEstatus, boolean getAcabLimpieza, boolean getAcabEstatus, boolean getExpLimpieza, boolean getExpEstatus, boolean getGroutLimpieza, boolean getGroutEstatus) {
+    private void storeCimentacion(boolean getNivelLimpieza, boolean getNivelEstatus, boolean getAcabLimpieza, boolean getAcabEstatus, boolean getExpLimpieza, boolean getExpEstatus, boolean getGroutLimpieza, boolean getGroutEstatus, String obsNivel, String obsAcab, String obsExp, String obsGrout) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<CimResponsePMI> call = apiService.storeCimentacionPMI(idMantenimiento,getNivelLimpieza, getNivelEstatus, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus);
+        Call<CimResponsePMI> call = apiService.storeCimentacionPMI(idMantenimiento,getNivelLimpieza, getNivelEstatus, getAcabLimpieza, getAcabEstatus, getExpLimpieza, getExpEstatus, getGroutLimpieza, getGroutEstatus, obsNivel, obsAcab, obsExp, obsGrout);
         call.enqueue(new Callback<CimResponsePMI>() {
             @Override
             public void onResponse(Call<CimResponsePMI> call, Response<CimResponsePMI> response) {

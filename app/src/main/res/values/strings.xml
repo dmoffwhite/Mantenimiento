@@ -141,6 +141,7 @@
 
     <!-- Activity Pararayo LPR -->
     <string name="faraday_lpr">Punta faraday</string>
+    <string name="mastil_lpr">Mastil</string>
 
     <!--Activity Equipamiento LPR -->
     <string name="radio_equipamiento_lpr">Radio</string>

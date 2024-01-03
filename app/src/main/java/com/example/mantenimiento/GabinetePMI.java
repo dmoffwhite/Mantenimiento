@@ -496,7 +496,7 @@ public class GabinetePMI extends AppCompatActivity {
                 String obsVentilador = obsVentiladorPMI.getText().toString();
                 String obsFiltros = obsFiltrosPMI.getText().toString();
 
-                storeGabinete(geTuberiaLimpieza, geTuberiaEstatus, getTapaLimpieza, getTapaEstatus, getCabInLimpieza, getCabInEstatus, getExteriorLimpieza, getExteriorEstatus, getFijacionLimpieza, getFijacionEstatus, getOrientacionLimpieza, getOrientacionEstatus, getCablenNLimpieza, getCableNEstatus, getVentiladorLimpieza, getVentiladorEstatus, getFiltrosLimpieza, getFiltrosEstatus);
+                storeGabinete(geTuberiaLimpieza, geTuberiaEstatus, getTapaLimpieza, getTapaEstatus, getCabInLimpieza, getCabInEstatus, getExteriorLimpieza, getExteriorEstatus, getFijacionLimpieza, getFijacionEstatus, getOrientacionLimpieza, getOrientacionEstatus, getCablenNLimpieza, getCableNEstatus, getVentiladorLimpieza, getVentiladorEstatus, getFiltrosLimpieza, getFiltrosEstatus, obsTub, obsTapa, obsCabIn, obsExt, obsFijacion, obsOrientacion, obsCable, obsVentilador, obsFiltros);
             }
         });
 
@@ -510,12 +510,12 @@ public class GabinetePMI extends AppCompatActivity {
 
     }
 
-    private void storeGabinete(boolean geTuberiaLimpieza, boolean geTuberiaEstatus, boolean getTapaLimpieza, boolean getTapaEstatus, boolean getCabInLimpieza, boolean getCabInEstatus, boolean getExteriorLimpieza, boolean getExteriorEstatus, boolean getFijacionLimpieza, boolean getFijacionEstatus, boolean getOrientacionLimpieza, boolean getOrientacionEstatus, boolean getCablenNLimpieza, boolean getCableNEstatus, boolean getVentiladorLimpieza, boolean getVentiladorEstatus, boolean getFiltrosLimpieza, boolean getFiltrosEstatus) {
+    private void storeGabinete(boolean geTuberiaLimpieza, boolean geTuberiaEstatus, boolean getTapaLimpieza, boolean getTapaEstatus, boolean getCabInLimpieza, boolean getCabInEstatus, boolean getExteriorLimpieza, boolean getExteriorEstatus, boolean getFijacionLimpieza, boolean getFijacionEstatus, boolean getOrientacionLimpieza, boolean getOrientacionEstatus, boolean getCablenNLimpieza, boolean getCableNEstatus, boolean getVentiladorLimpieza, boolean getVentiladorEstatus, boolean getFiltrosLimpieza, boolean getFiltrosEstatus, String obsTub, String obsTapa, String obsCabIn, String obsExt, String obsFijacion, String obsOrientacion, String obsCable, String obsVentilador, String obsFiltros) {
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<GabResponsePMI> call = apiService.storeGabPMI(idMantenimiento, geTuberiaLimpieza, geTuberiaEstatus, getTapaLimpieza, getTapaEstatus, getCabInLimpieza, getCabInEstatus, getExteriorLimpieza, getExteriorEstatus, getFijacionLimpieza, getFijacionEstatus, getOrientacionLimpieza, getOrientacionEstatus, getCablenNLimpieza, getCableNEstatus, getVentiladorLimpieza, getVentiladorEstatus, getFiltrosLimpieza, getFiltrosEstatus);
+        Call<GabResponsePMI> call = apiService.storeGabPMI(idMantenimiento, geTuberiaLimpieza, geTuberiaEstatus, getTapaLimpieza, getTapaEstatus, getCabInLimpieza, getCabInEstatus, getExteriorLimpieza, getExteriorEstatus, getFijacionLimpieza, getFijacionEstatus, getOrientacionLimpieza, getOrientacionEstatus, getCablenNLimpieza, getCableNEstatus, getVentiladorLimpieza, getVentiladorEstatus, getFiltrosLimpieza, getFiltrosEstatus, obsTub, obsTapa, obsCabIn, obsExt, obsFijacion, obsOrientacion, obsCable, obsVentilador, obsFiltros);
         call.enqueue(new Callback<GabResponsePMI>() {
             @Override
             public void onResponse(Call<GabResponsePMI> call, Response<GabResponsePMI> response) {

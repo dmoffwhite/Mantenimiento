@@ -231,7 +231,7 @@ public class SistemaTierrasLPR extends AppCompatActivity {
                 String obsRegistro = obsRegistroPMI.getText().toString();
                 String obsEstado = obsEstadoPMI.getText().toString();
                 String obsCables = obsCablesPMI.getText().toString();
-                storeSistema(getNivelLimpieza, getNivelEstatus, getRegistroLimpieza, getRegistroEstatus, getEstadoCLimpieza, getEstadoCEstado, getCablesNLimpieza, getCablesNEstatus);
+                storeSistema(getNivelLimpieza, getNivelEstatus, getRegistroLimpieza, getRegistroEstatus, getEstadoCLimpieza, getEstadoCEstado, getCablesNLimpieza, getCablesNEstatus, obsNivel, obsRegistro, obsEstado, obsCables);
             }
         });
 
@@ -246,13 +246,13 @@ public class SistemaTierrasLPR extends AppCompatActivity {
 
     }
 
-    private void storeSistema(boolean getNivelLimpieza, boolean getNivelEstatus, boolean getRegistroLimpieza, boolean getRegistroEstatus, boolean getEstadoCLimpieza, boolean getEstadoCEstado, boolean getCablesNLimpieza, boolean getCablesNEstatus) {
+    private void storeSistema(boolean getNivelLimpieza, boolean getNivelEstatus, boolean getRegistroLimpieza, boolean getRegistroEstatus, boolean getEstadoCLimpieza, boolean getEstadoCEstado, boolean getCablesNLimpieza, boolean getCablesNEstatus, String obsNivel, String obsRegistro, String obsEstado, String obsCables) {
 
         ApiService apiService = ApiClient.getClient();
 
         int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-        Call<SistemaResponseLPR> call = apiService.storeSisLPR(idMantenimiento, getNivelLimpieza, getNivelEstatus, getRegistroLimpieza, getRegistroEstatus, getEstadoCLimpieza, getEstadoCEstado, getCablesNLimpieza, getCablesNEstatus);
+        Call<SistemaResponseLPR> call = apiService.storeSisLPR(idMantenimiento, getNivelLimpieza, getNivelEstatus, getRegistroLimpieza, getRegistroEstatus, getEstadoCLimpieza, getEstadoCEstado, getCablesNLimpieza, getCablesNEstatus, obsNivel, obsRegistro, obsEstado, obsCables);
         call.enqueue(new Callback<SistemaResponseLPR>() {
             @Override
             public void onResponse(Call<SistemaResponseLPR> call, Response<SistemaResponseLPR> response) {

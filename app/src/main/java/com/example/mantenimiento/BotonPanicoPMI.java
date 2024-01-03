@@ -330,7 +330,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
                 String obsConexiones = obsConexionesBotonPMI.getText().toString();
                 String obsCableado = obsCableadoBotonPMI.getText().toString();
                 String obsFimware = obsFimwareBotonPMI.getText().toString();
-                storeBoton(getValidacionLimpieza, getValidacionEstatus, getTornillosLimpieza, getTornillosEstatus, getSuperficieLimpieza, getSuperficieEstatus, getConexionesLimpieza, getConexionesEstatus, getCableadoLimpieza, getCableadoEstatus, getFimwareLimpieza, getFimwareEstatus);
+                storeBoton(getValidacionLimpieza, getValidacionEstatus, getTornillosLimpieza, getTornillosEstatus, getSuperficieLimpieza, getSuperficieEstatus, getConexionesLimpieza, getConexionesEstatus, getCableadoLimpieza, getCableadoEstatus, getFimwareLimpieza, getFimwareEstatus, obsValidacion, obsTornillos, obsSuperficie, obsConexiones, obsCableado, obsFimware);
             }
         });
 
@@ -346,12 +346,12 @@ public class BotonPanicoPMI extends AppCompatActivity {
 
     }
 
-    private void storeBoton(boolean getValidacionLimpieza, boolean getValidacionEstatus, boolean getTornillosLimpieza, boolean getTornillosEstatus, boolean getSuperficieLimpieza, boolean getSuperficieEstatus, boolean getConexionesLimpieza, boolean getConexionesEstatus, boolean getCableadoLimpieza, boolean getCableadoEstatus, boolean getFimwareLimpieza, boolean getFimwareEstatus) {
+    private void storeBoton(boolean getValidacionLimpieza, boolean getValidacionEstatus, boolean getTornillosLimpieza, boolean getTornillosEstatus, boolean getSuperficieLimpieza, boolean getSuperficieEstatus, boolean getConexionesLimpieza, boolean getConexionesEstatus, boolean getCableadoLimpieza, boolean getCableadoEstatus, boolean getFimwareLimpieza, boolean getFimwareEstatus, String obsValidacion, String obsTornillos, String obsSuperficie, String obsConexiones, String obsCableado, String obsFimware) {
     ApiService apiService = ApiClient.getClient();
 
     int idMantenimiento = AppData.getInstance().getIdMantenimiento();
 
-      Call<BotonResponsePMI> call = apiService.storeBotonPMI(idMantenimiento, getValidacionLimpieza, getValidacionEstatus, getTornillosLimpieza, getTornillosEstatus, getSuperficieLimpieza, getSuperficieEstatus, getConexionesLimpieza, getConexionesEstatus, getCableadoLimpieza, getCableadoEstatus, getFimwareLimpieza, getFimwareEstatus);
+      Call<BotonResponsePMI> call = apiService.storeBotonPMI(idMantenimiento, getValidacionLimpieza, getValidacionEstatus, getTornillosLimpieza, getTornillosEstatus, getSuperficieLimpieza, getSuperficieEstatus, getConexionesLimpieza, getConexionesEstatus, getCableadoLimpieza, getCableadoEstatus, getFimwareLimpieza, getFimwareEstatus, obsValidacion, obsTornillos, obsSuperficie, obsConexiones, obsCableado, obsFimware);
       call.enqueue(new Callback<BotonResponsePMI>() {
           @Override
           public void onResponse(Call<BotonResponsePMI> call, Response<BotonResponsePMI> response) {
