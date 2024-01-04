@@ -43,8 +43,8 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxLimpiezaTubGalvSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getTubGalLimpieza = isChecked;
+                checkBoxLimpiezaTubGalvNO.setChecked(false);
+                getTubGalLimpieza = isChecked;
 
             }
         });
@@ -52,8 +52,8 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxLimpiezaTubGalvNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getTubGalLimpieza = !isChecked;
+                checkBoxLimpiezaTubGalvSI.setChecked(false);
+                getTubGalLimpieza = !isChecked;
 
             }
         });
@@ -61,7 +61,8 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxEstatusTubGalvSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTubGalEstatus = isChecked;
+                checkBoxEstatusTubGalvNO.setChecked(false);
+                getTubGalEstatus = isChecked;
 
             }
         });
@@ -69,8 +70,8 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxEstatusTubGalvNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getTubGalEstatus = !isChecked;
+                checkBoxEstatusTubGalvSI.setChecked(false);
+                getTubGalEstatus = !isChecked;
 
             }
         });
@@ -78,8 +79,8 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxLimpiezaTorSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getTorSLimpieza = isChecked;
+                checkBoxLimpiezaTorNO.setChecked(false);
+                getTorSLimpieza = isChecked;
 
             }
         });
@@ -87,8 +88,8 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxLimpiezaTorNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getTorSLimpieza = !isChecked;
+                checkBoxLimpiezaTorSI.setChecked(false);
+                getTorSLimpieza = !isChecked;
 
             }
         });
@@ -96,8 +97,8 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxEstatusTorSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getTorSEstatus = isChecked;
+                checkBoxEstatusTorNO.setChecked(false);
+                getTorSEstatus = isChecked;
 
             }
         });
@@ -105,7 +106,8 @@ public class RegistroMantenimientoLPR extends AppCompatActivity {
         checkBoxEstatusTorNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTorSEstatus = !isChecked;
+                checkBoxEstatusTorSI.setChecked(false);
+                getTorSEstatus = !isChecked;
             }
         });
 

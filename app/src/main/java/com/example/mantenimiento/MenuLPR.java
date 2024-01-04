@@ -97,7 +97,7 @@ public class MenuLPR extends AppCompatActivity {
             }
         });
 
-        CardView obs = findViewById(R.id.btn_lpr_tierras);
+        CardView obs = findViewById(R.id.btn_lpr_obs);
         obs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

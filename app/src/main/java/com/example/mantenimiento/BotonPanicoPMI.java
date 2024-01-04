@@ -75,6 +75,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaValSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaValNO.setChecked(false);
                     getValidacionLimpieza = isChecked;
 
             }
@@ -83,6 +84,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaValNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaValSI.setChecked(false);
                     getValidacionLimpieza = !isChecked;
 
             }
@@ -91,6 +93,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusValSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusValNO.setChecked(false);
                     getValidacionEstatus = isChecked;
 
             }
@@ -99,6 +102,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusValNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusValSI.setChecked(false);
                     getValidacionEstatus = !isChecked;
 
             }
@@ -107,6 +111,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaTornSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaTornNO.setChecked(false);
                     getTornillosLimpieza = isChecked;
 
             }
@@ -115,6 +120,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaTornNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaTornSI.setChecked(false);
                     getTornillosLimpieza = !isChecked;
 
             }
@@ -123,6 +129,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusTornSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusTornNO.setChecked(false);
                     getTornillosEstatus = isChecked;
 
             }
@@ -131,6 +138,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusTornNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusTornSI.setChecked(false);
                     getTornillosEstatus = !isChecked;
 
             }
@@ -139,6 +147,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaSupSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaSupNO.setChecked(false);
                     getSuperficieLimpieza = isChecked;
 
             }
@@ -147,6 +156,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaSupNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxLimpiezaSupSI.setChecked(false);
                     getSuperficieLimpieza = !isChecked;
             }
         });
@@ -154,6 +164,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusSupSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusSupNO.setChecked(false);
                     getSuperficieEstatus = isChecked;
 
             }
@@ -162,6 +173,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusSupNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusSupSI.setChecked(false);
                     getSuperficieEstatus = !isChecked;
 
             }
@@ -170,6 +182,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaConxSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaConxNO.setChecked(false);
                     getConexionesLimpieza = isChecked;
 
             }
@@ -178,6 +191,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaConxNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaConxSI.setChecked(false);
                     getConexionesLimpieza = !isChecked;
 
             }
@@ -186,6 +200,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusConxSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusConxNO.setChecked(false);
                     getConexionesEstatus = isChecked;
 
             }
@@ -194,6 +209,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusConxNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxEstatusConxSI.setChecked(false);
                     getConexionesEstatus = !isChecked;
 
             }
@@ -202,6 +218,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaCabNO.setChecked(false);
                     getCableadoLimpieza = isChecked;
 
             }
@@ -210,6 +227,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaCabSI.setChecked(false);
                     getCableadoLimpieza = !isChecked;
             }
         });
@@ -217,6 +235,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusCabNO.setChecked(false);
                     getCableadoEstatus = isChecked;
 
             }
@@ -225,6 +244,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusCabSI.setChecked(false);
                     getCableadoEstatus = !isChecked;
 
             }
@@ -233,6 +253,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaFimSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaFimNO.setChecked(false);
                     getFimwareLimpieza = isChecked;
 
             }
@@ -241,6 +262,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxLimpiezaFimNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxLimpiezaFimSI.setChecked(false);
                     getFimwareLimpieza = !isChecked;
             }
         });
@@ -248,6 +270,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusFimSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxEstatusFimNO.setChecked(false);
                     getFimwareEstatus = isChecked;
             }
         });
@@ -255,6 +278,7 @@ public class BotonPanicoPMI extends AppCompatActivity {
         checkBoxEstatusFimNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxEstatusFimSI.setChecked(false);
                     getFimwareEstatus = !isChecked;
 
             }

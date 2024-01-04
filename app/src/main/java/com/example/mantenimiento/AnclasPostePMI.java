@@ -43,13 +43,16 @@ public class AnclasPostePMI extends AppCompatActivity {
         checkBoxLimpiezaCuerdaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaCuerdaNO.setChecked(false);
                     getCuerdaLimpieza = isChecked;
+
             }
         });
 
         checkBoxLimpiezaCuerdaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaCuerdaSI.setChecked(false);
                     getCuerdaLimpieza = !isChecked;
 
             }
@@ -58,13 +61,16 @@ public class AnclasPostePMI extends AppCompatActivity {
         checkBoxEstatusCuerdaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusCuerdaNO.setChecked(false);
                     getCuerdaEstatus = isChecked;
+
             }
         });
 
         checkBoxEstatusCuerdaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxEstatusCuerdaSI.setChecked(false);
                     getCuerdaEstatus = !isChecked;
 
             }
@@ -73,6 +79,7 @@ public class AnclasPostePMI extends AppCompatActivity {
         checkBoxLimpiezaPiezasSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaPiezasNO.setChecked(false);
                     getPiezasLimpieza = isChecked;
             }
         });
@@ -80,6 +87,7 @@ public class AnclasPostePMI extends AppCompatActivity {
         checkBoxLimpiezaPiezasNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaPiezasSI.setChecked(false);
                     getPiezasLimpieza = !isChecked;
 
             }
@@ -88,6 +96,7 @@ public class AnclasPostePMI extends AppCompatActivity {
         checkBoxEstatusPiezasSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusPiezasNO.setChecked(false);
                     getPiezasEstatus =isChecked;
 
             }
@@ -96,10 +105,9 @@ public class AnclasPostePMI extends AppCompatActivity {
         checkBoxEstatusPiezasNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    checkBoxEstatusPiezasNO.setChecked(false);
+                    checkBoxEstatusPiezasSI.setChecked(false);
                     getPiezasEstatus =!isChecked;
-                }
+
             }
         });
 

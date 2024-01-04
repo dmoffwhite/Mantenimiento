@@ -59,8 +59,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxLimpiezaNivelSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getNivelLimpieza = isChecked;
+                checkBoxLimpiezaNivelNO.setChecked(false);
+                getNivelLimpieza = isChecked;
 
             }
         });
@@ -68,8 +68,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxLimpiezaNivelNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getNivelLimpieza = !isChecked;
+                checkBoxLimpiezaNivelSI.setChecked(false);
+                getNivelLimpieza = !isChecked;
 
             }
         });
@@ -77,8 +77,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxEstatusNivelSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getNivelEstatus = isChecked;
+                checkBoxEstatusNivelNO.setChecked(false);
+                getNivelEstatus = isChecked;
 
             }
         });
@@ -86,8 +86,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxEstatusNivelNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getNivelEstatus = !isChecked;
+                checkBoxEstatusNivelSI.setChecked(false);
+                getNivelEstatus = !isChecked;
 
             }
         });
@@ -95,7 +95,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxLimpiezaRegSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getRegistroLimpieza = isChecked;
+                checkBoxLimpiezaRegNO.setChecked(false);
+                getRegistroLimpieza = isChecked;
 
             }
         });
@@ -103,8 +104,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxLimpiezaRegNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getRegistroLimpieza = !isChecked;
+                checkBoxLimpiezaRegSI.setChecked(false);
+                getRegistroLimpieza = !isChecked;
 
 
             }
@@ -113,8 +114,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxEstatusRegSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getRegistroEstatus = isChecked;
+                checkBoxEstatusRegNO.setChecked(false);
+                getRegistroEstatus = isChecked;
 
             }
         });
@@ -122,14 +123,16 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxEstatusRegNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getRegistroEstatus = !isChecked;
+                checkBoxEstatusRegSI.setChecked(false);
+                getRegistroEstatus = !isChecked;
             }
         });
 
         checkBoxLimpiezaEstSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getEstadoCLimpieza = isChecked;
+                checkBoxLimpiezaEstNO.setChecked(false);
+                getEstadoCLimpieza = isChecked;
 
             }
         });
@@ -137,8 +140,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxLimpiezaEstNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getEstadoCLimpieza = !isChecked;
+                checkBoxLimpiezaEstSI.setChecked(false);
+                getEstadoCLimpieza = !isChecked;
 
             }
         });
@@ -146,7 +149,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxEstatusEstSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getEstadoCEstado = isChecked;
+                checkBoxEstatusEstNO.setChecked(false);
+                getEstadoCEstado = isChecked;
 
             }
         });
@@ -154,8 +158,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxEstatusEstNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getEstadoCEstado = !isChecked;
+                checkBoxEstatusEstSI.setChecked(false);
+                getEstadoCEstado = !isChecked;
 
             }
         });
@@ -163,7 +167,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxLimpiezaCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCablesNLimpieza = isChecked;
+                checkBoxLimpiezaCabNO.setChecked(false);
+                getCablesNLimpieza = isChecked;
 
             }
         });
@@ -171,8 +176,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxLimpiezaCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getCablesNLimpieza = !isChecked;
+                checkBoxLimpiezaCabSI.setChecked(false);
+                getCablesNLimpieza = !isChecked;
 
             }
         });
@@ -180,6 +185,7 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxEstatusCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxEstatusCabNO.setChecked(false);
                     getCablesNEstatus = isChecked;
 
             }
@@ -188,8 +194,8 @@ public class SistemaTierrasLPR extends AppCompatActivity {
         checkBoxEstatusCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getCablesNEstatus = !isChecked;
+                checkBoxEstatusCabSI.setChecked(false);
+                getCablesNEstatus = !isChecked;
 
             }
         });

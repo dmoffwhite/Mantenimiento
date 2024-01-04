@@ -59,7 +59,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxLimpiezaNivSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getNivelLimpieza = isChecked;
+                checkBoxLimpiezaNivNO.setChecked(false);
+                getNivelLimpieza = isChecked;
 
             }
         });
@@ -67,7 +68,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxLimpiezaNivNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getNivelLimpieza = !isChecked;
+                checkBoxLimpiezaNivSI.setChecked(false);
+                getNivelLimpieza = !isChecked;
 
             }
         });
@@ -75,7 +77,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxEstatusNivSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getNivelEstatus = isChecked;
+                checkBoxEstatusNivNO.setChecked(false);
+                getNivelEstatus = isChecked;
 
             }
         });
@@ -83,7 +86,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxEstatusNivNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getNivelEstatus = !isChecked;
+                checkBoxEstatusNivSI.setChecked(false);
+                getNivelEstatus = !isChecked;
 
             }
         });
@@ -91,7 +95,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxLimpiezaAcabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getAcabLimpieza = isChecked;
+                checkBoxLimpiezaAcabNO.setChecked(false);
+                getAcabLimpieza = isChecked;
 
             }
         });
@@ -99,7 +104,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxLimpiezaAcabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getAcabLimpieza = !isChecked;
+                checkBoxLimpiezaAcabSI.setChecked(false);
+                getAcabLimpieza = !isChecked;
 
             }
         });
@@ -107,14 +113,16 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxEstatusAcabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getAcabEstatus = isChecked;
+                checkBoxEstatusAcabNO.setChecked(false);
+                getAcabEstatus = isChecked;
             }
         });
 
         checkBoxEstatusAcabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getAcabEstatus = !isChecked;
+                checkBoxEstatusAcabSI.setChecked(false);
+                getAcabEstatus = !isChecked;
 
             }
         });
@@ -122,7 +130,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxLimpiezaExpSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getExpLimpieza = isChecked;
+                checkBoxLimpiezaExpNO.setChecked(false);
+                getExpLimpieza = isChecked;
 
             }
         });
@@ -130,7 +139,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxLimpiezaExpNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getExpLimpieza = !isChecked;
+                checkBoxLimpiezaExpSI.setChecked(false);
+                getExpLimpieza = !isChecked;
 
             }
         });
@@ -138,7 +148,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxEstatusExpSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getExpEstatus = isChecked;
+                checkBoxEstatusExpNO.setChecked(false);
+                getExpEstatus = isChecked;
 
             }
         });
@@ -146,7 +157,8 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxEstatusExpNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getExpEstatus = !isChecked;
+                checkBoxEstatusExpSI.setChecked(false);
+                getExpEstatus = !isChecked;
 
             }
         });
@@ -154,14 +166,16 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxLimpiezaGroSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getGroutLimpieza = isChecked;
+                checkBoxLimpiezaGroNO.setChecked(false);
+                getGroutLimpieza = isChecked;
             }
         });
 
         checkBoxLimpiezaGroNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getGroutLimpieza = !isChecked;
+                checkBoxLimpiezaGroSI.setChecked(false);
+                getGroutLimpieza = !isChecked;
 
             }
         });
@@ -169,14 +183,16 @@ public class CimentacionPMI extends AppCompatActivity {
         checkBoxEstatusGroSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getGroutEstatus = isChecked;
+                checkBoxEstatusGroNO.setChecked(false);
+                getGroutEstatus = isChecked;
             }
         });
 
         checkBoxEstatusGroNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getGroutEstatus = !isChecked;
+                checkBoxEstatusGroSI.setChecked(false);
+                getGroutEstatus = !isChecked;
             }
         });
 

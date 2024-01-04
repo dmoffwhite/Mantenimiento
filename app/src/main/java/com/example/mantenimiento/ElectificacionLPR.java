@@ -35,7 +35,8 @@ public class ElectificacionLPR extends AppCompatActivity {
         checkBoxLimpiezaRevSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getRevisionLimpieza = isChecked;
+                checkBoxLimpiezaRevNO.setChecked(false);
+                getRevisionLimpieza = isChecked;
 
             }
         });
@@ -43,7 +44,8 @@ public class ElectificacionLPR extends AppCompatActivity {
         checkBoxLimpiezaRevNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getRevisionLimpieza = !isChecked;
+                checkBoxLimpiezaRevSI.setChecked(false);
+                getRevisionLimpieza = !isChecked;
 
             }
         });
@@ -51,7 +53,8 @@ public class ElectificacionLPR extends AppCompatActivity {
         checkBoxEstatusRevSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getRevisionEstatus = isChecked;
+                checkBoxEstatusRevNO.setChecked(false);
+                getRevisionEstatus = isChecked;
 
             }
         });
@@ -59,7 +62,8 @@ public class ElectificacionLPR extends AppCompatActivity {
         checkBoxEstatusRevNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getRevisionEstatus = !isChecked;
+                checkBoxEstatusRevSI.setChecked(false);
+                getRevisionEstatus = !isChecked;
 
             }
         });

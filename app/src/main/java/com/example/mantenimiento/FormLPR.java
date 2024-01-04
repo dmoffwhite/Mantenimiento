@@ -108,7 +108,7 @@ public class FormLPR extends AppCompatActivity {
                 String fecha = fechaLPR.getText().toString();
                 String placas = placasLPR.getText().toString();
                 String municipio = autoCompleteMunicipio.getEditableText().toString();
-                Intent intent = new Intent(FormLPR.this, MenuPMI.class);
+                Intent intent = new Intent(FormLPR.this, MenuLPR.class);
                 startActivity(intent);
                 storeMantenimiento(tipoMantenimiento, lprID, folio, cuadrilla, fecha, placas, municipio);
 
