@@ -82,7 +82,7 @@
             android:gravity="top">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/obs_grl_lpr"
+                android:id="@+id/obs_grl_pmi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
