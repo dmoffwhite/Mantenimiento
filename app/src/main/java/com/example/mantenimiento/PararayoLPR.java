@@ -44,7 +44,8 @@ public class PararayoLPR extends AppCompatActivity {
         checkBoxLimpiezaPuntaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getPuntaLimpieza = isChecked;
+                checkBoxLimpiezaPuntaNO.setChecked(false);
+                getPuntaLimpieza = isChecked;
 
             }
         });
@@ -52,7 +53,8 @@ public class PararayoLPR extends AppCompatActivity {
         checkBoxLimpiezaPuntaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getPuntaLimpieza = !isChecked;
+                checkBoxLimpiezaPuntaSI.setChecked(false);
+                getPuntaLimpieza = !isChecked;
 
             }
         });
@@ -60,7 +62,8 @@ public class PararayoLPR extends AppCompatActivity {
         checkBoxEstatusPuntaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getPuntaEstatus = isChecked;
+                checkBoxEstatusPuntaNO.setChecked(false);
+                getPuntaEstatus = isChecked;
 
             }
         });
@@ -68,8 +71,8 @@ public class PararayoLPR extends AppCompatActivity {
         checkBoxEstatusPuntaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getPuntaEstatus = !isChecked;
+                checkBoxEstatusPuntaSI.setChecked(false);
+                getPuntaEstatus = !isChecked;
 
             }
         });
@@ -77,7 +80,8 @@ public class PararayoLPR extends AppCompatActivity {
         checkBoxLimpiezaMastilSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getMastilLimpieza = isChecked;
+                checkBoxLimpiezaMastilNO.setChecked(false);
+                getMastilLimpieza = isChecked;
 
             }
         });
@@ -85,7 +89,8 @@ public class PararayoLPR extends AppCompatActivity {
         checkBoxLimpiezaMastilNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getMastilLimpieza = !isChecked;
+                checkBoxLimpiezaMastilSI.setChecked(false);
+                getMastilLimpieza = !isChecked;
 
             }
         });
@@ -93,7 +98,8 @@ public class PararayoLPR extends AppCompatActivity {
         checkBoxEstatusMastilSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getMastilEstatus = isChecked;
+                checkBoxEstatusMastilNO.setChecked(false);
+                getMastilEstatus = isChecked;
 
             }
         });
@@ -101,8 +107,8 @@ public class PararayoLPR extends AppCompatActivity {
         checkBoxEstatusMastilNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getMastilEstatus = !isChecked;
+                checkBoxEstatusMastilSI.setChecked(false);
+                getMastilEstatus = !isChecked;
 
             }
         });

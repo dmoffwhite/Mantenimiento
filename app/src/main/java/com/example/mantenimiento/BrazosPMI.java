@@ -44,6 +44,7 @@ public class BrazosPMI extends AppCompatActivity {
         checkBoxLimpiezaCarcasaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxLimpiezaCarcasaNO.setChecked(false);
                 getCarcasaLimpieza = isChecked;
             }
         });
@@ -51,7 +52,8 @@ public class BrazosPMI extends AppCompatActivity {
         checkBoxLimpiezaCarcasaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCarcasaLimpieza = !isChecked;
+                checkBoxLimpiezaCarcasaSI.setChecked(false);
+                getCarcasaLimpieza = !isChecked;
 
             }
         });
@@ -59,7 +61,8 @@ public class BrazosPMI extends AppCompatActivity {
         checkBoxEstatusCarcasaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCarcasaEstatus = isChecked;
+                checkBoxEstatusCarcasaNO.setChecked(false);
+                getCarcasaEstatus = isChecked;
 
             }
         });
@@ -67,14 +70,16 @@ public class BrazosPMI extends AppCompatActivity {
         checkBoxEstatusCarcasaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCarcasaEstatus = !isChecked;
+                checkBoxEstatusCarcasaSI.setChecked(false);
+                getCarcasaEstatus = !isChecked;
             }
         });
 
         checkBoxLimpiezaTuberiaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTuberiaLimpieza = isChecked;
+                checkBoxLimpiezaTuberiaNO.setChecked(false);
+                getTuberiaLimpieza = isChecked;
 
             }
         });
@@ -82,14 +87,16 @@ public class BrazosPMI extends AppCompatActivity {
         checkBoxLimpiezaTuberiaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTuberiaLimpieza = !isChecked;
+                checkBoxLimpiezaTuberiaSI.setChecked(false);
+                getTuberiaLimpieza = !isChecked;
             }
         });
 
         checkBoxEstatusTuberiaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTuberiaEstatus = isChecked;
+                checkBoxEstatusTuberiaNO.setChecked(false);
+                getTuberiaEstatus = isChecked;
 
             }
         });
@@ -97,6 +104,7 @@ public class BrazosPMI extends AppCompatActivity {
         checkBoxEstatusTuberiaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxEstatusTuberiaSI.setChecked(false);
                     getTuberiaEstatus = !isChecked;
             }
         });

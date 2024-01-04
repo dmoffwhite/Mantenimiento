@@ -65,7 +65,7 @@ public class PostePMI extends AppCompatActivity {
         checkBoxLimpiezaConectoresSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
+                    checkBoxLimpiezaConectoresNO.setChecked(false);
                     getConectoresLimpieza = isChecked;
 
             }
@@ -74,8 +74,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxLimpiezaConectoresNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getConectoresLimpieza = !isChecked;
+                checkBoxLimpiezaConectoresSI.setChecked(false);
+                getConectoresLimpieza = !isChecked;
 
             }
         });
@@ -83,7 +83,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxEstatusConectoresSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getConectoresEstatus = isChecked;
+                checkBoxEstatusConectoresNO.setChecked(false);
+                getConectoresEstatus = isChecked;
 
             }
         });
@@ -91,7 +92,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxEstatusConectoresNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getElementosEstatus = !isChecked;
+                checkBoxEstatusConectoresSI.setChecked(false);
+                getElementosEstatus = !isChecked;
 
             }
         });
@@ -101,8 +103,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxLimpiezaElementosSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getElementosLimpieza = isChecked;
+                checkBoxLimpiezaElementosNO.setChecked(false);
+                getElementosLimpieza = isChecked;
 
             }
         });
@@ -110,8 +112,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxLimpiezaElementosNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getElementosLimpieza = !isChecked;
+                checkBoxLimpiezaElementosSI.setChecked(false);
+                getElementosLimpieza = !isChecked;
 
             }
         });
@@ -119,8 +121,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxEstatusElementosSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getElementosEstatus = isChecked;
+                checkBoxEstatusElementosNO.setChecked(false);
+                getElementosEstatus = isChecked;
 
             }
         });
@@ -128,8 +130,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxEstatusElementosNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getElementosEstatus = !isChecked;
+                checkBoxEstatusElementosSI.setChecked(false);
+                getElementosEstatus = !isChecked;
 
             }
         });
@@ -139,8 +141,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxLimpiezaSeccionesSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getSeccionesLimpieza = isChecked;
+                checkBoxLimpiezaSeccionesNO.setChecked(false);
+                getSeccionesLimpieza = isChecked;
 
             }
         });
@@ -148,8 +150,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxLimpiezaSeccionesNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getSeccionesLimpieza = !isChecked;
+                checkBoxLimpiezaSeccionesSI.setChecked(false);
+                getSeccionesLimpieza = !isChecked;
 
             }
         });
@@ -157,8 +159,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxEstatusSeccionesSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getSeccionesEstatus = isChecked;
+                checkBoxEstatusSeccionesNO.setChecked(false);
+                getSeccionesEstatus = isChecked;
 
             }
         });
@@ -166,8 +168,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxEstatusSeccionesNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getSeccionesEstatus = !isChecked;
+                checkBoxEstatusSeccionesSI.setChecked(false);
+                getSeccionesEstatus = !isChecked;
 
             }
         });
@@ -176,7 +178,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxLimpiezaPinturaSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getPinturaLimpieza = isChecked;
+                checkBoxLimpiezaPinturaNO.setChecked(false);
+                getPinturaLimpieza = isChecked;
 
             }
         });
@@ -184,8 +187,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxLimpiezaPinturaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getPinturaLimpieza = !isChecked;
+                checkBoxLimpiezaPinturaSI.setChecked(false);
+                getPinturaLimpieza = !isChecked;
 
             }
         });
@@ -193,8 +196,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxEstatusPinturaSi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                    getPinturaEstatus = isChecked;
+                checkBoxEstatusPinturaNO.setChecked(false);
+                getPinturaEstatus = isChecked;
 
             }
         });
@@ -202,7 +205,8 @@ public class PostePMI extends AppCompatActivity {
         checkBoxEstatusPinturaNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getPinturaEstatus = !isChecked;
+                checkBoxEstatusPinturaSi.setChecked(false);
+                getPinturaEstatus = !isChecked;
             }
         });
 

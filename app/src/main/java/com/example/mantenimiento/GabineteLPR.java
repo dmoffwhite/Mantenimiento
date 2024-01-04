@@ -98,13 +98,15 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaTubSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTubLicLimpieza = isChecked;
+                checkBoxLimpiezaTubNO.setChecked(false);
+                getTubLicLimpieza = isChecked;
             }
         });
         checkBoxLimpiezaTubNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTubLicLimpieza = !isChecked;
+                checkBoxLimpiezaTubSI.setChecked(false);
+                getTubLicLimpieza = !isChecked;
 
             }
         });
@@ -112,6 +114,7 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusTubSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxEstatusTubNO.setChecked(false);
                     getTubLicEstatus = isChecked;
 
             }
@@ -120,6 +123,7 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusTubNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxEstatusTubSI.setChecked(false);
                     getTubLicEstatus = !isChecked;
 
             }
@@ -128,6 +132,7 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaSegSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxLimpiezaSegNO.setChecked(false);
                     getTorSegLimpieza = isChecked;
 
             }
@@ -136,7 +141,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaSegNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTorSegLimpieza = !isChecked;
+                checkBoxLimpiezaSegSI.setChecked(false);
+                getTorSegLimpieza = !isChecked;
 
             }
         });
@@ -144,7 +150,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusSegSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getTorSegEstatus = isChecked;
+                checkBoxEstatusSegNO.setChecked(false);
+                getTorSegEstatus = isChecked;
 
             }
         });
@@ -153,6 +160,7 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusSegNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBoxEstatusSegSI.setChecked(false);
                     getTorSegEstatus = !isChecked;
 
             }
@@ -161,7 +169,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCabLimpieza = isChecked;
+                checkBoxLimpiezaCabNO.setChecked(false);
+                getCabLimpieza = isChecked;
 
             }
         });
@@ -169,7 +178,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCabLimpieza = !isChecked;
+                checkBoxLimpiezaCabSI.setChecked(false);
+                getCabLimpieza = !isChecked;
 
             }
         });
@@ -177,7 +187,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusCabSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCabEstatus = isChecked;
+                checkBoxEstatusCabNO.setChecked(false);
+                getCabEstatus = isChecked;
 
             }
         });
@@ -185,7 +196,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusCabNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCabEstatus = !isChecked;
+                checkBoxEstatusCabSI.setChecked(false);
+                getCabEstatus = !isChecked;
 
             }
         });
@@ -193,7 +205,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaExtSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getExtLimpieza = isChecked;
+                checkBoxLimpiezaExtNO.setChecked(false);
+                getExtLimpieza = isChecked;
 
             }
         });
@@ -201,7 +214,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaExtNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getExtLimpieza = !isChecked;
+                checkBoxLimpiezaExtSI.setChecked(false);
+                getExtLimpieza = !isChecked;
 
             }
         });
@@ -209,7 +223,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusExtSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getExtEstatus = isChecked;
+                checkBoxEstatusExtNO.setChecked(false);
+                getExtEstatus = isChecked;
 
             }
         });
@@ -217,7 +232,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusExtNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getExtEstatus = !isChecked;
+                checkBoxEstatusExtSI.setChecked(false);
+                getExtEstatus = !isChecked;
 
             }
         });
@@ -225,7 +241,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaCieSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCierLimpieza = isChecked;
+                checkBoxLimpiezaCieNO.setChecked(false);
+                getCierLimpieza = isChecked;
 
             }
         });
@@ -233,7 +250,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaCieNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCierLimpieza = !isChecked;
+                checkBoxLimpiezaCieSI.setChecked(false);
+                getCierLimpieza = !isChecked;
 
             }
         });
@@ -241,7 +259,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusCieSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCierEstatus = isChecked;
+                checkBoxEstatusCieNO.setChecked(false);
+                getCierEstatus = isChecked;
 
             }
         });
@@ -249,7 +268,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusCieNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCierEstatus = !isChecked;
+                checkBoxEstatusCieSI.setChecked(false);
+                getCierEstatus = !isChecked;
 
             }
         });
@@ -257,7 +277,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaCabnSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCabNeuLimpieza = isChecked;
+                checkBoxLimpiezaCabnNO.setChecked(false);
+                getCabNeuLimpieza = isChecked;
 
             }
         });
@@ -265,7 +286,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaCabnNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCabNeuLimpieza = !isChecked;
+                checkBoxLimpiezaCabnSI.setChecked(false);
+                getCabNeuLimpieza = !isChecked;
 
             }
         });
@@ -273,14 +295,16 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusCabnSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCabNeuEstatus = isChecked;
+                checkBoxEstatusCabnNO.setChecked(false);
+                getCabNeuEstatus = isChecked;
 
             }
         });
         checkBoxEstatusCabnNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getCabNeuEstatus = !isChecked;
+                checkBoxEstatusCabnSI.setChecked(false);
+                getCabNeuEstatus = !isChecked;
 
             }
         });
@@ -288,6 +312,7 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaVenSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    checkBoxLimpiezaVenNO.setChecked(false);
                     getVentLimpieza = isChecked;
 
             }
@@ -296,7 +321,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaVenNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getVentLimpieza = !isChecked;
+                checkBoxLimpiezaVenSI.setChecked(false);
+                getVentLimpieza = !isChecked;
 
             }
         });
@@ -304,7 +330,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusVenSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getVentEstatus = isChecked;
+                checkBoxEstatusVenNO.setChecked(false);
+                getVentEstatus = isChecked;
 
             }
         });
@@ -312,7 +339,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusVenNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getVentEstatus = !isChecked;
+                checkBoxEstatusVenSI.setChecked(false);
+                getVentEstatus = !isChecked;
 
             }
         });
@@ -320,7 +348,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaFilSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getFiltLimpieza = isChecked;
+                checkBoxLimpiezaFilNO.setChecked(false);
+                getFiltLimpieza = isChecked;
 
             }
         });
@@ -328,7 +357,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaFilNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getFiltLimpieza = !isChecked;
+                checkBoxLimpiezaFilSI.setChecked(false);
+                getFiltLimpieza = !isChecked;
 
             }
         });
@@ -336,7 +366,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusFilSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getFiltEstatus = isChecked;
+                checkBoxEstatusFilNO.setChecked(false);
+                getFiltEstatus = isChecked;
 
             }
         });
@@ -344,7 +375,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusFilNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getFiltEstatus = !isChecked;
+                checkBoxEstatusFilSI.setChecked(false);
+                getFiltEstatus = !isChecked;
 
             }
         });
@@ -352,14 +384,16 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxLimpiezaSilSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getSilLimpieza = isChecked;
+                checkBoxLimpiezaSilNO.setChecked(false);
+                getSilLimpieza = isChecked;
             }
         });
 
         checkBoxLimpiezaSilNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getSilLimpieza = !isChecked;
+                checkBoxLimpiezaSilSI.setChecked(false);
+                getSilLimpieza = !isChecked;
 
             }
         });
@@ -367,7 +401,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusSilSI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getSilEstatus = isChecked;
+                checkBoxEstatusSilNO.setChecked(false);
+                getSilEstatus = isChecked;
 
             }
         });
@@ -375,7 +410,8 @@ public class GabineteLPR extends AppCompatActivity {
         checkBoxEstatusSilNO.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    getSilEstatus = !isChecked;
+                checkBoxEstatusSilSI.setChecked(false);
+                getSilEstatus = !isChecked;
 
             }
         });
